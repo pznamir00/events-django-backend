@@ -1,5 +1,7 @@
 import graphene
 from users.schema import AuthMutation, Query as AuthQuery
+from drivers.schema import Query as DriverQuery
+from .models import UserPlatformChoice, Item, ItemOffer
 
 
 
@@ -7,7 +9,7 @@ from users.schema import AuthMutation, Query as AuthQuery
 class Mutation(AuthMutation, graphene.ObjectType):
     pass
 
-class Query(AuthQuery, graphene.ObjectType):
+class Query(AuthQuery, DriverQuery, graphene.ObjectType):
     pass
 
 

@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import UserPlatformChoice, ItemOffer, Item
 
-# Register your models here.
+admin.site.register(UserPlatformChoice)
+admin.site.register(Item)
+admin.site.register(ItemOffer)

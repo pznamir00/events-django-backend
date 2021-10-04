@@ -1,11 +1,11 @@
 from django.db import models
 from users.models import ExtendedUser
-from drivers.models import Driver
+from drivers.models import Platform
 
 
 class UserPlatformChoice(models.Model):
-    user = models.ForeignField(ExtendedUser, on_delete=models.CASCADE, related_name='platforms')
-    driver = models.ForeignField(Driver, on_delete=models.CASCADE)
+    user = models.ForeignKey(ExtendedUser, on_delete=models.CASCADE, related_name='platforms')
+    platform = models.ForeignKey(Platform, on_delete=models.CASCADE)
 
 
 class Item(models.Model):
