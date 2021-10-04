@@ -1,10 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import User
-from django.db.models.fields import related
+from django.contrib.auth.models import AbstractUser
 
 
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+class ExtendedUser(AbstractUser):
+    EMAIL_FIELD = 'email'
+    USERNAME_FIELD = 'username'
+    phone_number = models.CharField(max_length=16)
     
     def __str__(self):
-        return 'Profile of ' + self.user.email
+        return self.username
