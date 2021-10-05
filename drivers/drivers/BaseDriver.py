@@ -1,4 +1,4 @@
-from abc import ABC
+import abc
 
 
 class BaseDriver:
@@ -10,12 +10,15 @@ class BaseDriver:
     - insert
     - logout
     Every new system has to get new class that provides the rules for it.
-    Objects of Driver classes have data prop where they can store any 
-    additional data like token etc.
+    Objects of Driver classes have data prop where they can store additional data.
     """
     data = {}
+    
+    @staticmethod
+    def get_required_fields():
+        return []
         
-    @ABC.abstractmethod
+    @abc.abstractmethod
     def login(self, **kwargs):
         """
         Login method for authoriza to platform that user want to store any offers.
@@ -24,7 +27,7 @@ class BaseDriver:
         """
         pass
     
-    @ABC.abstractmethod
+    @abc.abstractmethod
     def logout(self, **kwargs):
         """
         Logout method from external system.
@@ -32,7 +35,7 @@ class BaseDriver:
         """
         pass
     
-    @ABC.abstractmethod
+    @abc.abstractmethod
     def insert(self, **kwargs):
         """
         Logic of inserting new offer to external system.

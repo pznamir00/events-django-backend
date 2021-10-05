@@ -6,6 +6,7 @@ from drivers.models import Platform
 class UserPlatformChoice(models.Model):
     user = models.ForeignKey(ExtendedUser, on_delete=models.CASCADE, related_name='platforms')
     platform = models.ForeignKey(Platform, on_delete=models.CASCADE)
+    auth_data = models.JSONField()
 
 
 class Item(models.Model):
