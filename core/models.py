@@ -1,12 +1,13 @@
 from django.db import models
-from users.models import ExtendedUser
+from users.models import User
 from drivers.models import Platform
+from hashid_field import HashidField
 
 
 class UserPlatformChoice(models.Model):
-    user = models.ForeignKey(ExtendedUser, on_delete=models.CASCADE, related_name='platforms')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='platforms')
     platform = models.ForeignKey(Platform, on_delete=models.CASCADE)
-    auth_data_file = models.FileField(upload_to='static/auth_files', null=True)
+    data = HashidField(blank=True)
 
 
 class Item(models.Model):
@@ -19,7 +20,7 @@ class Item(models.Model):
     
     
 class ItemOffer(models.Model):
-    item = models.ForeignKey(Item, on_delete=models.CASCADE)
+    item = models.ForeignKey(Item, on_delete=models.CASCADE, related_name='offers')
     platform = models.ForeignKey(UserPlatformChoice, on_delete=models.SET_NULL, null=True)
     url = models.URLField(max_length=1024)
     

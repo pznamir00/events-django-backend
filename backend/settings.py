@@ -41,10 +41,9 @@ INSTALLED_APPS = [
     'users',
     'core',
     'drivers',
-    'graphene_django',
-    'graphql_jwt.refresh_token.apps.RefreshTokenConfig',
-    'graphql_auth',
-    'django_filters',
+    'rest_framework',
+    'dj_rest_auth',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
@@ -136,30 +135,5 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-GRAPHENE = {
-    'SCHEMA' : 'core.schema.schema',
-    'MIDDLEWARE': [
-        'graphql_jwt.middleware.JSONWebTokenMiddleware',
-    ],
-}
-
-AUTHENTICATION_BACKENDS = [
-    'graphql_auth.backends.GraphQLAuthBackend',
-    'django.contrib.auth.backends.ModelBackend',
-]
-
-GRAPHQL_JWT = {
-    "JWT_ALLOW_ANY_CLASSES": [
-        "graphql_auth.mutations.Register",
-        "graphql_auth.mutations.VerifyAccount",
-        "graphql_auth.mutations.ObtainJSONWebToken",
-    ],
-    "JWT_VERIFY_EXPIRATION": True,
-    "JWT_LONG_RUNNING_REFRESH_TOKEN": True,
-}
-
-REGISTER_MUTATION_FIELDS = ["email", "username", "phone_number"]
-
-
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-AUTH_USER_MODEL = 'users.ExtendedUser'
+AUTH_USER_MODEL = 'users.User'
