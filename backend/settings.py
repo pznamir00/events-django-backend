@@ -40,10 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'core',
-    'drivers',
     'rest_framework',
+    'rest_framework.authtoken',
     'dj_rest_auth',
     'phonenumber_field',
+    'address',
 ]
 
 MIDDLEWARE = [
@@ -137,3 +138,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 AUTH_USER_MODEL = 'users.User'
+
+
+
+REST_FRAMEWORK = {
+   'DEFAULT_AUTHENTICATION_CLASSES': (
+       'rest_framework.authentication.TokenAuthentication',
+   )
+}

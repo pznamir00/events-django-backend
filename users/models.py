@@ -1,11 +1,16 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from address.models import AddressField
+from phonenumber_field.modelfields import PhoneNumberField
 
+  
 
 class User(AbstractUser):
-    EMAIL_FIELD = 'email'
-    USERNAME_FIELD = 'username'
-    phone_number = models.CharField(max_length=16)
+    USERNAME_FIELD = 'email'
+    email = models.EmailField('Email address', unique=True)
+    phone_number = PhoneNumberField()
+    address = AddressField()
+    REQUIRED_FIELDS = ['']
     
     def __str__(self):
-        return self.username
+        return self.email

@@ -1,24 +1,63 @@
 from rest_framework import serializers
-from .models import UserPlatformChoice, Item, ItemOffer
-from .validators import PlatformAuthDataValidator
+from .models import Category, Event, EventImage, FollowedHashTag, EventHistory
+from django_base64field.fields import Base64Field
 
 
-class UserPlatformChoiceSerializer(serializers.ModelSerializer):    
+
+
+
+class CategorySerializer(serializers.ModelSerializer):
     class Meta:
-        model = UserPlatformChoice
-        fields = ('platform', 'data',)
-        validators = (PlatformAuthDataValidator,)
+        model = Category
+        fields = ('name', 'slug',)
+        read_only = ('slug',)
         
         
-class ItemOfferSerializer(serializers.ModelSerializer):
+        
+        
+        
+class EventHistorySerializer(serializers.ModelSerializer):
     class Meta:
-        model = ItemOffer
-        fields = ('platform', 'url',)
+        model = EventHistory
+        fields = ('label', 'text',)
         
         
-class ItemSerializer(serializers.ModelSerializer):
-    offers = ItemOfferSerializer(many=True, read_only=True)
+        
+        
+        
+class EventImageSerializer(serializers.ModelSerializer):
+    file = Base64Field(write_only=True)
     
     class Meta:
-        model = Item
+        model = EventImage
+        fields = ('event', 'file',)
+        
+        
+        
+        
+        
+class FollowedHashTagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FollowedHashTag
+        fields = ('value',)
+        
+        
+        
+
+
+class EventSimpleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Event
+        fields = ('title', 'geolocation', 'event_datetime', 'category', 'is_free',)
+
+
+
+
+
+class EventDetailSerializer(serializers.ModelSerializer):
+    images = Base64Field(many=True)
+    histories = EventHistorySerializer(many=True, read_only=True)
+    
+    class Meta:
+        model = Event
         fields = '__all__'
