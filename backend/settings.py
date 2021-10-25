@@ -38,13 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis', 
     'users',
     'core',
     'rest_framework',
     'rest_framework.authtoken',
     'dj_rest_auth',
     'phonenumber_field',
-    'address',
 ]
 
 MIDDLEWARE = [
@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'db',
+        'HOST': 'pgdb',
         'PORT': '5432',
     }
 }

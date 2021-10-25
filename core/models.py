@@ -2,6 +2,7 @@ from django.db import models
 from users.models import User
 from autoslug import AutoSlugField
 from .choices import HistoryLabel
+from django.contrib.gis.db.models import PointField
 import uuid
 
 
@@ -33,7 +34,7 @@ class Event(models.Model):
     description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    geolocation = models.PointField(geography=True)
+    geolocation = PointField(geography=True)
     location_hints = models.CharField(max_length=256, blank=True, null=True)
     event_datetime = models.DateTimeField()
     promoter = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
@@ -70,7 +71,7 @@ Include all additional informations for client about currenc state of event,
 Label field includes the name of that log.
 """
 class EventHistory(models.Model):
-    label = models.CharField(max_length=1, choices=HistoryLabel)
+    label = models.CharField(max_length=1, choices=HistoryLabel.choices)
     text = models.CharField(max_length=256, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     
@@ -99,7 +100,7 @@ If event is private is necessery to get a ticket before arrive to event
 Each ticket is generated based on template file with unique key as id of that ticket.
 The quantity of tickets depends on promotor of event.
 """
-class Ticket(models.Model):
+class EventTicket(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
     template = models.FileField(upload_to='media/tickets/')

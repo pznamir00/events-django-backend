@@ -1,3 +1,8 @@
 from django.contrib import admin
+from . import models
 
-# Register your models here.
+admin.site.register(models.Category)
+admin.site.register(models.Event)
+admin.site.register(models.EventImage)
+admin.site.register(models.EventHistory)
+admin.site.register(models.EventTicket)
