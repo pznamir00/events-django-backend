@@ -1,10 +1,10 @@
-version: "3.8"
+version: "3.9"
    
 services:
-    pgdb:
+    _db:
         image: postgres
         volumes:
-            - ./data/db:/var/lib/postgresql/data
+            - ../data/db3:/var/lib/postgresql/data
         environment:
             - POSTGRES_DB=postgres
             - POSTGRES_USER=postgres
@@ -17,4 +17,4 @@ services:
         ports:
             - "8000:8000"
         depends_on:
-            - pgdb
+            - _db

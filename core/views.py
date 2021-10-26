@@ -1,10 +1,11 @@
-from rest_framework import viewsets, mixins, generics
+from rest_framework import viewsets, mixins
 from .serializers import CategorySerializer, EventDetailSerializer, EventSimpleSerializer, FollowedHashTagSerializer
-from django.db.models import Case, When, Value, BooleanField
+from django.db.models import Case, When, Value
 from .models import Category, FollowedHashTag, Event
-from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly
+from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly, CreateAuthenticatedOnly
 from rest_framework.permissions import IsAuthenticated
 from datetime import datetime
+from django.template.defaultfilters import slugify
 import uuid
 
 
@@ -28,11 +29,18 @@ class FollowedHashTagView(
 ):
     serializer_class = FollowedHashTagSerializer
     
-    def get_queryset(self, request):
-        return FollowedHashTag.objects.filter(user=request.user)
+    def get_queryset(self):
+        return FollowedHashTag.objects.filter(user=self.request.user)
     
-    def perform_create(self, instance):
-        return instance.save(user=self.request.user)
+    def perform_create(self, serializer):
+        #change string to hashtag
+        value = serializer.validated_data.pop('value')
+        value = slugify(value).replace('-', '')
+        #save data
+        return serializer.save(
+            user=self.request.user,
+            value=value
+        )
     
     
     
@@ -40,9 +48,9 @@ class FollowedHashTagView(
     
 class EventViewSet(viewsets.ModelViewSet):
     serializer_class = EventDetailSerializer
-    permissions_classes = (IsOwnerOrReadOnly,)
+    permission_classes = (CreateAuthenticatedOnly, IsOwnerOrReadOnly,)
     
-    def get_queryset(self, request):
+    def get_queryset(self):
         return Event.objects.filter(
             active=True,
             is_private=False
@@ -52,7 +60,7 @@ class EventViewSet(viewsets.ModelViewSet):
                 default=Value('1')
             )
         ).order_by(
-            'event_datetime_expired'
+            'event_datetime_expired',
             '-created_at'
         )
     
@@ -62,20 +70,19 @@ class EventViewSet(viewsets.ModelViewSet):
         """
         return EventSimpleSerializer if self.action == 'list' else EventDetailSerializer
     
-    def perform_create(self, instance):
-        secret_key = uuid.uuid64 if instance.is_private else None
-        return instance.save(
-            user=self.request.user,
-            secret_key=secret_key
-        )
+    def perform_create(self, serializer):
+        data = { 'promoter': self.request.user }
+        if 'is_private' in serializer.validated_data and serializer.validated_data['is_private']:
+            data['secret_key'] = uuid.uuid64
+        return serializer.save(**data)
     
     
     
     
     
-class EventOwnListView(generics.ListAPIView):
+class EventOwnListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     serializer_class = EventDetailSerializer
     permission_classes = (IsAuthenticated,)
     
-    def get_queryset(self, request):
-        return Event.objects.filter(user=request.user)
+    def get_queryset(self):
+        return Event.objects.filter(promoter=self.request.user)

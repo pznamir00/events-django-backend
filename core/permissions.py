@@ -25,3 +25,9 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
         Edit mode only for author (promotor) of event or admin user
         """
         return request.user.is_superuser or obj.promotor == request.user
+    
+    
+    
+class CreateAuthenticatedOnly(permissions.BasePermission):
+    def has_permission(self, request, view):
+        return request.user.is_authenticated if request.method == 'POST' else True
