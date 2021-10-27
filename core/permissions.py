@@ -24,6 +24,7 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
         """
         Edit mode only for author (promotor) of event or admin user
         """
+        print(request)
         return request.user.is_superuser or obj.promotor == request.user
     
     

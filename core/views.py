@@ -1,16 +1,13 @@
 from rest_framework import viewsets, mixins
 from rest_framework.generics import get_object_or_404
 from rest_framework.views import APIView
-from .serializers import CategorySerializer, EventDetailSerializer, EventHistorySerializer, EventSimpleSerializer, FollowedHashTagSerializer
+from .serializers import CategorySerializer, EventDetailSerializer, EventSimpleSerializer, FollowedHashTagSerializer
 from django.db.models import Case, When, Value
 from .models import Category, EventHistory, FollowedHashTag, Event
 from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly, CreateAuthenticatedOnly
 from rest_framework.permissions import IsAuthenticated
 from datetime import datetime
 from django.template.defaultfilters import slugify
-import uuid
-
-from core import serializers
 
 
 
@@ -52,7 +49,7 @@ class FollowedHashTagView(
     
 class EventViewSet(viewsets.ModelViewSet):
     serializer_class = EventDetailSerializer
-    permission_classes = (CreateAuthenticatedOnly, IsOwnerOrReadOnly,)
+    permission_classes = (IsOwnerOrReadOnly, CreateAuthenticatedOnly,)
     
     def get_queryset(self):
         return Event.objects.filter(
@@ -77,6 +74,9 @@ class EventViewSet(viewsets.ModelViewSet):
     def get_object(self):
         return get_object_or_404(Event, id=self.kwargs['pk'])
     
+    def perform_create(self, serializer):
+        return serializer.save(promoter=self.request.user)
+    
     def perform_update(self, serializer):
         """
         In this point application creates history logs.
@@ -86,7 +86,7 @@ class EventViewSet(viewsets.ModelViewSet):
         event = serializer.instance
         if 'event_datetime' in serializer.validated_data:
             #Changed event datetime
-            text = str(serializer.instance.event_datetime) + " ===> " + str(serializers.validated_data['event_datetime'])
+            text = str(serializer.instance.event_datetime) + " ===> " + str(serializer.validated_data['event_datetime'])
             EventHistory.objects.create(event=event, label='1', text=text)
         if 'is_active' in serializer.validated_data and not serializer.validated_data['is_active']:
             #Canceled an event

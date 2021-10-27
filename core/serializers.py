@@ -1,8 +1,8 @@
 from rest_framework import serializers
 from . import validators
-from .models import Category, Event, FollowedHashTag, EventHistory, EventTicket
+from .models import Category, Event, EventTemplate, FollowedHashTag, EventHistory, EventTicket
 from drf_extra_fields.fields import Base64ImageField
-
+import base64 
 
 
 
@@ -20,7 +20,12 @@ class CategorySerializer(serializers.ModelSerializer):
 class EventHistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = EventHistory
-        fields = ('label', 'event',)
+        exclude = ('id',)
+        extra_kwargs = {
+            'event': { 
+                'write_only': True 
+            }
+        }
         
         
         
@@ -35,14 +40,14 @@ class FollowedHashTagSerializer(serializers.ModelSerializer):
 
 
 
-class EventTicketSerializer(serializers.ModelSerializer):
-    template = Base64ImageField()
-    quantity = serializers.IntegerField(write_only=True)
+class EventTemplateSerializer(serializers.ModelSerializer):
+    template = serializers.CharField(required=True)
+    quantity = serializers.IntegerField(required=True)
     
     class Meta:
-        model = EventTicket
+        model = EventTemplate
         fields = ('template', 'quantity',)
-
+        
         
         
 
@@ -57,7 +62,7 @@ class EventSimpleSerializer(serializers.ModelSerializer):
 
 
 class EventDetailSerializer(serializers.ModelSerializer):
-    ticket = EventTicketSerializer(write_only=True, required=False)
+    ticket_template = EventTemplateSerializer(write_only=True, required=False)
     histories = EventHistorySerializer(many=True, read_only=True)
     image_input = Base64ImageField(write_only=True, required=False)
 
@@ -76,12 +81,14 @@ class EventDetailSerializer(serializers.ModelSerializer):
         }
             
     def create(self, validated_data):
-        ticket = validated_data.pop('ticket', None)
         image = validated_data.pop('image_input', None)
+        ticket_template = validated_data.pop('ticket_template', None)
         event = Event.objects.create(**validated_data, image=image)
         if not event.is_free:
-            EventTicket.objects.create(
-                event=event, 
-                template=ticket,
-            )
+            # save a template
+            template_file = base64.b64decode(ticket_template['template'])
+            template = EventTemplate.objects.create(event=event, template=template_file)
+            for i in range(ticket_template['quantity']):
+                # creating single tickets
+                EventTicket.objects.create(template=template)
         return event
