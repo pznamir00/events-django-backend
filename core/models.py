@@ -2,7 +2,6 @@ from django.db import models
 from users.models import User
 from autoslug import AutoSlugField
 from .choices import HistoryLabel
-from django.contrib.gis.db.models import PointField
 import uuid
 
 
@@ -30,6 +29,7 @@ If is_private = True, secret key is generated as random key for sharing by link,
 If is_free = True, tickets are necessery and are stored in tickets table.
 """
 class Event(models.Model):
+    id = models.UUIDField(primary_key=True, editable=False, default=uuid.uuid4)
     title = models.CharField(max_length=128)
     description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -37,30 +37,18 @@ class Event(models.Model):
     longitude = models.DecimalField(max_digits=8, decimal_places=3, default=0.00)
     latitude = models.DecimalField(max_digits=8, decimal_places=3, default=0.00)
     location_hints = models.CharField(max_length=256, blank=True, null=True)
-    event_datetime = models.DateTimeField()
+    event_datetime = models.DateTimeField() 
     promoter = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    active = models.BooleanField(default=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
     is_free = models.BooleanField(default=True)
     is_private = models.BooleanField(default=False)
-    secret_key = models.UUIDField(editable=False, unique=True, blank=True, null=True)
+    is_active = models.BooleanField(default=True)
     took_place = models.BooleanField(default=False)
+    image = models.ImageField(upload_to='media/events/', null=True)
     
     def __str__(self):
         return self.title
     
-    
-    
-    
-"""
-Images for event
-"""
-class EventImage(models.Model):
-    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='images')
-    file = models.ImageField(upload_to='media/events/')
-    
-    def __str__(self):
-        return self.file.name
     
     
     
@@ -74,6 +62,7 @@ Label field includes the name of that log.
 class EventHistory(models.Model):
     label = models.CharField(max_length=1, choices=HistoryLabel.choices)
     text = models.CharField(max_length=256, blank=True, null=True)
+    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='histories', null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):

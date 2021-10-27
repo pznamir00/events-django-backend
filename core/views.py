@@ -1,12 +1,16 @@
 from rest_framework import viewsets, mixins
-from .serializers import CategorySerializer, EventDetailSerializer, EventSimpleSerializer, FollowedHashTagSerializer
+from rest_framework.generics import get_object_or_404
+from rest_framework.views import APIView
+from .serializers import CategorySerializer, EventDetailSerializer, EventHistorySerializer, EventSimpleSerializer, FollowedHashTagSerializer
 from django.db.models import Case, When, Value
-from .models import Category, FollowedHashTag, Event
+from .models import Category, EventHistory, FollowedHashTag, Event
 from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly, CreateAuthenticatedOnly
 from rest_framework.permissions import IsAuthenticated
 from datetime import datetime
 from django.template.defaultfilters import slugify
 import uuid
+
+from core import serializers
 
 
 
@@ -52,7 +56,7 @@ class EventViewSet(viewsets.ModelViewSet):
     
     def get_queryset(self):
         return Event.objects.filter(
-            active=True,
+            is_active=True,
             is_private=False
         ).annotate(
             event_datetime_expired=Case(
@@ -70,18 +74,34 @@ class EventViewSet(viewsets.ModelViewSet):
         """
         return EventSimpleSerializer if self.action == 'list' else EventDetailSerializer
     
-    def perform_create(self, serializer):
-        data = { 'promoter': self.request.user }
-        if 'is_private' in serializer.validated_data and serializer.validated_data['is_private']:
-            data['secret_key'] = uuid.uuid64
-        return serializer.save(**data)
+    def get_object(self):
+        return get_object_or_404(Event, id=self.kwargs['pk'])
+    
+    def perform_update(self, serializer):
+        """
+        In this point application creates history logs.
+        Each of them is generated automatically based on 
+        updated properties
+        """
+        event = serializer.instance
+        if 'event_datetime' in serializer.validated_data:
+            #Changed event datetime
+            text = str(serializer.instance.event_datetime) + " ===> " + str(serializers.validated_data['event_datetime'])
+            EventHistory.objects.create(event=event, label='1', text=text)
+        if 'is_active' in serializer.validated_data and not serializer.validated_data['is_active']:
+            #Canceled an event
+            EventHistory.objects.create(event=event, label='2')
+        else:
+            #Note update
+            EventHistory.objects.create(event=event, label='3')
+        return serializer.save()
     
     
     
     
     
 class EventOwnListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
-    serializer_class = EventDetailSerializer
+    serializer_class = EventSimpleSerializer
     permission_classes = (IsAuthenticated,)
     
     def get_queryset(self):

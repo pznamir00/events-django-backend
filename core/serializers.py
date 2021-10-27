@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from . import validators
-from .models import Category, Event, EventImage, FollowedHashTag, EventHistory, EventTicket
-from django_base64field.fields import Base64Field
+from .models import Category, Event, FollowedHashTag, EventHistory, EventTicket
+from drf_extra_fields.fields import Base64ImageField
 
 
 
@@ -20,23 +20,7 @@ class CategorySerializer(serializers.ModelSerializer):
 class EventHistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = EventHistory
-        fields = ('label', 'text',)
-        
-        
-        
-        
-        
-class EventImageSerializer(serializers.ModelSerializer):
-    file = Base64Field()
-    
-    class Meta:
-        model = EventImage
-        fields = ('event', 'file',)
-        extra_kwargs = {
-            'file': { 
-                'write_only': True 
-            }
-        }
+        fields = ('label', 'event',)
         
         
         
@@ -52,7 +36,7 @@ class FollowedHashTagSerializer(serializers.ModelSerializer):
 
 
 class EventTicketSerializer(serializers.ModelSerializer):
-    template = Base64Field()
+    template = Base64ImageField()
     quantity = serializers.IntegerField(write_only=True)
     
     class Meta:
@@ -74,14 +58,13 @@ class EventSimpleSerializer(serializers.ModelSerializer):
 
 class EventDetailSerializer(serializers.ModelSerializer):
     ticket = EventTicketSerializer(write_only=True, required=False)
-    images = Base64Field()
     histories = EventHistorySerializer(many=True, read_only=True)
-    
+    image_input = Base64ImageField(write_only=True, required=False)
+
     class Meta:
         model = Event
         fields = '__all__'
-        read_only_fields = ('created_at', 'updated_at', 'promoter',)
-        exclude_fields = ('secret_key',)
+        read_only_fields = ('created_at', 'updated_at', 'promoter', 'image', 'took_place',)
         validators = (
             validators.CheckIfTicketProvidedIfPrivate(),
             validators.CheckGeolocation()
@@ -93,11 +76,12 @@ class EventDetailSerializer(serializers.ModelSerializer):
         }
             
     def create(self, validated_data):
-        template = validated_data.pop('template', None)
-        event = Event.objects.create(**validated_data)
+        ticket = validated_data.pop('ticket', None)
+        image = validated_data.pop('image_input', None)
+        event = Event.objects.create(**validated_data, image=image)
         if not event.is_free:
             EventTicket.objects.create(
                 event=event, 
-                template=template
+                template=ticket,
             )
         return event

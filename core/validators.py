@@ -10,5 +10,6 @@ class CheckIfTicketProvidedIfPrivate:
 
 class CheckGeolocation:
     def __call__(self, value):
-        if not (0 <= value['latitude'] <= 180.00 and 0 <= value['longitude'] <= 180.00):
-            raise serializers.ValidationError("You passed wrong coordinates")
+        if 'latitude' in value and 'longitude' in value:
+            if not (0 <= value['latitude'] <= 180.00 and 0 <= value['longitude'] <= 180.00):
+                raise serializers.ValidationError("You passed wrong coordinates")
