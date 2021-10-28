@@ -3,6 +3,7 @@ from users.models import User
 from autoslug import AutoSlugField
 from .choices import HistoryLabel
 from django.core.validators import FileExtensionValidator
+from .helpers import EventFileNameGenerator
 import uuid
 
 
@@ -45,7 +46,7 @@ class Event(models.Model):
     is_private = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     took_place = models.BooleanField(default=False)
-    image = models.ImageField(upload_to='media/events/', null=True)
+    image = models.ImageField(upload_to=EventFileNameGenerator.generate, null=True)
     
     def __str__(self):
         return self.title
@@ -97,18 +98,6 @@ class EventTemplate(models.Model):
     
     def __str__(self):
         return self.event.title + " Ticket Template"
-
-
-
-
-
-class EventTicket(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
-    template = models.ForeignKey(EventTemplate, on_delete=models.CASCADE)
-    sold = models.BooleanField(default=False)
-    
-    def __str__(self):
-        return "Ticket " + str(self.id)
     
 
 

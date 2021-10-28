@@ -1,8 +1,8 @@
 from rest_framework import serializers
 from . import validators
-from .models import Category, Event, EventTemplate, FollowedHashTag, EventHistory, EventTicket
-from drf_extra_fields.fields import Base64ImageField
-import base64 
+from .models import Category, Event, EventTemplate, FollowedHashTag, EventHistory
+from tickets.helpers import TicketGenerator
+
 
 
 
@@ -41,7 +41,6 @@ class FollowedHashTagSerializer(serializers.ModelSerializer):
 
 
 class EventTemplateSerializer(serializers.ModelSerializer):
-    template = serializers.CharField(required=True)
     quantity = serializers.IntegerField(required=True)
     
     class Meta:
@@ -55,40 +54,43 @@ class EventTemplateSerializer(serializers.ModelSerializer):
 class EventSimpleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
-        fields = ('title', 'latitude', 'longitude', 'event_datetime', 'category', 'is_free',)
+        fields = ('id', 'title', 'latitude', 'longitude', 'event_datetime', 'category', 'is_free',)
 
 
 
 
 
 class EventDetailSerializer(serializers.ModelSerializer):
-    ticket_template = EventTemplateSerializer(write_only=True, required=False)
+    ticket = EventTemplateSerializer(write_only=True, required=False)
     histories = EventHistorySerializer(many=True, read_only=True)
-    image_input = Base64ImageField(write_only=True, required=False)
 
     class Meta:
         model = Event
         fields = '__all__'
-        read_only_fields = ('created_at', 'updated_at', 'promoter', 'image', 'took_place',)
+        read_only_fields = ('created_at', 'updated_at', 'promoter', 'took_place',)
         validators = (
             validators.CheckIfTicketProvidedIfPrivate(),
-            validators.CheckGeolocation()
+            validators.CheckGeolocation(),
         )
         extra_kwargs = {
             'latitude': { 'required': True },
             'longitude': { 'required': True },
             'category': { 'required': True },
         }
+        
+    def validate_ticket(self, value):
+        if 'quantity' not in value or 'template' not in value:
+            raise serializers.ValidationError("Please valid 'ticket' field")
             
     def create(self, validated_data):
-        image = validated_data.pop('image_input', None)
-        ticket_template = validated_data.pop('ticket_template', None)
-        event = Event.objects.create(**validated_data, image=image)
-        if not event.is_free:
-            # save a template
-            template_file = base64.b64decode(ticket_template['template'])
-            template = EventTemplate.objects.create(event=event, template=template_file)
-            for i in range(ticket_template['quantity']):
-                # creating single tickets
-                EventTicket.objects.create(template=template)
+        ticket = validated_data.pop('ticket', None)
+        event = Event.objects.create(**validated_data)
+        TicketGenerator.generate_if_provided(validated_data, ticket, event)
         return event
+    
+    def update(self, instance, validated_data):
+        ticket = validated_data.pop('ticket', None)
+        TicketGenerator.generate_if_provided(validated_data, ticket, instance)
+        instance.save(**validated_data)
+        return instance
+        

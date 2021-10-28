@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'core',
+    'tickets',
     'rest_framework',
     'rest_framework.authtoken',
     'dj_rest_auth',
