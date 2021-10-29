@@ -80,6 +80,8 @@ class EventDetailSerializer(serializers.ModelSerializer):
     
     def update(self, instance, validated_data):
         ticket = validated_data.pop('ticket', None)
+        if validated_data.get('took_place'):
+            validated_data['is_active'] = False
         TicketGenerator.generate_if_provided(validated_data, ticket, instance)
         instance.save(**validated_data)
         return instance

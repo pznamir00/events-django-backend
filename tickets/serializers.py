@@ -1,13 +1,21 @@
 from rest_framework import serializers
-from .models import TicketTemplate
+from .models import Ticket, TicketTemplate
 from django.core.validators import MinValueValidator
 
 
 
 
 
-class TicketSerializer(serializers.Serializer):
+class TicketPurchaseSerializer(serializers.Serializer):
     email = serializers.EmailField(required=True)
+
+
+
+
+class TicketSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ticket
+        exclude = ('template',)
 
 
 

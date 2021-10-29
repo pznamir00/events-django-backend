@@ -1,24 +1,53 @@
 from rest_framework.views import APIView
+from rest_framework.generics import RetrieveAPIView
 from rest_framework.response import Response
 from core.models import Event
-from .serializers import TicketSerializer
-from rest_framework.permissions import AllowAny
+from .serializers import TicketSerializer, TicketPurchaseSerializer
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from .permissions import IsOwner
 from .models import Ticket
+from rest_framework import status
 from django.http import Http404
 from .helpers import TicketWithQRCodeSender
 
-class TicketAPIView(APIView):
+
+
+
+
+class TicketCheckerAPIView(APIView):
     serializer_class = TicketSerializer
+    permission_classes = (IsAuthenticated, IsOwner,)
+
+    def get_object(self, event_id, ticket_id):
+        try:
+            return Ticket.objects.get(id=ticket_id, template__event=event_id, is_used=False, is_sold=True)
+        except:
+            raise Http404
+
+    def get(self, request, event_id, ticket_id):
+        """
+        This route checks if received event_id and ticket_id are valid
+        and belongs ticket to this event.
+        If it's so, then marks a ticket as used, otherwise returns an error
+        """
+        obj = self.get_object(event_id, ticket_id)
+        obj.is_used = True
+        obj.save()
+        serializer = self.serializer_class(instance=obj)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+
+
+class TicketAPIView(APIView):
+    serializer_class = TicketPurchaseSerializer
     permission_classes = (AllowAny,)
     
     def get_object(self, event_id):
         """
         Get first available ticket that belongs to the choosed event
         """
-        return Ticket.objects.filter(template__event=event_id).first()
-
-    def get(self, request, event_id=None):
-        print(event_id)
+        return Ticket.objects.filter(template__event=event_id, is_sold=False).first()
     
     def post(self, request, event_id):
         """
@@ -42,17 +71,17 @@ class TicketAPIView(APIView):
             if serializer.is_valid():
                 obj = self.get_object(event_id)
                 if not obj:
-                    return Http404
+                    raise Http404
                 
                 """
                 Generate PDF and send to provided email address
                 """
                 TicketWithQRCodeSender.generate_and_send(serializer.data['email'], obj)
-                obj.sold = True
+                obj.is_sold = True
                 obj.save()
                 return Response({
                     'Message': 'The ticket was sent to the provided email address. You should be able to see it in a moment',
                     'data': serializer.data
-                })
+                }, status=HTTP_200_OK)
             return Response(serializer.errors)
-        return Http404
+        raise Http404

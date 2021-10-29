@@ -1,13 +1,15 @@
 from rest_framework import viewsets, mixins
 from rest_framework.generics import get_object_or_404
 from rest_framework.views import APIView
-from .serializers import CategorySerializer, EventDetailSerializer, EventSimpleSerializer, FollowedHashTagSerializer
-from django.db.models import Case, When, Value
-from .models import Category, EventHistory, FollowedHashTag, Event
-from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly, CreateAuthenticatedOnly
 from rest_framework.permissions import IsAuthenticated
 from datetime import datetime
 from django.template.defaultfilters import slugify
+from django.db.models import Case, When, Value
+from django_filters import rest_framework as filters
+from .serializers import CategorySerializer, EventDetailSerializer, EventSimpleSerializer, FollowedHashTagSerializer
+from .models import Category, EventHistory, FollowedHashTag, Event
+from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly, CreateAuthenticatedOnly
+from .filters import EventFilterSet
 
 
 
@@ -50,6 +52,7 @@ class FollowedHashTagView(
 class EventViewSet(viewsets.ModelViewSet):
     serializer_class = EventDetailSerializer
     permission_classes = (IsOwnerOrReadOnly, CreateAuthenticatedOnly,)
+    filter_backends = (filters.DjangoFilterBackend, EventFilterSet,)
     
     def get_queryset(self):
         return Event.objects.filter(

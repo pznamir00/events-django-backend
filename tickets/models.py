@@ -26,7 +26,8 @@ class TicketTemplate(models.Model):
 class Ticket(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)
     template = models.ForeignKey(TicketTemplate, on_delete=models.CASCADE)
-    sold = models.BooleanField(default=False)
+    is_used = models.BooleanField(default=False)
+    is_sold = models.BooleanField(default=False)
     
     def __str__(self):
         return "Ticket " + str(self.id)
