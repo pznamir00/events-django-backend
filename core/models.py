@@ -2,7 +2,6 @@ from django.db import models
 from users.models import User
 from autoslug import AutoSlugField
 from .choices import HistoryLabel
-from django.core.validators import FileExtensionValidator
 from .helpers import EventFileNameGenerator
 import uuid
 
@@ -46,7 +45,7 @@ class Event(models.Model):
     is_private = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     took_place = models.BooleanField(default=False)
-    image = models.ImageField(upload_to=EventFileNameGenerator.generate, null=True)
+    image = models.ImageField(upload_to=EventFileNameGenerator.generate, null=True, blank=True)
     
     def __str__(self):
         return self.title
@@ -83,21 +82,6 @@ class FollowedHashTag(models.Model):
     
     def __str__(self):
         return '#' + self.value
-    
-    
-    
-    
-"""
-If event is private is necessery to get a ticket before arrive to event
-Each ticket is generated based on template file with unique key as id of that ticket.
-The quantity of tickets depends on promotor of event.
-"""
-class EventTemplate(models.Model):
-    event = models.OneToOneField(Event, on_delete=models.CASCADE)
-    template = models.FileField(upload_to='media/tickets/', validators=[FileExtensionValidator(['pdf'])])
-    
-    def __str__(self):
-        return self.event.title + " Ticket Template"
     
 
 

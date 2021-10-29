@@ -5,7 +5,7 @@ from .serializers import TicketSerializer
 from rest_framework.permissions import AllowAny
 from .models import Ticket
 from django.http import Http404
-from .helpers import TicketWithQRCodeGenerator
+from .helpers import TicketWithQRCodeSender
 
 class TicketAPIView(APIView):
     serializer_class = TicketSerializer
@@ -16,6 +16,9 @@ class TicketAPIView(APIView):
         Get first available ticket that belongs to the choosed event
         """
         return Ticket.objects.filter(template__event=event_id).first()
+
+    def get(self, request, event_id=None):
+        print(event_id)
     
     def post(self, request, event_id):
         """
@@ -44,7 +47,9 @@ class TicketAPIView(APIView):
                 """
                 Generate PDF and send to provided email address
                 """
-                TicketWithQRCodeGenerator.generate_and_send(serializer.data['email'], obj)
+                TicketWithQRCodeSender.generate_and_send(serializer.data['email'], obj)
+                obj.sold = True
+                obj.save()
                 return Response({
                     'Message': 'The ticket was sent to the provided email address. You should be able to see it in a moment',
                     'data': serializer.data

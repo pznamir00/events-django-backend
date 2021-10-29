@@ -1,7 +1,8 @@
 from rest_framework import serializers
 from . import validators
-from .models import Category, Event, EventTemplate, FollowedHashTag, EventHistory
+from .models import Category, Event, FollowedHashTag, EventHistory
 from tickets.helpers import TicketGenerator
+from tickets.serializers import TicketTemplateSerializer
 
 
 
@@ -35,17 +36,6 @@ class FollowedHashTagSerializer(serializers.ModelSerializer):
     class Meta:
         model = FollowedHashTag
         fields = ('value',)
-
-
-
-
-
-class EventTemplateSerializer(serializers.ModelSerializer):
-    quantity = serializers.IntegerField(required=True)
-    
-    class Meta:
-        model = EventTemplate
-        fields = ('template', 'quantity',)
         
         
         
@@ -61,7 +51,7 @@ class EventSimpleSerializer(serializers.ModelSerializer):
 
 
 class EventDetailSerializer(serializers.ModelSerializer):
-    ticket = EventTemplateSerializer(write_only=True, required=False)
+    ticket = TicketTemplateSerializer(write_only=True, required=False)
     histories = EventHistorySerializer(many=True, read_only=True)
 
     class Meta:
