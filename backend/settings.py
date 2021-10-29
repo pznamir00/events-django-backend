@@ -86,11 +86,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'x',
+        'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': 'skate886',
-        'HOST': 'localhost',
-        'PORT': '',
+        'PASSWORD': 'postgres',
+        'HOST': '_2db',
+        'PORT': '5432',
     }
 }
 
@@ -149,7 +149,6 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_FILTER_BACKENDS': (
         'django_filters.rest_framework.DjangoFilterBackend',
-        ...
     ),
 }
 

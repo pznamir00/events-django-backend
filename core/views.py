@@ -50,9 +50,11 @@ class FollowedHashTagView(
 
     
 class EventViewSet(viewsets.ModelViewSet):
+    queryset = Event.objects.all()
     serializer_class = EventDetailSerializer
     permission_classes = (IsOwnerOrReadOnly, CreateAuthenticatedOnly,)
-    filter_backends = (filters.DjangoFilterBackend, EventFilterSet,)
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_class = EventFilterSet
     
     def get_queryset(self):
         return Event.objects.filter(
