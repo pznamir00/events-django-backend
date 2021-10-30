@@ -9,7 +9,10 @@ RUN pip install -r requirements.txt
 #Django gis
 RUN apt-get update -y
 RUN apt-get install -y gdal-bin
+RUN apt-get update -y
+RUN apt install -y python3-gdal
 
+#copy source code
 COPY . /code/
 
 #migrations entrypoint

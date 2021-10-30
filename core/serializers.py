@@ -60,11 +60,8 @@ class EventDetailSerializer(serializers.ModelSerializer):
         read_only_fields = ('created_at', 'updated_at', 'promoter', 'took_place',)
         validators = (
             validators.CheckIfTicketProvidedIfPrivate(),
-            validators.CheckGeolocation(),
         )
         extra_kwargs = {
-            'latitude': { 'required': True },
-            'longitude': { 'required': True },
             'category': { 'required': True },
         }
         

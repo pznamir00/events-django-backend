@@ -3,6 +3,7 @@ from users.models import User
 from autoslug import AutoSlugField
 from .choices import HistoryLabel
 from .helpers import EventFileNameGenerator
+from django.contrib.gis.db.models import PointField
 import uuid
 
 
@@ -35,8 +36,7 @@ class Event(models.Model):
     description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    longitude = models.DecimalField(max_digits=8, decimal_places=3, default=0.00)
-    latitude = models.DecimalField(max_digits=8, decimal_places=3, default=0.00)
+    location = PointField(geography=True, null=True)
     location_hints = models.CharField(max_length=256, blank=True, null=True)
     event_datetime = models.DateTimeField() 
     promoter = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)

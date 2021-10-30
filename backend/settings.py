@@ -85,11 +85,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': '_2db',
+        'HOST': '_5db',
         'PORT': '5432',
     }
 }
@@ -156,5 +156,5 @@ SITE_ID = 1
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'pznamir00@gmail.com'
-EMAIL_HOST_PASSWORD = 'skate886'
+EMAIL_HOST_USER = '***'
+EMAIL_HOST_PASSWORD = '***'

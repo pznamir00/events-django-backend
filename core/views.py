@@ -1,15 +1,12 @@
 from rest_framework import viewsets, mixins
 from rest_framework.generics import get_object_or_404
-from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
-from datetime import datetime
 from django.template.defaultfilters import slugify
-from django.db.models import Case, When, Value
 from django_filters import rest_framework as filters
 from .serializers import CategorySerializer, EventDetailSerializer, EventSimpleSerializer, FollowedHashTagSerializer
 from .models import Category, EventHistory, FollowedHashTag, Event
 from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly, CreateAuthenticatedOnly
-from .filters import EventFilterSet
+from .filters import EventFilterSet, EventOrderingFilter
 
 
 
@@ -50,25 +47,13 @@ class FollowedHashTagView(
 
     
 class EventViewSet(viewsets.ModelViewSet):
-    queryset = Event.objects.all()
+    queryset = Event.objects.filter(is_active=True, is_private=False)
     serializer_class = EventDetailSerializer
     permission_classes = (IsOwnerOrReadOnly, CreateAuthenticatedOnly,)
     filter_backends = (filters.DjangoFilterBackend,)
     filter_class = EventFilterSet
-    
-    def get_queryset(self):
-        return Event.objects.filter(
-            is_active=True,
-            is_private=False
-        ).annotate(
-            event_datetime_expired=Case(
-                When(event_datetime__lte=datetime.now(), then=Value('0')),
-                default=Value('1')
-            )
-        ).order_by(
-            'event_datetime_expired',
-            '-created_at'
-        )
+    filter_backends = (EventOrderingFilter,)
+    ordering_fields = ('distance', 'event_datetime_expired', '-create_at',)
     
     def get_serializer_class(self):
         """
@@ -93,7 +78,10 @@ class EventViewSet(viewsets.ModelViewSet):
             #Changed event datetime
             text = str(serializer.instance.event_datetime) + " ===> " + str(serializer.validated_data['event_datetime'])
             EventHistory.objects.create(event=event, label='1', text=text)
-        if 'is_active' in serializer.validated_data and not serializer.validated_data['is_active']:
+        if serializer.validated_data.get('took_place'):
+            #The event took place
+            EventHistory.objects.create(event=event, label='4')
+        if serializer.validated_data.get('is_active') == False:
             #Canceled an event
             EventHistory.objects.create(event=event, label='2')
         else:
