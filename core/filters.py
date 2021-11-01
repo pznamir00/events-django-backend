@@ -87,7 +87,7 @@ class EventOrderingFilter(OrderingFilter):
             """
             lat = self.request.query_params.get('latitude')
             lon = self.request.query_params.get('longitude')
-            queryset.annotate(distance=Distance("location", Point(lat, lon)))
+            queryset.annotate(distance=Distance("location", Point(float(lat), float(lon))))
         except:
             queryset.annotate(distance=Value(0))
         
