@@ -1,0 +1,10 @@
+<p>In last 24 hours in our system appeard some new events that may interest you based on your followed hashtags</p>
+<ul>
+    {% for event in events %}
+        <li>
+            <a href="#">
+                {{ event.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

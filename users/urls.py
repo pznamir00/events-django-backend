@@ -3,6 +3,8 @@ from . import views
 
 
 urlpatterns = [
-    path('', include('dj_rest_auth.urls')),
     path('user/', views.UserAPIView.as_view()),
+    path('registration/', include('dj_rest_auth.registration.urls')),
+    path('password/', include('django.contrib.auth.urls')),
+    path('', include('dj_rest_auth.urls')),
 ]

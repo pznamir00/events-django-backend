@@ -43,9 +43,9 @@ class EventFilterSet(filters.FilterSet):
         (fields 'latitude' and 'longitude' are required)
         """       
         try:
-            lat = self.request.query_params.get('latitude')
-            lon = self.request.query_params.get('longitude')
-            point = Point(lat, lon)
+            lat = self.request.query_params['latitude']
+            lon = self.request.query_params['longitude']
+            point = Point(float(lat), float(lon))
         except:
             raise ValidationError("Excepted 'latitude' and 'longitude' parameters (both decimal) when you pass 'range' field")
         return queryset.filter(location__dwithin=(point, D(km=value)))

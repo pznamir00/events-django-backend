@@ -47,12 +47,10 @@ class FollowedHashTagView(
 
     
 class EventViewSet(viewsets.ModelViewSet):
-    queryset = Event.objects.filter(is_active=True, is_private=False)
-    serializer_class = EventDetailSerializer
+    queryset = Event.objects.filter(is_private=False, canceled=False, took_place=False)
     permission_classes = (IsOwnerOrReadOnly, CreateAuthenticatedOnly,)
-    filter_backends = (filters.DjangoFilterBackend,)
+    filter_backends = (filters.DjangoFilterBackend, EventOrderingFilter,)
     filter_class = EventFilterSet
-    filter_backends = (EventOrderingFilter,)
     ordering_fields = ('distance', 'event_datetime_expired', '-create_at',)
     
     def get_serializer_class(self):
@@ -60,9 +58,6 @@ class EventViewSet(viewsets.ModelViewSet):
         For list method user can get simplify version of objects.
         """
         return EventSimpleSerializer if self.action == 'list' else EventDetailSerializer
-    
-    def get_object(self):
-        return get_object_or_404(Event, id=self.kwargs['pk'])
     
     def perform_create(self, serializer):
         return serializer.save(promoter=self.request.user)
@@ -81,7 +76,7 @@ class EventViewSet(viewsets.ModelViewSet):
         if serializer.validated_data.get('took_place'):
             #The event took place
             EventHistory.objects.create(event=event, label='4')
-        if serializer.validated_data.get('is_active') == False:
+        if serializer.validated_data.get('canceled') == True:
             #Canceled an event
             EventHistory.objects.create(event=event, label='2')
         else:

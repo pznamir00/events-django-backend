@@ -3,6 +3,7 @@ from . import validators
 from .models import Category, Event, FollowedHashTag, EventHistory
 from tickets.helpers import TicketGenerator
 from tickets.serializers import TicketTemplateSerializer
+from drf_extra_fields.geo_fields import PointField
 
 
 
@@ -44,7 +45,7 @@ class FollowedHashTagSerializer(serializers.ModelSerializer):
 class EventSimpleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
-        fields = ('id', 'title', 'latitude', 'longitude', 'event_datetime', 'category', 'is_free',)
+        fields = ('id', 'title', 'location' ,'event_datetime', 'category', 'is_free',)
 
 
 
@@ -53,16 +54,16 @@ class EventSimpleSerializer(serializers.ModelSerializer):
 class EventDetailSerializer(serializers.ModelSerializer):
     ticket = TicketTemplateSerializer(write_only=True, required=False)
     histories = EventHistorySerializer(many=True, read_only=True)
+    location = PointField()
 
     class Meta:
         model = Event
         fields = '__all__'
         read_only_fields = ('created_at', 'updated_at', 'promoter', 'took_place',)
-        validators = (
-            validators.CheckIfTicketProvidedIfPrivate(),
-        )
+        validators = [validators.CheckIfTicketProvidedIfPrivate()]
         extra_kwargs = {
             'category': { 'required': True },
+            'location': { 'required': True }
         }
         
     def validate_ticket(self, value):
@@ -77,9 +78,6 @@ class EventDetailSerializer(serializers.ModelSerializer):
     
     def update(self, instance, validated_data):
         ticket = validated_data.pop('ticket', None)
-        if validated_data.get('took_place'):
-            validated_data['is_active'] = False
         TicketGenerator.generate_if_provided(validated_data, ticket, instance)
-        instance.save(**validated_data)
-        return instance
+        return super(EventDetailSerializer, self).update(instance, validated_data)
         

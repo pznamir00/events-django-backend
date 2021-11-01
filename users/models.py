@@ -14,7 +14,7 @@ class User(AbstractUser):
     street = models.CharField(max_length=128)
     home_nb = models.CharField(max_length=16)
     zip_code = models.CharField(max_length=16)
-    avatar = models.ImageField(upload_to='media/avatars', null=True)
+    avatar = models.ImageField(upload_to='media/avatars', null=True, blank=True)
     
     def __str__(self):
         return self.email

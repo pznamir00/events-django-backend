@@ -11,10 +11,14 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-from django.core.management.utils import get_random_secret_key  
+from django.core.management.utils import get_random_secret_key
+from celery.schedules import crontab
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
 
 
 # Quick-start development settings - unsuitable for production
@@ -45,9 +49,19 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'dj_rest_auth',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.twitter',
     'phonenumber_field',
     'django_filters',
+    'django_celery_results',
+    'django_celery_beat',
 ]
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -64,7 +78,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'static/templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -89,7 +103,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': '_5db',
+        'HOST': 'database',
         'PORT': '5432',
     }
 }
@@ -133,6 +147,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/') # 'data' is my media folder
+
+MEDIA_URL = '/media/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -152,9 +170,29 @@ REST_FRAMEWORK = {
     ),
 }
 
+REST_AUTH_REGISTER_SERIALIZERS = {
+    'REGISTER_SERIALIZER': 'users.serializers.ExtendedRegisterSerializer'
+}
+
 SITE_ID = 1
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = '***'
 EMAIL_HOST_PASSWORD = '***'
+
+
+
+CELERY_TIMEZONE = "Europe/London"
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
+CELERY_BROKER_URL = os.environ.get('CELERY_BROKER', 'redis://redis:6379/0')
+CELERY_BROKER_BACKEND = os.environ.get('CELERY_BROKER', 'redis://redis:6379/0')
+BROKER_URL = 'django://'
+
+CELERY_BEAT_SCHEDULE = {
+    'send_emails': {
+        'task': 'core.tasks.send_emails',
+        'schedule': 10
+    }
+}

@@ -82,6 +82,6 @@ class TicketAPIView(APIView):
                 return Response({
                     'Message': 'The ticket was sent to the provided email address. You should be able to see it in a moment',
                     'data': serializer.data
-                }, status=HTTP_200_OK)
+                }, status=status.HTTP_200_OK)
             return Response(serializer.errors)
         raise Http404

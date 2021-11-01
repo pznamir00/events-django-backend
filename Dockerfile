@@ -10,12 +10,10 @@ RUN pip install -r requirements.txt
 RUN apt-get update -y
 RUN apt-get install -y gdal-bin
 RUN apt-get update -y
-RUN apt install -y python3-gdal
+RUN apt-get install -y python3-gdal
+RUN apt-get update -y
+RUN apt-get install -y rabbitmq-server 
 
 #copy source code
 COPY . /code/
 
-#migrations entrypoint
-COPY migrate-entrypoint.sh /code/migrate-entrypoint.sh
-RUN chmod +x migrate-entrypoint.sh
-ENTRYPOINT ["sh", "migrate-entrypoint.sh"]

@@ -43,8 +43,8 @@ class Event(models.Model):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
     is_free = models.BooleanField(default=True)
     is_private = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=True)
     took_place = models.BooleanField(default=False)
+    canceled = models.BooleanField(default=False)
     image = models.ImageField(upload_to=EventFileNameGenerator.generate, null=True, blank=True)
     
     def __str__(self):
@@ -78,7 +78,7 @@ for getting easy access and find quickty new events.
 """
 class FollowedHashTag(models.Model):
     value = models.CharField(max_length=128)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='followed_hashtags')
     
     def __str__(self):
         return '#' + self.value
