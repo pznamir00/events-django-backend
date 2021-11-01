@@ -40,5 +40,6 @@ class UserSerializer(serializers.ModelSerializer):
             'street',
             'home_nb',
             'zip_code',
+            'avatar',
         )
         read_only_fields = ('email', 'is_superuser',)
