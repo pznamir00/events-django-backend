@@ -2,12 +2,12 @@
 <hr/>
 <div>
     <h3>Description</h3>
-    <p>
+    <small>
         Events-Django-App is an application that provides a database of events in the user's area. Application is splited for3 parts: core, users and tickets.<br/>
         <b>Core</b> part provides the events catalog and related models for user. Addltionally has a system of sending emails to users with Celery.<br/>
         <b>Users</b> includes a authorization system and extends default Django User model.<br/>
         <b>Tickets</b> is very easy selling tickets system. By default events are free for everybody but there is an option to set 'is_free'=False. Then user has to provides a ticket file that will be selling for clients. That part generates a new ticket with unique QR code and send it to user's email.
-    </p>
+    </small>
 </div>
 <hr/>
 <div>
