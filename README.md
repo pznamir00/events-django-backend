@@ -31,7 +31,7 @@
             <ul>
                 <li>
                     <b>CRUD categories/</b> - crud for category model; write only for admin
-                    <p>Fields: [name]</p>    
+                    <p>Fields: [name]</p>
                 </li>
                 <li>
                     <b>GET, POST, DELETE followed-hashtags/</b> - handling of followed hashtags for user (required authorization)
@@ -62,7 +62,7 @@
                         <li>DELETE {id}/ - destroy (required authorization as owner)</li>
                     </ul>
                 </li>
-            </ul>    
+            </ul>
         </li>
         <li>
             Users (prefix: /api/users/)
@@ -77,7 +77,7 @@
                     <b>POST register/</b> - register new user
                     <p>Fields: [email, username, password1, password2, phone_number, country, state, city, street, home_nb, zip_code]</p>
                 </li>
-            </ul>   
+            </ul>
         </li>
         <li>
             Tickets (prefix: /api/tickets/)

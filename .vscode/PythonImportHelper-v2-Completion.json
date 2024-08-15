@@ -1206,7 +1206,7 @@
         "kind": 5,
         "importPath": "backend.celery",
         "description": "backend.celery",
-        "peekOfCode": "app = Celery('backend')\napp.config_from_object('django.conf:settings', namespace='CELERY')\napp.autodiscover_tasks()",
+        "peekOfCode": "app = Celery(\"backend\")\napp.config_from_object(\"django.conf:settings\", namespace=\"CELERY\")\napp.autodiscover_tasks()",
         "detail": "backend.celery",
         "documentation": {}
     },
@@ -1548,7 +1548,7 @@
         "kind": 5,
         "importPath": "backend.urls",
         "description": "backend.urls",
-        "peekOfCode": "urlpatterns = [\n    path('api/auth/', include('users.urls')),\n    path('api/core/', include('core.urls')),\n    path('api/tickets/', include('tickets.urls')),\n    path('admin/', admin.site.urls)\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"api/auth/\", include(\"users.urls\")),\n    path(\"api/core/\", include(\"core.urls\")),\n    path(\"api/tickets/\", include(\"tickets.urls\")),\n    path(\"admin/\", admin.site.urls),\n]",
         "detail": "backend.urls",
         "documentation": {}
     },
@@ -1566,7 +1566,7 @@
         "kind": 6,
         "importPath": "core.migrations.0001_initial",
         "description": "core.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Category',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Category\",\n            fields=[\n                (",
         "detail": "core.migrations.0001_initial",
         "documentation": {}
     },
@@ -1575,7 +1575,7 @@
         "kind": 6,
         "importPath": "core.migrations.0002_rename_id_event_key",
         "description": "core.migrations.0002_rename_id_event_key",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0001_initial'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='event',\n            old_name='id',\n            new_name='key',\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"event\",\n            old_name=\"id\",\n            new_name=\"key\",\n        ),",
         "detail": "core.migrations.0002_rename_id_event_key",
         "documentation": {}
     },
@@ -1584,7 +1584,7 @@
         "kind": 6,
         "importPath": "core.migrations.0003_rename_key_event_id",
         "description": "core.migrations.0003_rename_key_event_id",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0002_rename_id_event_key'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='event',\n            old_name='key',\n            new_name='ID',\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0002_rename_id_event_key\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"event\",\n            old_name=\"key\",\n            new_name=\"ID\",\n        ),",
         "detail": "core.migrations.0003_rename_key_event_id",
         "documentation": {}
     },
@@ -1593,7 +1593,7 @@
         "kind": 6,
         "importPath": "core.migrations.0004_rename_id_event_id",
         "description": "core.migrations.0004_rename_id_event_id",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0003_rename_key_event_id'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='event',\n            old_name='ID',\n            new_name='id',\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0003_rename_key_event_id\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"event\",\n            old_name=\"ID\",\n            new_name=\"id\",\n        ),",
         "detail": "core.migrations.0004_rename_id_event_id",
         "documentation": {}
     },
@@ -1602,7 +1602,7 @@
         "kind": 6,
         "importPath": "core.migrations.0005_eventhistory_event",
         "description": "core.migrations.0005_eventhistory_event",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0004_rename_id_event_id'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='eventhistory',\n            name='event',\n            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='histories', to='core.event'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0004_rename_id_event_id\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"eventhistory\",\n            name=\"event\",\n            field=models.ForeignKey(\n                null=True,",
         "detail": "core.migrations.0005_eventhistory_event",
         "documentation": {}
     },
@@ -1611,7 +1611,7 @@
         "kind": 6,
         "importPath": "core.migrations.0006_auto_20211027_1949",
         "description": "core.migrations.0006_auto_20211027_1949",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0005_eventhistory_event'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='event',\n            name='is_active',\n            field=models.BooleanField(default=True),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0005_eventhistory_event\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"event\",\n            name=\"is_active\",\n            field=models.BooleanField(default=True),\n        ),",
         "detail": "core.migrations.0006_auto_20211027_1949",
         "documentation": {}
     },
@@ -1620,7 +1620,7 @@
         "kind": 6,
         "importPath": "core.migrations.0007_auto_20211027_2059",
         "description": "core.migrations.0007_auto_20211027_2059",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0006_auto_20211027_1949'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='eventticket',\n            name='event',\n        ),\n        migrations.CreateModel(",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0006_auto_20211027_1949\"),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name=\"eventticket\",\n            name=\"event\",\n        ),\n        migrations.CreateModel(",
         "detail": "core.migrations.0007_auto_20211027_2059",
         "documentation": {}
     },
@@ -1629,7 +1629,7 @@
         "kind": 6,
         "importPath": "core.migrations.0008_auto_20211028_1819",
         "description": "core.migrations.0008_auto_20211028_1819",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0007_auto_20211027_2059'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='event',\n            name='image',\n            field=models.ImageField(null=True, upload_to=core.helpers.EventFileNameGenerator.generate),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0007_auto_20211027_2059\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"event\",\n            name=\"image\",\n            field=models.ImageField(\n                null=True, upload_to=core.helpers.EventFileNameGenerator.generate",
         "detail": "core.migrations.0008_auto_20211028_1819",
         "documentation": {}
     },
@@ -1638,7 +1638,7 @@
         "kind": 6,
         "importPath": "core.migrations.0009_remove_eventtemplate_event",
         "description": "core.migrations.0009_remove_eventtemplate_event",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0008_auto_20211028_1819'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='eventtemplate',\n            name='event',\n        ),\n    ]",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0008_auto_20211028_1819\"),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name=\"eventtemplate\",\n            name=\"event\",\n        ),\n    ]",
         "detail": "core.migrations.0009_remove_eventtemplate_event",
         "documentation": {}
     },
@@ -1647,7 +1647,7 @@
         "kind": 6,
         "importPath": "core.migrations.0010_delete_eventtemplate",
         "description": "core.migrations.0010_delete_eventtemplate",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0009_remove_eventtemplate_event'),\n        ('tickets', '0002_auto_20211029_0930'),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name='EventTemplate',\n        ),\n    ]",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0009_remove_eventtemplate_event\"),\n        (\"tickets\", \"0002_auto_20211029_0930\"),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name=\"EventTemplate\",\n        ),\n    ]",
         "detail": "core.migrations.0010_delete_eventtemplate",
         "documentation": {}
     },
@@ -1656,7 +1656,7 @@
         "kind": 6,
         "importPath": "core.migrations.0011_alter_event_image",
         "description": "core.migrations.0011_alter_event_image",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0010_delete_eventtemplate'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='event',\n            name='image',\n            field=models.ImageField(blank=True, null=True, upload_to=core.helpers.EventFileNameGenerator.generate),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0010_delete_eventtemplate\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"event\",\n            name=\"image\",\n            field=models.ImageField(\n                blank=True,",
         "detail": "core.migrations.0011_alter_event_image",
         "documentation": {}
     },
@@ -1665,7 +1665,7 @@
         "kind": 6,
         "importPath": "core.migrations.0012_event_location",
         "description": "core.migrations.0012_event_location",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0011_alter_event_image'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='event',\n            name='location',\n            field=django.contrib.gis.db.models.fields.PointField(null=True, srid=4326),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0011_alter_event_image\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"event\",\n            name=\"location\",\n            field=django.contrib.gis.db.models.fields.PointField(null=True, srid=4326),\n        ),",
         "detail": "core.migrations.0012_event_location",
         "documentation": {}
     },
@@ -1674,7 +1674,7 @@
         "kind": 6,
         "importPath": "core.migrations.0013_auto_20211030_1604",
         "description": "core.migrations.0013_auto_20211030_1604",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0012_event_location'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='event',\n            name='latitude',\n        ),\n        migrations.RemoveField(",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0012_event_location\"),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name=\"event\",\n            name=\"latitude\",\n        ),\n        migrations.RemoveField(",
         "detail": "core.migrations.0013_auto_20211030_1604",
         "documentation": {}
     },
@@ -1683,7 +1683,7 @@
         "kind": 6,
         "importPath": "core.migrations.0014_alter_eventhistory_label",
         "description": "core.migrations.0014_alter_eventhistory_label",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0013_auto_20211030_1604'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='eventhistory',\n            name='label',\n            field=models.CharField(choices=[('1', 'Moved'), ('2', 'Canceled'), ('3', 'Details Changed'), ('4', 'Took place')], max_length=1),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0013_auto_20211030_1604\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"eventhistory\",\n            name=\"label\",\n            field=models.CharField(\n                choices=[",
         "detail": "core.migrations.0014_alter_eventhistory_label",
         "documentation": {}
     },
@@ -1692,7 +1692,7 @@
         "kind": 6,
         "importPath": "core.migrations.0015_auto_20211101_1057",
         "description": "core.migrations.0015_auto_20211101_1057",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0014_alter_eventhistory_label'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='event',\n            name='is_active',\n        ),\n        migrations.AddField(",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0014_alter_eventhistory_label\"),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name=\"event\",\n            name=\"is_active\",\n        ),\n        migrations.AddField(",
         "detail": "core.migrations.0015_auto_20211101_1057",
         "documentation": {}
     },
@@ -1701,7 +1701,7 @@
         "kind": 6,
         "importPath": "core.migrations.0016_alter_followedhashtag_user",
         "description": "core.migrations.0016_alter_followedhashtag_user",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('core', '0015_auto_20211101_1057'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='followedhashtag',\n            name='user',\n            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='followed_hashtags', to=settings.AUTH_USER_MODEL),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        (\"core\", \"0015_auto_20211101_1057\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"followedhashtag\",\n            name=\"user\",\n            field=models.ForeignKey(",
         "detail": "core.migrations.0016_alter_followedhashtag_user",
         "documentation": {}
     },
@@ -1710,7 +1710,7 @@
         "kind": 6,
         "importPath": "core.apps",
         "description": "core.apps",
-        "peekOfCode": "class CoreConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'core'",
+        "peekOfCode": "class CoreConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"core\"",
         "detail": "core.apps",
         "documentation": {}
     },
@@ -1719,7 +1719,7 @@
         "kind": 6,
         "importPath": "core.choices",
         "description": "core.choices",
-        "peekOfCode": "class HistoryLabel(models.TextChoices):\n    MOVED = '1', 'Moved'\n    CANCELED = '2', 'Canceled'\n    DETAILS_CHANGED = '3', 'Details Changed'\n    TOOK_PLACE = '4', 'Took place'",
+        "peekOfCode": "class HistoryLabel(models.TextChoices):\n    MOVED = \"1\", \"Moved\"\n    CANCELED = \"2\", \"Canceled\"\n    DETAILS_CHANGED = \"3\", \"Details Changed\"\n    TOOK_PLACE = \"4\", \"Took place\"",
         "detail": "core.choices",
         "documentation": {}
     },
@@ -1728,7 +1728,7 @@
         "kind": 6,
         "importPath": "core.filters",
         "description": "core.filters",
-        "peekOfCode": "class EventFilterSet(filters.FilterSet):\n    range = filters.NumberFilter(method='filter_by_range')\n    keywords = filters.CharFilter('keywords', method='filter_by_keywords')\n    created_at = filters.DateRangeFilter()\n    updated_at = filters.DateRangeFilter()\n    event_datetime = filters.DateRangeFilter()\n    category = filters.NumberFilter('category')\n    promoter = filters.NumberFilter('promoter')\n    is_free = filters.BooleanFilter('is_free')\n    class Meta:",
+        "peekOfCode": "class EventFilterSet(filters.FilterSet):\n    range = filters.NumberFilter(method=\"filter_by_range\")\n    keywords = filters.CharFilter(\"keywords\", method=\"filter_by_keywords\")\n    created_at = filters.DateRangeFilter()\n    updated_at = filters.DateRangeFilter()\n    event_datetime = filters.DateRangeFilter()\n    category = filters.NumberFilter(\"category\")\n    promoter = filters.NumberFilter(\"promoter\")\n    is_free = filters.BooleanFilter(\"is_free\")\n    class Meta:",
         "detail": "core.filters",
         "documentation": {}
     },
@@ -1746,7 +1746,7 @@
         "kind": 6,
         "importPath": "core.helpers",
         "description": "core.helpers",
-        "peekOfCode": "class EventFileNameGenerator:\n    def generate(instance, filename):\n        extension = filename.split('.')[-1]\n        return 'media/events/' + str(uuid.uuid4()) + '.' + extension",
+        "peekOfCode": "class EventFileNameGenerator:\n    def generate(instance, filename):\n        extension = filename.split(\".\")[-1]\n        return \"media/events/\" + str(uuid.uuid4()) + \".\" + extension",
         "detail": "core.helpers",
         "documentation": {}
     },
@@ -1755,7 +1755,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Category(models.Model):\n    name = models.CharField(max_length=64, unique=True)\n    slug = AutoSlugField(populate_from='name')\n    def __str__(self):\n        return self.name\n\"\"\"\nMain Event model.\nIt includes all necessery data for schedule a meeting (place, time etc.)\nThis objects have own images and history additionally.\nIf is_private = True, secret key is generated as random key for sharing by link,",
+        "peekOfCode": "class Category(models.Model):\n    name = models.CharField(max_length=64, unique=True)\n    slug = AutoSlugField(populate_from=\"name\")\n    def __str__(self):\n        return self.name\n\"\"\"\nMain Event model.\nIt includes all necessery data for schedule a meeting (place, time etc.)\nThis objects have own images and history additionally.\nIf is_private = True, secret key is generated as random key for sharing by link,",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1764,7 +1764,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Event(models.Model):\n    id = models.UUIDField(primary_key=True, editable=False, default=uuid.uuid4)\n    title = models.CharField(max_length=128)\n    description = models.TextField(blank=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now=True)\n    location = PointField(geography=True, null=True)\n    location_hints = models.CharField(max_length=256, blank=True, null=True)\n    event_datetime = models.DateTimeField() \n    promoter = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)",
+        "peekOfCode": "class Event(models.Model):\n    id = models.UUIDField(primary_key=True, editable=False, default=uuid.uuid4)\n    title = models.CharField(max_length=128)\n    description = models.TextField(blank=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now=True)\n    location = PointField(geography=True, null=True)\n    location_hints = models.CharField(max_length=256, blank=True, null=True)\n    event_datetime = models.DateTimeField()\n    promoter = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1773,7 +1773,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class EventHistory(models.Model):\n    label = models.CharField(max_length=1, choices=HistoryLabel.choices)\n    text = models.CharField(max_length=256, blank=True, null=True)\n    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='histories', null=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.name\n\"\"\"\nAuthorized users can incidate hashtags that belong to events \nfor getting easy access and find quickty new events.",
+        "peekOfCode": "class EventHistory(models.Model):\n    label = models.CharField(max_length=1, choices=HistoryLabel.choices)\n    text = models.CharField(max_length=256, blank=True, null=True)\n    event = models.ForeignKey(\n        Event, on_delete=models.CASCADE, related_name=\"histories\", null=True\n    )\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.name\n\"\"\"",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1782,7 +1782,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class FollowedHashTag(models.Model):\n    value = models.CharField(max_length=128)\n    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='followed_hashtags')\n    def __str__(self):\n        return '#' + self.value",
+        "peekOfCode": "class FollowedHashTag(models.Model):\n    value = models.CharField(max_length=128)\n    user = models.ForeignKey(\n        User, on_delete=models.CASCADE, related_name=\"followed_hashtags\"\n    )\n    def __str__(self):\n        return \"#\" + self.value",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1791,7 +1791,7 @@
         "kind": 6,
         "importPath": "core.permissions",
         "description": "core.permissions",
-        "peekOfCode": "class IsAdminOrReadOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        \"\"\"\n        Allow an access for each user if method is safe (read)\n        Otherwise admin rights are required\n        \"\"\"\n        return True if request.method in permissions.SAFE_METHODS else request.user.is_superuser\nclass IsOwnerOrReadOnly(permissions.BasePermission):    \n    def has_object_permission(self, request, view, obj):\n        \"\"\"",
+        "peekOfCode": "class IsAdminOrReadOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        \"\"\"\n        Allow an access for each user if method is safe (read)\n        Otherwise admin rights are required\n        \"\"\"\n        return (\n            True\n            if request.method in permissions.SAFE_METHODS\n            else request.user.is_superuser",
         "detail": "core.permissions",
         "documentation": {}
     },
@@ -1800,7 +1800,7 @@
         "kind": 6,
         "importPath": "core.permissions",
         "description": "core.permissions",
-        "peekOfCode": "class IsOwnerOrReadOnly(permissions.BasePermission):    \n    def has_object_permission(self, request, view, obj):\n        \"\"\"\n        Read only for everybody\n        \"\"\"\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        \"\"\"\n        Edit mode only for author (promotor) of event or admin user\n        \"\"\"",
+        "peekOfCode": "class IsOwnerOrReadOnly(permissions.BasePermission):\n    def has_object_permission(self, request, view, obj):\n        \"\"\"\n        Read only for everybody\n        \"\"\"\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        \"\"\"\n        Edit mode only for author (promotor) of event or admin user\n        \"\"\"",
         "detail": "core.permissions",
         "documentation": {}
     },
@@ -1809,7 +1809,7 @@
         "kind": 6,
         "importPath": "core.permissions",
         "description": "core.permissions",
-        "peekOfCode": "class CreateAuthenticatedOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        return request.user.is_authenticated if request.method == 'POST' else True",
+        "peekOfCode": "class CreateAuthenticatedOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        return request.user.is_authenticated if request.method == \"POST\" else True",
         "detail": "core.permissions",
         "documentation": {}
     },
@@ -1818,7 +1818,7 @@
         "kind": 6,
         "importPath": "core.serializers",
         "description": "core.serializers",
-        "peekOfCode": "class CategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Category\n        fields = ('name', 'slug',)\n        read_only_fields = ('slug',)\nclass EventHistorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = EventHistory\n        exclude = ('id',)\n        extra_kwargs = {",
+        "peekOfCode": "class CategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Category\n        fields = (\n            \"name\",\n            \"slug\",\n        )\n        read_only_fields = (\"slug\",)\nclass EventHistorySerializer(serializers.ModelSerializer):\n    class Meta:",
         "detail": "core.serializers",
         "documentation": {}
     },
@@ -1827,7 +1827,7 @@
         "kind": 6,
         "importPath": "core.serializers",
         "description": "core.serializers",
-        "peekOfCode": "class EventHistorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = EventHistory\n        exclude = ('id',)\n        extra_kwargs = {\n            'event': { \n                'write_only': True \n            }\n        }\nclass FollowedHashTagSerializer(serializers.ModelSerializer):",
+        "peekOfCode": "class EventHistorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = EventHistory\n        exclude = (\"id\",)\n        extra_kwargs = {\"event\": {\"write_only\": True}}\nclass FollowedHashTagSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = FollowedHashTag\n        fields = (\"value\",)\nclass EventSimpleSerializer(serializers.ModelSerializer):",
         "detail": "core.serializers",
         "documentation": {}
     },
@@ -1836,7 +1836,7 @@
         "kind": 6,
         "importPath": "core.serializers",
         "description": "core.serializers",
-        "peekOfCode": "class FollowedHashTagSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = FollowedHashTag\n        fields = ('value',)\nclass EventSimpleSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Event\n        fields = ('id', 'title', 'location' ,'event_datetime', 'category', 'is_free',)\nclass EventDetailSerializer(serializers.ModelSerializer):\n    ticket = TicketTemplateSerializer(write_only=True, required=False)",
+        "peekOfCode": "class FollowedHashTagSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = FollowedHashTag\n        fields = (\"value\",)\nclass EventSimpleSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Event\n        fields = (\n            \"id\",\n            \"title\",",
         "detail": "core.serializers",
         "documentation": {}
     },
@@ -1845,7 +1845,7 @@
         "kind": 6,
         "importPath": "core.serializers",
         "description": "core.serializers",
-        "peekOfCode": "class EventSimpleSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Event\n        fields = ('id', 'title', 'location' ,'event_datetime', 'category', 'is_free',)\nclass EventDetailSerializer(serializers.ModelSerializer):\n    ticket = TicketTemplateSerializer(write_only=True, required=False)\n    histories = EventHistorySerializer(many=True, read_only=True)\n    location = PointField()\n    class Meta:\n        model = Event",
+        "peekOfCode": "class EventSimpleSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Event\n        fields = (\n            \"id\",\n            \"title\",\n            \"location\",\n            \"event_datetime\",\n            \"category\",\n            \"is_free\",",
         "detail": "core.serializers",
         "documentation": {}
     },
@@ -1854,7 +1854,7 @@
         "kind": 6,
         "importPath": "core.serializers",
         "description": "core.serializers",
-        "peekOfCode": "class EventDetailSerializer(serializers.ModelSerializer):\n    ticket = TicketTemplateSerializer(write_only=True, required=False)\n    histories = EventHistorySerializer(many=True, read_only=True)\n    location = PointField()\n    class Meta:\n        model = Event\n        fields = '__all__'\n        read_only_fields = ('created_at', 'updated_at', 'promoter', 'took_place',)\n        validators = [validators.CheckIfTicketProvidedIfPrivate()]\n        extra_kwargs = {",
+        "peekOfCode": "class EventDetailSerializer(serializers.ModelSerializer):\n    ticket = TicketTemplateSerializer(write_only=True, required=False)\n    histories = EventHistorySerializer(many=True, read_only=True)\n    location = PointField()\n    class Meta:\n        model = Event\n        fields = \"__all__\"\n        read_only_fields = (\n            \"created_at\",\n            \"updated_at\",",
         "detail": "core.serializers",
         "documentation": {}
     },
@@ -1863,7 +1863,7 @@
         "kind": 2,
         "importPath": "core.tasks",
         "description": "core.tasks",
-        "peekOfCode": "def send_emails(**kwargs):\n    \"\"\"\n    This function is the cron system for automatically sending\n    emails in users every day with new events that may interest them.\n    It triggers on 1 time every day and looks for events that were\n    added in last 24 hours.\n    After retrieve a list of this events looks for a matches with\n    followed hashtags based on relations of their with user.\n    Result is a list of events that is submiting to user as email message. \n    \"\"\"",
+        "peekOfCode": "def send_emails(**kwargs):\n    \"\"\"\n    This function is the cron system for automatically sending\n    emails in users every day with new events that may interest them.\n    It triggers on 1 time every day and looks for events that were\n    added in last 24 hours.\n    After retrieve a list of this events looks for a matches with\n    followed hashtags based on relations of their with user.\n    Result is a list of events that is submiting to user as email message.\n    \"\"\"",
         "detail": "core.tasks",
         "documentation": {}
     },
@@ -1872,7 +1872,7 @@
         "kind": 5,
         "importPath": "core.urls",
         "description": "core.urls",
-        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register('categories', views.CategoryViewSet)\nrouter.register('followed-hashtags', views.FollowedHashTagView, basename='followedHashtags')\nrouter.register('events', views.EventViewSet, basename='events')\nrouter.register('own-events', views.EventOwnListViewSet, basename='own_events')\nurlpatterns = [\n    path('', include(router.urls))\n]",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(\"categories\", views.CategoryViewSet)\nrouter.register(\n    \"followed-hashtags\", views.FollowedHashTagView, basename=\"followedHashtags\"\n)\nrouter.register(\"events\", views.EventViewSet, basename=\"events\")\nrouter.register(\"own-events\", views.EventOwnListViewSet, basename=\"own_events\")\nurlpatterns = [path(\"\", include(router.urls))]",
         "detail": "core.urls",
         "documentation": {}
     },
@@ -1881,7 +1881,7 @@
         "kind": 5,
         "importPath": "core.urls",
         "description": "core.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', include(router.urls))\n]",
+        "peekOfCode": "urlpatterns = [path(\"\", include(router.urls))]",
         "detail": "core.urls",
         "documentation": {}
     },
@@ -1890,7 +1890,7 @@
         "kind": 6,
         "importPath": "core.validators",
         "description": "core.validators",
-        "peekOfCode": "class CheckIfTicketProvidedIfPrivate:\n    def __call__(self, value):\n        if value.get('is_free') == False:\n            if 'ticket' not in value:\n                raise serializers.ValidationError(\"If you are passing is_free field, you must pass ticket field too\")",
+        "peekOfCode": "class CheckIfTicketProvidedIfPrivate:\n    def __call__(self, value):\n        if value.get(\"is_free\") == False:\n            if \"ticket\" not in value:\n                raise serializers.ValidationError(\n                    \"If you are passing is_free field, you must pass ticket field too\"\n                )",
         "detail": "core.validators",
         "documentation": {}
     },
@@ -1899,7 +1899,7 @@
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class CategoryViewSet(viewsets.ModelViewSet):\n    queryset = Category.objects.all()\n    serializer_class = CategorySerializer\n    permission_classes = (IsAdminOrReadOnly,)\nclass FollowedHashTagView(\n    mixins.ListModelMixin, \n    mixins.CreateModelMixin, \n    mixins.DestroyModelMixin, \n    viewsets.GenericViewSet\n):",
+        "peekOfCode": "class CategoryViewSet(viewsets.ModelViewSet):\n    queryset = Category.objects.all()\n    serializer_class = CategorySerializer\n    permission_classes = (IsAdminOrReadOnly,)\nclass FollowedHashTagView(\n    mixins.ListModelMixin,\n    mixins.CreateModelMixin,\n    mixins.DestroyModelMixin,\n    viewsets.GenericViewSet,\n):",
         "detail": "core.views",
         "documentation": {}
     },
@@ -1908,7 +1908,7 @@
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class FollowedHashTagView(\n    mixins.ListModelMixin, \n    mixins.CreateModelMixin, \n    mixins.DestroyModelMixin, \n    viewsets.GenericViewSet\n):\n    serializer_class = FollowedHashTagSerializer\n    def get_queryset(self):\n        return FollowedHashTag.objects.filter(user=self.request.user)\n    def perform_create(self, serializer):",
+        "peekOfCode": "class FollowedHashTagView(\n    mixins.ListModelMixin,\n    mixins.CreateModelMixin,\n    mixins.DestroyModelMixin,\n    viewsets.GenericViewSet,\n):\n    serializer_class = FollowedHashTagSerializer\n    def get_queryset(self):\n        return FollowedHashTag.objects.filter(user=self.request.user)\n    def perform_create(self, serializer):",
         "detail": "core.views",
         "documentation": {}
     },
@@ -1917,7 +1917,7 @@
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class EventViewSet(viewsets.ModelViewSet):\n    queryset = Event.objects.filter(is_private=False, canceled=False, took_place=False)\n    permission_classes = (IsOwnerOrReadOnly, CreateAuthenticatedOnly,)\n    filter_backends = (filters.DjangoFilterBackend, EventOrderingFilter,)\n    filter_class = EventFilterSet\n    ordering_fields = ('distance', 'event_datetime_expired', '-create_at',)\n    def get_serializer_class(self):\n        \"\"\"\n        For list method user can get simplify version of objects.\n        \"\"\"",
+        "peekOfCode": "class EventViewSet(viewsets.ModelViewSet):\n    queryset = Event.objects.filter(is_private=False, canceled=False, took_place=False)\n    permission_classes = (\n        IsOwnerOrReadOnly,\n        CreateAuthenticatedOnly,\n    )\n    filter_backends = (\n        filters.DjangoFilterBackend,\n        EventOrderingFilter,\n    )",
         "detail": "core.views",
         "documentation": {}
     },
@@ -1935,7 +1935,7 @@
         "kind": 6,
         "importPath": "tickets.migrations.0001_initial",
         "description": "tickets.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('core', '0008_auto_20211028_1819'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Ticket',\n            fields=[\n                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False, unique=True)),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        (\"core\", \"0008_auto_20211028_1819\"),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Ticket\",\n            fields=[\n                (",
         "detail": "tickets.migrations.0001_initial",
         "documentation": {}
     },
@@ -1944,7 +1944,7 @@
         "kind": 6,
         "importPath": "tickets.migrations.0002_auto_20211029_0930",
         "description": "tickets.migrations.0002_auto_20211029_0930",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0009_remove_eventtemplate_event'),\n        ('tickets', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='TicketTemplate',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0009_remove_eventtemplate_event\"),\n        (\"tickets\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"TicketTemplate\",\n            fields=[\n                (",
         "detail": "tickets.migrations.0002_auto_20211029_0930",
         "documentation": {}
     },
@@ -1953,7 +1953,7 @@
         "kind": 6,
         "importPath": "tickets.migrations.0003_rename_template_tickettemplate__file",
         "description": "tickets.migrations.0003_rename_template_tickettemplate__file",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('tickets', '0002_auto_20211029_0930'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='tickettemplate',\n            old_name='template',\n            new_name='_file',\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"tickets\", \"0002_auto_20211029_0930\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"tickettemplate\",\n            old_name=\"template\",\n            new_name=\"_file\",\n        ),",
         "detail": "tickets.migrations.0003_rename_template_tickettemplate__file",
         "documentation": {}
     },
@@ -1962,7 +1962,7 @@
         "kind": 6,
         "importPath": "tickets.migrations.0004_auto_20211029_1451",
         "description": "tickets.migrations.0004_auto_20211029_1451",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('tickets', '0003_rename_template_tickettemplate__file'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='ticket',\n            old_name='sold',\n            new_name='is_sold',\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"tickets\", \"0003_rename_template_tickettemplate__file\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"ticket\",\n            old_name=\"sold\",\n            new_name=\"is_sold\",\n        ),",
         "detail": "tickets.migrations.0004_auto_20211029_1451",
         "documentation": {}
     },
@@ -1971,7 +1971,7 @@
         "kind": 6,
         "importPath": "tickets.apps",
         "description": "tickets.apps",
-        "peekOfCode": "class TicketsConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'tickets'",
+        "peekOfCode": "class TicketsConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"tickets\"",
         "detail": "tickets.apps",
         "documentation": {}
     },
@@ -1980,7 +1980,7 @@
         "kind": 6,
         "importPath": "tickets.helpers",
         "description": "tickets.helpers",
-        "peekOfCode": "class TicketGenerator:\n    \"\"\"\n    This class generates tickets with provided quantity by user\n    if it is necessery (that means when user provided 'is_free' field\n    and is set on False). User has to pass template file and quantity\n    of tickets to generate and in this point generates them.\n    \"\"\"\n    def generate_if_provided(data, ticket, event):\n        if 'is_free' in data and not data['is_free']:\n            # save a template",
+        "peekOfCode": "class TicketGenerator:\n    \"\"\"\n    This class generates tickets with provided quantity by user\n    if it is necessery (that means when user provided 'is_free' field\n    and is set on False). User has to pass template file and quantity\n    of tickets to generate and in this point generates them.\n    \"\"\"\n    def generate_if_provided(data, ticket, event):\n        if \"is_free\" in data and not data[\"is_free\"]:\n            # save a template",
         "detail": "tickets.helpers",
         "documentation": {}
     },
@@ -1989,7 +1989,7 @@
         "kind": 6,
         "importPath": "tickets.helpers",
         "description": "tickets.helpers",
-        "peekOfCode": "class TicketWithQRCodeSender:\n    \"\"\"\n    This class is up to sending ticket file to client's email address.\n    It generates unique QR code (based on id of ticket), and pdf file \n    (based on selected template file). Then it merges this 2 files saved\n    in media/tmp with unique names, and send the outcome to provided email\n    address.\n    \"\"\"\n    def generate_and_send(email, obj):\n        #get pdf file from template",
+        "peekOfCode": "class TicketWithQRCodeSender:\n    \"\"\"\n    This class is up to sending ticket file to client's email address.\n    It generates unique QR code (based on id of ticket), and pdf file\n    (based on selected template file). Then it merges this 2 files saved\n    in media/tmp with unique names, and send the outcome to provided email\n    address.\n    \"\"\"\n    def generate_and_send(email, obj):\n        # get pdf file from template",
         "detail": "tickets.helpers",
         "documentation": {}
     },
@@ -1998,7 +1998,7 @@
         "kind": 6,
         "importPath": "tickets.models",
         "description": "tickets.models",
-        "peekOfCode": "class TicketTemplate(models.Model):\n    event = models.OneToOneField(Event, on_delete=models.CASCADE)\n    _file = models.FileField(upload_to='media/tickets/', validators=[FileExtensionValidator(['pdf'])])\n    def __str__(self):\n        return self.event.title + \" Ticket Template\"\nclass Ticket(models.Model):\n    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)\n    template = models.ForeignKey(TicketTemplate, on_delete=models.CASCADE)\n    is_used = models.BooleanField(default=False)\n    is_sold = models.BooleanField(default=False)",
+        "peekOfCode": "class TicketTemplate(models.Model):\n    event = models.OneToOneField(Event, on_delete=models.CASCADE)\n    _file = models.FileField(\n        upload_to=\"media/tickets/\", validators=[FileExtensionValidator([\"pdf\"])]\n    )\n    def __str__(self):\n        return self.event.title + \" Ticket Template\"\nclass Ticket(models.Model):\n    id = models.UUIDField(\n        primary_key=True, default=uuid.uuid4, editable=False, unique=True",
         "detail": "tickets.models",
         "documentation": {}
     },
@@ -2007,7 +2007,7 @@
         "kind": 6,
         "importPath": "tickets.models",
         "description": "tickets.models",
-        "peekOfCode": "class Ticket(models.Model):\n    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, unique=True)\n    template = models.ForeignKey(TicketTemplate, on_delete=models.CASCADE)\n    is_used = models.BooleanField(default=False)\n    is_sold = models.BooleanField(default=False)\n    def __str__(self):\n        return \"Ticket \" + str(self.id)",
+        "peekOfCode": "class Ticket(models.Model):\n    id = models.UUIDField(\n        primary_key=True, default=uuid.uuid4, editable=False, unique=True\n    )\n    template = models.ForeignKey(TicketTemplate, on_delete=models.CASCADE)\n    is_used = models.BooleanField(default=False)\n    is_sold = models.BooleanField(default=False)\n    def __str__(self):\n        return \"Ticket \" + str(self.id)",
         "detail": "tickets.models",
         "documentation": {}
     },
@@ -2025,7 +2025,7 @@
         "kind": 6,
         "importPath": "tickets.serializers",
         "description": "tickets.serializers",
-        "peekOfCode": "class TicketPurchaseSerializer(serializers.Serializer):\n    email = serializers.EmailField(required=True)\nclass TicketSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Ticket\n        exclude = ('template',)\nclass TicketTemplateSerializer(serializers.ModelSerializer):\n    quantity = serializers.IntegerField(required=True, validators=[MinValueValidator(0)])\n    class Meta:\n        model = TicketTemplate",
+        "peekOfCode": "class TicketPurchaseSerializer(serializers.Serializer):\n    email = serializers.EmailField(required=True)\nclass TicketSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Ticket\n        exclude = (\"template\",)\nclass TicketTemplateSerializer(serializers.ModelSerializer):\n    quantity = serializers.IntegerField(\n        required=True, validators=[MinValueValidator(0)]\n    )",
         "detail": "tickets.serializers",
         "documentation": {}
     },
@@ -2034,7 +2034,7 @@
         "kind": 6,
         "importPath": "tickets.serializers",
         "description": "tickets.serializers",
-        "peekOfCode": "class TicketSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Ticket\n        exclude = ('template',)\nclass TicketTemplateSerializer(serializers.ModelSerializer):\n    quantity = serializers.IntegerField(required=True, validators=[MinValueValidator(0)])\n    class Meta:\n        model = TicketTemplate\n        fields = ('template', 'quantity',)",
+        "peekOfCode": "class TicketSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Ticket\n        exclude = (\"template\",)\nclass TicketTemplateSerializer(serializers.ModelSerializer):\n    quantity = serializers.IntegerField(\n        required=True, validators=[MinValueValidator(0)]\n    )\n    class Meta:\n        model = TicketTemplate",
         "detail": "tickets.serializers",
         "documentation": {}
     },
@@ -2043,7 +2043,7 @@
         "kind": 6,
         "importPath": "tickets.serializers",
         "description": "tickets.serializers",
-        "peekOfCode": "class TicketTemplateSerializer(serializers.ModelSerializer):\n    quantity = serializers.IntegerField(required=True, validators=[MinValueValidator(0)])\n    class Meta:\n        model = TicketTemplate\n        fields = ('template', 'quantity',)",
+        "peekOfCode": "class TicketTemplateSerializer(serializers.ModelSerializer):\n    quantity = serializers.IntegerField(\n        required=True, validators=[MinValueValidator(0)]\n    )\n    class Meta:\n        model = TicketTemplate\n        fields = (\n            \"template\",\n            \"quantity\",\n        )",
         "detail": "tickets.serializers",
         "documentation": {}
     },
@@ -2052,7 +2052,7 @@
         "kind": 5,
         "importPath": "tickets.urls",
         "description": "tickets.urls",
-        "peekOfCode": "urlpatterns = [\n    path('events/<str:event_id>/tickets/', views.TicketAPIView.as_view()),\n    path('events/<str:event_id>/tickets/<str:ticket_id>/', views.TicketCheckerAPIView.as_view())\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"events/<str:event_id>/tickets/\", views.TicketAPIView.as_view()),\n    path(\n        \"events/<str:event_id>/tickets/<str:ticket_id>/\",\n        views.TicketCheckerAPIView.as_view(),\n    ),\n]",
         "detail": "tickets.urls",
         "documentation": {}
     },
@@ -2061,7 +2061,7 @@
         "kind": 6,
         "importPath": "tickets.views",
         "description": "tickets.views",
-        "peekOfCode": "class TicketCheckerAPIView(APIView):\n    serializer_class = TicketSerializer\n    permission_classes = (IsAuthenticated, IsOwner,)\n    def get_object(self, event_id, ticket_id):\n        try:\n            return Ticket.objects.get(id=ticket_id, template__event=event_id, is_used=False, is_sold=True)\n        except:\n            raise Http404\n    def get(self, request, event_id, ticket_id):\n        \"\"\"",
+        "peekOfCode": "class TicketCheckerAPIView(APIView):\n    serializer_class = TicketSerializer\n    permission_classes = (\n        IsAuthenticated,\n        IsOwner,\n    )\n    def get_object(self, event_id, ticket_id):\n        try:\n            return Ticket.objects.get(\n                id=ticket_id, template__event=event_id, is_used=False, is_sold=True",
         "detail": "tickets.views",
         "documentation": {}
     },
@@ -2079,7 +2079,7 @@
         "kind": 6,
         "importPath": "users.migrations.0001_initial",
         "description": "users.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='User',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        (\"auth\", \"0012_alter_user_first_name_max_length\"),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"User\",\n            fields=[\n                (",
         "detail": "users.migrations.0001_initial",
         "documentation": {}
     },
@@ -2088,7 +2088,7 @@
         "kind": 6,
         "importPath": "users.migrations.0002_user_avatar",
         "description": "users.migrations.0002_user_avatar",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('users', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='user',\n            name='avatar',\n            field=models.ImageField(null=True, upload_to='media/avatars'),\n        ),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"user\",\n            name=\"avatar\",\n            field=models.ImageField(null=True, upload_to=\"media/avatars\"),\n        ),",
         "detail": "users.migrations.0002_user_avatar",
         "documentation": {}
     },
@@ -2097,7 +2097,7 @@
         "kind": 6,
         "importPath": "users.apps",
         "description": "users.apps",
-        "peekOfCode": "class UsersConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'users'",
+        "peekOfCode": "class UsersConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"users\"",
         "detail": "users.apps",
         "documentation": {}
     },
@@ -2106,7 +2106,7 @@
         "kind": 6,
         "importPath": "users.models",
         "description": "users.models",
-        "peekOfCode": "class User(AbstractUser):\n    USERNAME_FIELD = 'username'\n    EMAIL_FIELD = 'email'\n    phone_number = PhoneNumberField(null=True, default=\"\")\n    country = models.CharField(max_length=128)\n    state = models.CharField(max_length=128)\n    city = models.CharField(max_length=128)\n    street = models.CharField(max_length=128)\n    home_nb = models.CharField(max_length=16)\n    zip_code = models.CharField(max_length=16)",
+        "peekOfCode": "class User(AbstractUser):\n    USERNAME_FIELD = \"username\"\n    EMAIL_FIELD = \"email\"\n    phone_number = PhoneNumberField(null=True, default=\"\")\n    country = models.CharField(max_length=128)\n    state = models.CharField(max_length=128)\n    city = models.CharField(max_length=128)\n    street = models.CharField(max_length=128)\n    home_nb = models.CharField(max_length=16)\n    zip_code = models.CharField(max_length=16)",
         "detail": "users.models",
         "documentation": {}
     },
@@ -2115,7 +2115,7 @@
         "kind": 6,
         "importPath": "users.serializers",
         "description": "users.serializers",
-        "peekOfCode": "class ExtendedRegisterSerializer(RegisterSerializer):\n    def get_cleaned_data(self):\n        super(ExtendedRegisterSerializer, self).get_cleaned_data()\n        return {\n            'username': self.validated_data.get('username', ''),\n            'password1': self.validated_data.get('password1', ''),\n            'password2': self.validated_data.get('password2', ''),\n            'email': self.validated_data.get('email', ''),\n            'phone_number': self.validated_data.get('phone_number', ''),\n            'country': self.validated_data.get('country', ''),",
+        "peekOfCode": "class ExtendedRegisterSerializer(RegisterSerializer):\n    def get_cleaned_data(self):\n        super(ExtendedRegisterSerializer, self).get_cleaned_data()\n        return {\n            \"username\": self.validated_data.get(\"username\", \"\"),\n            \"password1\": self.validated_data.get(\"password1\", \"\"),\n            \"password2\": self.validated_data.get(\"password2\", \"\"),\n            \"email\": self.validated_data.get(\"email\", \"\"),\n            \"phone_number\": self.validated_data.get(\"phone_number\", \"\"),\n            \"country\": self.validated_data.get(\"country\", \"\"),",
         "detail": "users.serializers",
         "documentation": {}
     },
@@ -2124,7 +2124,7 @@
         "kind": 6,
         "importPath": "users.serializers",
         "description": "users.serializers",
-        "peekOfCode": "class UserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = (\n            'email', \n            'phone_number', \n            'is_superuser', \n            'country',\n            'state',\n            'city',",
+        "peekOfCode": "class UserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = (\n            \"email\",\n            \"phone_number\",\n            \"is_superuser\",\n            \"country\",\n            \"state\",\n            \"city\",",
         "detail": "users.serializers",
         "documentation": {}
     },
@@ -2133,7 +2133,7 @@
         "kind": 5,
         "importPath": "users.urls",
         "description": "users.urls",
-        "peekOfCode": "urlpatterns = [\n    path('user/', views.UserAPIView.as_view()),\n    path('registration/', include('dj_rest_auth.registration.urls')),\n    path('password/', include('django.contrib.auth.urls')),\n    path('', include('dj_rest_auth.urls')),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"user/\", views.UserAPIView.as_view()),\n    path(\"registration/\", include(\"dj_rest_auth.registration.urls\")),\n    path(\"password/\", include(\"django.contrib.auth.urls\")),\n    path(\"\", include(\"dj_rest_auth.urls\")),\n]",
         "detail": "users.urls",
         "documentation": {}
     },
@@ -2151,7 +2151,7 @@
         "kind": 2,
         "importPath": "manage",
         "description": "manage",
-        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"backend.settings\")\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
         "detail": "manage",
         "documentation": {}
     }

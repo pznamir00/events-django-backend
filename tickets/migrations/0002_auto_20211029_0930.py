@@ -8,22 +8,45 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0009_remove_eventtemplate_event'),
-        ('tickets', '0001_initial'),
+        ("core", "0009_remove_eventtemplate_event"),
+        ("tickets", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='TicketTemplate',
+            name="TicketTemplate",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('template', models.FileField(upload_to='media/tickets/', validators=[django.core.validators.FileExtensionValidator(['pdf'])])),
-                ('event', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='core.event')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "template",
+                    models.FileField(
+                        upload_to="media/tickets/",
+                        validators=[
+                            django.core.validators.FileExtensionValidator(["pdf"])
+                        ],
+                    ),
+                ),
+                (
+                    "event",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE, to="core.event"
+                    ),
+                ),
             ],
         ),
         migrations.AlterField(
-            model_name='ticket',
-            name='template',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='tickets.tickettemplate'),
+            model_name="ticket",
+            name="template",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE, to="tickets.tickettemplate"
+            ),
         ),
     ]

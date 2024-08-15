@@ -6,18 +6,21 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0005_eventhistory_event'),
+        ("core", "0005_eventhistory_event"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='event',
-            name='is_active',
+            model_name="event",
+            name="is_active",
             field=models.BooleanField(default=True),
         ),
         migrations.AlterField(
-            model_name='eventhistory',
-            name='label',
-            field=models.CharField(choices=[('1', 'Moved'), ('2', 'Canceled'), ('3', 'Details Changed')], max_length=1),
+            model_name="eventhistory",
+            name="label",
+            field=models.CharField(
+                choices=[("1", "Moved"), ("2", "Canceled"), ("3", "Details Changed")],
+                max_length=1,
+            ),
         ),
     ]

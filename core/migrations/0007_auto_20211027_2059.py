@@ -7,25 +7,40 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0006_auto_20211027_1949'),
+        ("core", "0006_auto_20211027_1949"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='eventticket',
-            name='event',
+            model_name="eventticket",
+            name="event",
         ),
         migrations.CreateModel(
-            name='EventTemplate',
+            name="EventTemplate",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('template', models.FileField(upload_to='media/tickets/')),
-                ('event', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='core.event')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("template", models.FileField(upload_to="media/tickets/")),
+                (
+                    "event",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE, to="core.event"
+                    ),
+                ),
             ],
         ),
         migrations.AlterField(
-            model_name='eventticket',
-            name='template',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='core.eventtemplate'),
+            model_name="eventticket",
+            name="template",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE, to="core.eventtemplate"
+            ),
         ),
     ]

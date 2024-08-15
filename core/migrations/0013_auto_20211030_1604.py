@@ -7,21 +7,23 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0012_event_location'),
+        ("core", "0012_event_location"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='event',
-            name='latitude',
+            model_name="event",
+            name="latitude",
         ),
         migrations.RemoveField(
-            model_name='event',
-            name='longitude',
+            model_name="event",
+            name="longitude",
         ),
         migrations.AlterField(
-            model_name='event',
-            name='location',
-            field=django.contrib.gis.db.models.fields.PointField(geography=True, null=True, srid=4326),
+            model_name="event",
+            name="location",
+            field=django.contrib.gis.db.models.fields.PointField(
+                geography=True, null=True, srid=4326
+            ),
         ),
     ]

@@ -7,13 +7,13 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0011_alter_event_image'),
+        ("core", "0011_alter_event_image"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='event',
-            name='location',
+            model_name="event",
+            name="location",
             field=django.contrib.gis.db.models.fields.PointField(null=True, srid=4326),
         ),
     ]

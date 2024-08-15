@@ -9,13 +9,17 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('core', '0015_auto_20211101_1057'),
+        ("core", "0015_auto_20211101_1057"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='followedhashtag',
-            name='user',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='followed_hashtags', to=settings.AUTH_USER_MODEL),
+            model_name="followedhashtag",
+            name="user",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="followed_hashtags",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
     ]

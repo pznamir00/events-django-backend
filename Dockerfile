@@ -12,10 +12,8 @@ RUN apt-get install -y gdal-bin
 RUN apt-get update -y
 RUN apt-get install -y python3-gdal
 RUN apt-get update -y
-RUN apt-get install -y rabbitmq-server 
+RUN apt-get install -y rabbitmq-server
 
 #copy source code
 COPY . /code/
 RUN chmod +x /code/scripts/wait-for-it.sh
-
-

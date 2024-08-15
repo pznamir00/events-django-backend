@@ -17,57 +17,145 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Category',
+            name="Category",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=64, unique=True)),
-                ('slug', autoslug.fields.AutoSlugField(editable=False, populate_from='name')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=64, unique=True)),
+                (
+                    "slug",
+                    autoslug.fields.AutoSlugField(editable=False, populate_from="name"),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Event',
+            name="Event",
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
-                ('title', models.CharField(max_length=128)),
-                ('description', models.TextField(blank=True)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('longitude', models.DecimalField(decimal_places=3, default=0.0, max_digits=8)),
-                ('latitude', models.DecimalField(decimal_places=3, default=0.0, max_digits=8)),
-                ('location_hints', models.CharField(blank=True, max_length=256, null=True)),
-                ('event_datetime', models.DateTimeField()),
-                ('is_free', models.BooleanField(default=True)),
-                ('is_private', models.BooleanField(default=False)),
-                ('took_place', models.BooleanField(default=False)),
-                ('image', models.ImageField(null=True, upload_to='media/events/')),
-                ('category', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='core.category')),
-                ('promoter', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("title", models.CharField(max_length=128)),
+                ("description", models.TextField(blank=True)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
+                (
+                    "longitude",
+                    models.DecimalField(decimal_places=3, default=0.0, max_digits=8),
+                ),
+                (
+                    "latitude",
+                    models.DecimalField(decimal_places=3, default=0.0, max_digits=8),
+                ),
+                (
+                    "location_hints",
+                    models.CharField(blank=True, max_length=256, null=True),
+                ),
+                ("event_datetime", models.DateTimeField()),
+                ("is_free", models.BooleanField(default=True)),
+                ("is_private", models.BooleanField(default=False)),
+                ("took_place", models.BooleanField(default=False)),
+                ("image", models.ImageField(null=True, upload_to="media/events/")),
+                (
+                    "category",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        to="core.category",
+                    ),
+                ),
+                (
+                    "promoter",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='EventHistory',
+            name="EventHistory",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('label', models.CharField(choices=[('1', 'Moved'), ('2', 'Details Changed'), ('3', 'Canceled')], max_length=1)),
-                ('text', models.CharField(blank=True, max_length=256, null=True)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "label",
+                    models.CharField(
+                        choices=[
+                            ("1", "Moved"),
+                            ("2", "Details Changed"),
+                            ("3", "Canceled"),
+                        ],
+                        max_length=1,
+                    ),
+                ),
+                ("text", models.CharField(blank=True, max_length=256, null=True)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
             ],
         ),
         migrations.CreateModel(
-            name='FollowedHashTag',
+            name="FollowedHashTag",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('value', models.CharField(max_length=128)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("value", models.CharField(max_length=128)),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='EventTicket',
+            name="EventTicket",
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False, unique=True)),
-                ('template', models.FileField(upload_to='media/tickets/')),
-                ('sold', models.BooleanField(default=False)),
-                ('event', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='core.event')),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                        unique=True,
+                    ),
+                ),
+                ("template", models.FileField(upload_to="media/tickets/")),
+                ("sold", models.BooleanField(default=False)),
+                (
+                    "event",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="core.event"
+                    ),
+                ),
             ],
         ),
     ]

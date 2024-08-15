@@ -11,9 +11,6 @@ import io
 import time
 
 
-
-
-
 class TicketGenerator:
     """
     This class generates tickets with provided quantity by user
@@ -21,36 +18,37 @@ class TicketGenerator:
     and is set on False). User has to pass template file and quantity
     of tickets to generate and in this point generates them.
     """
+
     def generate_if_provided(data, ticket, event):
-        if 'is_free' in data and not data['is_free']:
+        if "is_free" in data and not data["is_free"]:
             # save a template
-            template = TicketTemplate.objects.create(event=event, template=ticket['template'])
-            for i in range(ticket['quantity']):
+            template = TicketTemplate.objects.create(
+                event=event, template=ticket["template"]
+            )
+            for i in range(ticket["quantity"]):
                 # creating single tickets
                 Ticket.objects.create(template=template)
-                
-
-
 
 
 class TicketWithQRCodeSender:
     """
     This class is up to sending ticket file to client's email address.
-    It generates unique QR code (based on id of ticket), and pdf file 
+    It generates unique QR code (based on id of ticket), and pdf file
     (based on selected template file). Then it merges this 2 files saved
     in media/tmp with unique names, and send the outcome to provided email
     address.
     """
+
     def generate_and_send(email, obj):
-        #get pdf file from template
+        # get pdf file from template
         pdf = obj.template._file
-        #generate qr code and get path to it
+        # generate qr code and get path to it
         qr_path = TicketWithQRCodeSender.make_qr(obj)
-        #generate new pdf (ticket) and get path to it
+        # generate new pdf (ticket) and get path to it
         pdf_path = TicketWithQRCodeSender.make_pdf(qr_path, pdf)
-        #send files
+        # send files
         TicketWithQRCodeSender.send(email, pdf_path, qr_path)
-        #delete files from tmp
+        # delete files from tmp
         TicketWithQRCodeSender.delete_files(pdf_path, qr_path)
         return True
 
@@ -59,15 +57,15 @@ class TicketWithQRCodeSender:
         This method generates qr code and saves it in media/tmp directory.
         For this purpose it uses a qrcode lib.
         """
-        #get domain
+        # get domain
         current_site = Site.objects.get_current()
         domain = current_site.domain
-        #prepare link to validate ticket
-        path = f'{domain}/api/tickets/check/{obj.id}/'
-        #generate qr code
+        # prepare link to validate ticket
+        path = f"{domain}/api/tickets/check/{obj.id}/"
+        # generate qr code
         img = qrcode.make(path)
-        #save code as .png in media/tmp
-        name = 'media/tmp/' + str(time.time() * 1000) + '.png'
+        # save code as .png in media/tmp
+        name = "media/tmp/" + str(time.time() * 1000) + ".png"
         img.save(name)
         return name
 
@@ -75,14 +73,14 @@ class TicketWithQRCodeSender:
         """
         This method generates a PDF file (actually a ticket that client'll receive)
         """
-        #path to file
-        pdf_path = 'media/tmp/' + str(time.time() * 1000) + '.pdf'
+        # path to file
+        pdf_path = "media/tmp/" + str(time.time() * 1000) + ".pdf"
         packet = io.BytesIO()
-        #create canvas with qr code
+        # create canvas with qr code
         can = canvas.Canvas(packet, pagesize=letter)
         can.drawImage(qr_path, 0, 0, 250, 250)
         can.save()
-        #create pdf file
+        # create pdf file
         packet.seek(0)
         new_pdf = PdfFileReader(packet)
         existing_pdf = PdfFileReader(pdf)
@@ -97,10 +95,10 @@ class TicketWithQRCodeSender:
 
     def send(recipient_email, pdf_path, qr_path):
         email = EmailMessage(
-            'Hello, Events here',
-            'You are getting your own ticket below',
-            'events@gmail.com',
-            [recipient_email]
+            "Hello, Events here",
+            "You are getting your own ticket below",
+            "events@gmail.com",
+            [recipient_email],
         )
         email.attach_file(pdf_path)
         email.attach_file(qr_path)
@@ -109,4 +107,3 @@ class TicketWithQRCodeSender:
     def delete_files(file_path, qr_path):
         os.remove(file_path)
         os.remove(qr_path)
-

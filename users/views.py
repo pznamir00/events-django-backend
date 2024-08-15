@@ -6,6 +6,6 @@ from .serializers import UserSerializer
 class UserAPIView(generics.RetrieveUpdateAPIView):
     serializer_class = UserSerializer
     permission_classes = (IsAuthenticated,)
-    
+
     def get_object(self, **kargs):
         return self.request.user

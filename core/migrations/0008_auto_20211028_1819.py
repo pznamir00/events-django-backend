@@ -8,21 +8,26 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0007_auto_20211027_2059'),
+        ("core", "0007_auto_20211027_2059"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='event',
-            name='image',
-            field=models.ImageField(null=True, upload_to=core.helpers.EventFileNameGenerator.generate),
+            model_name="event",
+            name="image",
+            field=models.ImageField(
+                null=True, upload_to=core.helpers.EventFileNameGenerator.generate
+            ),
         ),
         migrations.AlterField(
-            model_name='eventtemplate',
-            name='template',
-            field=models.FileField(upload_to='media/tickets/', validators=[django.core.validators.FileExtensionValidator(['pdf'])]),
+            model_name="eventtemplate",
+            name="template",
+            field=models.FileField(
+                upload_to="media/tickets/",
+                validators=[django.core.validators.FileExtensionValidator(["pdf"])],
+            ),
         ),
         migrations.DeleteModel(
-            name='EventTicket',
+            name="EventTicket",
         ),
     ]

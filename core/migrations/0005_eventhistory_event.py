@@ -7,13 +7,18 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0004_rename_id_event_id'),
+        ("core", "0004_rename_id_event_id"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='eventhistory',
-            name='event',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='histories', to='core.event'),
+            model_name="eventhistory",
+            name="event",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="histories",
+                to="core.event",
+            ),
         ),
     ]

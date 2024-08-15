@@ -7,13 +7,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0010_delete_eventtemplate'),
+        ("core", "0010_delete_eventtemplate"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='event',
-            name='image',
-            field=models.ImageField(blank=True, null=True, upload_to=core.helpers.EventFileNameGenerator.generate),
+            model_name="event",
+            name="image",
+            field=models.ImageField(
+                blank=True,
+                null=True,
+                upload_to=core.helpers.EventFileNameGenerator.generate,
+            ),
         ),
     ]
