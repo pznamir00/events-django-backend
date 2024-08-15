@@ -16,4 +16,6 @@ RUN apt-get install -y rabbitmq-server
 
 #copy source code
 COPY . /code/
+RUN chmod +x /code/scripts/wait-for-it.sh
+
 
