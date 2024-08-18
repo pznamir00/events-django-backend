@@ -1,13 +1,12 @@
 from __future__ import absolute_import, unicode_literals
 from celery import shared_task
-from core.models import Event
-from users.models import User
+from .models import Event
+from applications.users.models import User
 from django.db.models import Count
 from datetime import datetime, timedelta
 from django.core import mail
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
-import time
 
 
 @shared_task

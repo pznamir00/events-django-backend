@@ -42,9 +42,9 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "users",
-    "core",
-    "tickets",
+    "applications.users",
+    "applications.core",
+    "applications.tickets",
     "rest_framework",
     "rest_framework.authtoken",
     "dj_rest_auth",
@@ -165,7 +165,7 @@ REST_FRAMEWORK = {
 }
 
 REST_AUTH_REGISTER_SERIALIZERS = {
-    "REGISTER_SERIALIZER": "users.serializers.ExtendedRegisterSerializer"
+    "REGISTER_SERIALIZER": "applications.users.serializers.ExtendedRegisterSerializer"
 }
 
 SITE_ID = 1

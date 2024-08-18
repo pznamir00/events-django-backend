@@ -3,7 +3,7 @@ import pytest
 from .. import views
 
 
-@pytest.mark.urls("tickets.urls")
+@pytest.mark.urls("applications.tickets.urls")
 class TestTicketsUrls:
     def test_event_tickets_url_resolves(self):
         url = reverse("events-tickets", args=["event123"])

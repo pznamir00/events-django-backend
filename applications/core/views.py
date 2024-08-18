@@ -1,5 +1,4 @@
 from rest_framework import viewsets, mixins
-from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
 from django.template.defaultfilters import slugify
 from django_filters import rest_framework as filters

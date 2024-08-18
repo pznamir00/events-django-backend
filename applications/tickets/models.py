@@ -1,5 +1,5 @@
 from django.db import models
-from core.models import Event
+from applications.core.models import Event
 from django.core.validators import FileExtensionValidator
 import uuid
 

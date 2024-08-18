@@ -1,5 +1,5 @@
 from django.db import models
-from users.models import User
+from applications.users.models import User
 from autoslug import AutoSlugField
 from .choices import HistoryLabel
 from .helpers import EventFileNameGenerator

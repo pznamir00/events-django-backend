@@ -1,198 +1,5 @@
 [
     {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "get_random_secret_key",
-        "importPath": "django.core.management.utils",
-        "description": "django.core.management.utils",
-        "isExtraImport": true,
-        "detail": "django.core.management.utils",
-        "documentation": {}
-    },
-    {
-        "label": "get_asgi_application",
-        "importPath": "django.core.asgi",
-        "description": "django.core.asgi",
-        "isExtraImport": true,
-        "detail": "django.core.asgi",
-        "documentation": {}
-    },
-    {
-        "label": "absolute_import",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
-        "label": "unicode_literals",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
-        "label": "absolute_import",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
-        "label": "unicode_literals",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
-        "label": "Celery",
-        "importPath": "celery",
-        "description": "celery",
-        "isExtraImport": true,
-        "detail": "celery",
-        "documentation": {}
-    },
-    {
-        "label": "shared_task",
-        "importPath": "celery",
-        "description": "celery",
-        "isExtraImport": true,
-        "detail": "celery",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "reverse",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "resolve",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "get_wsgi_application",
-        "importPath": "django.core.wsgi",
-        "description": "django.core.wsgi",
-        "isExtraImport": true,
-        "detail": "django.core.wsgi",
-        "documentation": {}
-    },
-    {
         "label": "autoslug.fields",
         "kind": 6,
         "isExtraImport": true,
@@ -556,12 +363,12 @@
         "documentation": {}
     },
     {
-        "label": "core.helpers",
+        "label": "applications.core.helpers",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "core.helpers",
-        "description": "core.helpers",
-        "detail": "core.helpers",
+        "importPath": "applications.core.helpers",
+        "description": "applications.core.helpers",
+        "detail": "applications.core.helpers",
         "documentation": {}
     },
     {
@@ -596,6 +403,38 @@
         "importPath": "django.contrib.gis.db.models.fields",
         "description": "django.contrib.gis.db.models.fields",
         "detail": "django.contrib.gis.db.models.fields",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
         "documentation": {}
     },
     {
@@ -753,18 +592,18 @@
     },
     {
         "label": "User",
-        "importPath": "users.models",
-        "description": "users.models",
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
         "isExtraImport": true,
-        "detail": "users.models",
+        "detail": "applications.users.models",
         "documentation": {}
     },
     {
         "label": "User",
-        "importPath": "users.models",
-        "description": "users.models",
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
         "isExtraImport": true,
-        "detail": "users.models",
+        "detail": "applications.users.models",
         "documentation": {}
     },
     {
@@ -873,18 +712,18 @@
     },
     {
         "label": "TicketGenerator",
-        "importPath": "tickets.helpers",
-        "description": "tickets.helpers",
+        "importPath": "applications.tickets.helpers",
+        "description": "applications.tickets.helpers",
         "isExtraImport": true,
-        "detail": "tickets.helpers",
+        "detail": "applications.tickets.helpers",
         "documentation": {}
     },
     {
         "label": "TicketTemplateSerializer",
-        "importPath": "tickets.serializers",
-        "description": "tickets.serializers",
+        "importPath": "applications.tickets.serializers",
+        "description": "applications.tickets.serializers",
         "isExtraImport": true,
-        "detail": "tickets.serializers",
+        "detail": "applications.tickets.serializers",
         "documentation": {}
     },
     {
@@ -896,27 +735,51 @@
         "documentation": {}
     },
     {
-        "label": "Event",
-        "importPath": "core.models",
-        "description": "core.models",
+        "label": "absolute_import",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "core.models",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "Event",
-        "importPath": "core.models",
-        "description": "core.models",
+        "label": "unicode_literals",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "core.models",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "Event",
-        "importPath": "core.models",
-        "description": "core.models",
+        "label": "absolute_import",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "core.models",
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "unicode_literals",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "shared_task",
+        "importPath": "celery",
+        "description": "celery",
+        "isExtraImport": true,
+        "detail": "celery",
+        "documentation": {}
+    },
+    {
+        "label": "Celery",
+        "importPath": "celery",
+        "description": "celery",
+        "isExtraImport": true,
+        "detail": "celery",
         "documentation": {}
     },
     {
@@ -944,53 +807,75 @@
         "documentation": {}
     },
     {
-        "label": "time",
-        "kind": 6,
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
         "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
+        "detail": "django.urls",
         "documentation": {}
     },
     {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
         "isExtraImport": true,
-        "detail": "django.test",
+        "detail": "django.urls",
         "documentation": {}
     },
     {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
         "isExtraImport": true,
-        "detail": "django.test",
+        "detail": "django.urls",
         "documentation": {}
     },
     {
-        "label": "base64",
-        "kind": 6,
+        "label": "resolve",
+        "importPath": "django.urls",
+        "description": "django.urls",
         "isExtraImport": true,
-        "importPath": "base64",
-        "description": "base64",
-        "detail": "base64",
+        "detail": "django.urls",
         "documentation": {}
     },
     {
-        "label": "get_object_or_404",
-        "importPath": "rest_framework.generics",
-        "description": "rest_framework.generics",
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
         "isExtraImport": true,
-        "detail": "rest_framework.generics",
+        "detail": "django.urls",
         "documentation": {}
     },
     {
-        "label": "RetrieveAPIView",
-        "importPath": "rest_framework.generics",
-        "description": "rest_framework.generics",
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
         "isExtraImport": true,
-        "detail": "rest_framework.generics",
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
         "documentation": {}
     },
     {
@@ -1034,22 +919,6 @@
         "documentation": {}
     },
     {
-        "label": "mixer",
-        "importPath": "mixer.backend.django",
-        "description": "mixer.backend.django",
-        "isExtraImport": true,
-        "detail": "mixer.backend.django",
-        "documentation": {}
-    },
-    {
-        "label": "mixer",
-        "importPath": "mixer.backend.django",
-        "description": "mixer.backend.django",
-        "isExtraImport": true,
-        "detail": "mixer.backend.django",
-        "documentation": {}
-    },
-    {
         "label": "pytest",
         "kind": 6,
         "isExtraImport": true,
@@ -1072,6 +941,22 @@
         "description": "django.core.exceptions",
         "isExtraImport": true,
         "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
         "documentation": {}
     },
     {
@@ -1140,12 +1025,46 @@
         "documentation": {}
     },
     {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
         "label": "io",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "io",
         "description": "io",
         "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
         "documentation": {}
     },
     {
@@ -1233,12 +1152,647 @@
         "documentation": {}
     },
     {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "get_random_secret_key",
+        "importPath": "django.core.management.utils",
+        "description": "django.core.management.utils",
+        "isExtraImport": true,
+        "detail": "django.core.management.utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0001_initial",
+        "description": "applications.core.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Category\",\n            fields=[\n                (",
+        "detail": "applications.core.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0002_rename_id_event_key",
+        "description": "applications.core.migrations.0002_rename_id_event_key",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"event\",\n            old_name=\"id\",\n            new_name=\"key\",\n        ),",
+        "detail": "applications.core.migrations.0002_rename_id_event_key",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0003_rename_key_event_id",
+        "description": "applications.core.migrations.0003_rename_key_event_id",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0002_rename_id_event_key\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"event\",\n            old_name=\"key\",\n            new_name=\"ID\",\n        ),",
+        "detail": "applications.core.migrations.0003_rename_key_event_id",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0004_rename_id_event_id",
+        "description": "applications.core.migrations.0004_rename_id_event_id",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0003_rename_key_event_id\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"event\",\n            old_name=\"ID\",\n            new_name=\"id\",\n        ),",
+        "detail": "applications.core.migrations.0004_rename_id_event_id",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0005_eventhistory_event",
+        "description": "applications.core.migrations.0005_eventhistory_event",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0004_rename_id_event_id\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"eventhistory\",\n            name=\"event\",\n            field=models.ForeignKey(\n                null=True,",
+        "detail": "applications.core.migrations.0005_eventhistory_event",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0006_auto_20211027_1949",
+        "description": "applications.core.migrations.0006_auto_20211027_1949",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0005_eventhistory_event\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"event\",\n            name=\"is_active\",\n            field=models.BooleanField(default=True),\n        ),",
+        "detail": "applications.core.migrations.0006_auto_20211027_1949",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0007_auto_20211027_2059",
+        "description": "applications.core.migrations.0007_auto_20211027_2059",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0006_auto_20211027_1949\"),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name=\"eventticket\",\n            name=\"event\",\n        ),\n        migrations.CreateModel(",
+        "detail": "applications.core.migrations.0007_auto_20211027_2059",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0008_auto_20211028_1819",
+        "description": "applications.core.migrations.0008_auto_20211028_1819",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0007_auto_20211027_2059\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"event\",\n            name=\"image\",\n            field=models.ImageField(\n                null=True,",
+        "detail": "applications.core.migrations.0008_auto_20211028_1819",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0009_remove_eventtemplate_event",
+        "description": "applications.core.migrations.0009_remove_eventtemplate_event",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0008_auto_20211028_1819\"),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name=\"eventtemplate\",\n            name=\"event\",\n        ),\n    ]",
+        "detail": "applications.core.migrations.0009_remove_eventtemplate_event",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0010_delete_eventtemplate",
+        "description": "applications.core.migrations.0010_delete_eventtemplate",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0009_remove_eventtemplate_event\"),\n        (\"tickets\", \"0002_auto_20211029_0930\"),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name=\"EventTemplate\",\n        ),\n    ]",
+        "detail": "applications.core.migrations.0010_delete_eventtemplate",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0011_alter_event_image",
+        "description": "applications.core.migrations.0011_alter_event_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0010_delete_eventtemplate\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"event\",\n            name=\"image\",\n            field=models.ImageField(\n                blank=True,",
+        "detail": "applications.core.migrations.0011_alter_event_image",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0012_event_location",
+        "description": "applications.core.migrations.0012_event_location",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0011_alter_event_image\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"event\",\n            name=\"location\",\n            field=django.contrib.gis.db.models.fields.PointField(null=True, srid=4326),\n        ),",
+        "detail": "applications.core.migrations.0012_event_location",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0013_auto_20211030_1604",
+        "description": "applications.core.migrations.0013_auto_20211030_1604",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0012_event_location\"),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name=\"event\",\n            name=\"latitude\",\n        ),\n        migrations.RemoveField(",
+        "detail": "applications.core.migrations.0013_auto_20211030_1604",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0014_alter_eventhistory_label",
+        "description": "applications.core.migrations.0014_alter_eventhistory_label",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0013_auto_20211030_1604\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"eventhistory\",\n            name=\"label\",\n            field=models.CharField(\n                choices=[",
+        "detail": "applications.core.migrations.0014_alter_eventhistory_label",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0015_auto_20211101_1057",
+        "description": "applications.core.migrations.0015_auto_20211101_1057",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0014_alter_eventhistory_label\"),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name=\"event\",\n            name=\"is_active\",\n        ),\n        migrations.AddField(",
+        "detail": "applications.core.migrations.0015_auto_20211101_1057",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0016_alter_followedhashtag_user",
+        "description": "applications.core.migrations.0016_alter_followedhashtag_user",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        (\"core\", \"0015_auto_20211101_1057\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"followedhashtag\",\n            name=\"user\",\n            field=models.ForeignKey(",
+        "detail": "applications.core.migrations.0016_alter_followedhashtag_user",
+        "documentation": {}
+    },
+    {
+        "label": "CoreConfig",
+        "kind": 6,
+        "importPath": "applications.core.apps",
+        "description": "applications.core.apps",
+        "peekOfCode": "class CoreConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"applications.core\"",
+        "detail": "applications.core.apps",
+        "documentation": {}
+    },
+    {
+        "label": "HistoryLabel",
+        "kind": 6,
+        "importPath": "applications.core.choices",
+        "description": "applications.core.choices",
+        "peekOfCode": "class HistoryLabel(models.TextChoices):\n    MOVED = \"1\", \"Moved\"\n    CANCELED = \"2\", \"Canceled\"\n    DETAILS_CHANGED = \"3\", \"Details Changed\"\n    TOOK_PLACE = \"4\", \"Took place\"",
+        "detail": "applications.core.choices",
+        "documentation": {}
+    },
+    {
+        "label": "EventFilterSet",
+        "kind": 6,
+        "importPath": "applications.core.filters",
+        "description": "applications.core.filters",
+        "peekOfCode": "class EventFilterSet(filters.FilterSet):\n    range = filters.NumberFilter(method=\"filter_by_range\")\n    keywords = filters.CharFilter(\"keywords\", method=\"filter_by_keywords\")\n    created_at = filters.DateRangeFilter()\n    updated_at = filters.DateRangeFilter()\n    event_datetime = filters.DateRangeFilter()\n    category = filters.NumberFilter(\"category\")\n    promoter = filters.NumberFilter(\"promoter\")\n    is_free = filters.BooleanFilter(\"is_free\")\n    class Meta:",
+        "detail": "applications.core.filters",
+        "documentation": {}
+    },
+    {
+        "label": "EventOrderingFilter",
+        "kind": 6,
+        "importPath": "applications.core.filters",
+        "description": "applications.core.filters",
+        "peekOfCode": "class EventOrderingFilter(OrderingFilter):\n    \"\"\"\n    Default ordering way for events list.\n    That orders by time expiriation and if user\n    provided coordinates, by distance either.\n    \"\"\"\n    def filter_queryset(self, request, queryset, view):\n        \"\"\"\n        Order by expiriation time. Expired events go to the end of a list.\n        \"\"\"",
+        "detail": "applications.core.filters",
+        "documentation": {}
+    },
+    {
+        "label": "EventFileNameGenerator",
+        "kind": 6,
+        "importPath": "applications.core.helpers",
+        "description": "applications.core.helpers",
+        "peekOfCode": "class EventFileNameGenerator:\n    def generate(instance, filename):\n        extension = filename.split(\".\")[-1]\n        return \"media/events/\" + str(uuid.uuid4()) + \".\" + extension",
+        "detail": "applications.core.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "kind": 6,
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "peekOfCode": "class Category(models.Model):\n    name = models.CharField(max_length=64, unique=True)\n    slug = AutoSlugField(populate_from=\"name\")\n    def __str__(self):\n        return self.name\n\"\"\"\nMain Event model.\nIt includes all necessery data for schedule a meeting (place, time etc.)\nThis objects have own images and history additionally.\nIf is_private = True, secret key is generated as random key for sharing by link,",
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "kind": 6,
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "peekOfCode": "class Event(models.Model):\n    id = models.UUIDField(primary_key=True, editable=False, default=uuid.uuid4)\n    title = models.CharField(max_length=128)\n    description = models.TextField(blank=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now=True)\n    location = PointField(geography=True, null=True)\n    location_hints = models.CharField(max_length=256, blank=True, null=True)\n    event_datetime = models.DateTimeField()\n    promoter = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)",
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "EventHistory",
+        "kind": 6,
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "peekOfCode": "class EventHistory(models.Model):\n    label = models.CharField(max_length=1, choices=HistoryLabel.choices)\n    text = models.CharField(max_length=256, blank=True, null=True)\n    event = models.ForeignKey(\n        Event, on_delete=models.CASCADE, related_name=\"histories\", null=True\n    )\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.name\n\"\"\"",
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "FollowedHashTag",
+        "kind": 6,
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "peekOfCode": "class FollowedHashTag(models.Model):\n    value = models.CharField(max_length=128)\n    user = models.ForeignKey(\n        User, on_delete=models.CASCADE, related_name=\"followed_hashtags\"\n    )\n    def __str__(self):\n        return \"#\" + self.value",
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "IsAdminOrReadOnly",
+        "kind": 6,
+        "importPath": "applications.core.permissions",
+        "description": "applications.core.permissions",
+        "peekOfCode": "class IsAdminOrReadOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        \"\"\"\n        Allow an access for each user if method is safe (read)\n        Otherwise admin rights are required\n        \"\"\"\n        return (\n            True\n            if request.method in permissions.SAFE_METHODS\n            else request.user.is_superuser",
+        "detail": "applications.core.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsOwnerOrReadOnly",
+        "kind": 6,
+        "importPath": "applications.core.permissions",
+        "description": "applications.core.permissions",
+        "peekOfCode": "class IsOwnerOrReadOnly(permissions.BasePermission):\n    def has_object_permission(self, request, view, obj):\n        \"\"\"\n        Read only for everybody\n        \"\"\"\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        \"\"\"\n        Edit mode only for author (promotor) of event or admin user\n        \"\"\"",
+        "detail": "applications.core.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "CreateAuthenticatedOnly",
+        "kind": 6,
+        "importPath": "applications.core.permissions",
+        "description": "applications.core.permissions",
+        "peekOfCode": "class CreateAuthenticatedOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        return request.user.is_authenticated if request.method == \"POST\" else True",
+        "detail": "applications.core.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "CategorySerializer",
+        "kind": 6,
+        "importPath": "applications.core.serializers",
+        "description": "applications.core.serializers",
+        "peekOfCode": "class CategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Category\n        fields = (\n            \"name\",\n            \"slug\",\n        )\n        read_only_fields = (\"slug\",)\nclass EventHistorySerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "applications.core.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "EventHistorySerializer",
+        "kind": 6,
+        "importPath": "applications.core.serializers",
+        "description": "applications.core.serializers",
+        "peekOfCode": "class EventHistorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = EventHistory\n        exclude = (\"id\",)\n        extra_kwargs = {\"event\": {\"write_only\": True}}\nclass FollowedHashTagSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = FollowedHashTag\n        fields = (\"value\",)\nclass EventSimpleSerializer(serializers.ModelSerializer):",
+        "detail": "applications.core.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "FollowedHashTagSerializer",
+        "kind": 6,
+        "importPath": "applications.core.serializers",
+        "description": "applications.core.serializers",
+        "peekOfCode": "class FollowedHashTagSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = FollowedHashTag\n        fields = (\"value\",)\nclass EventSimpleSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Event\n        fields = (\n            \"id\",\n            \"title\",",
+        "detail": "applications.core.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "EventSimpleSerializer",
+        "kind": 6,
+        "importPath": "applications.core.serializers",
+        "description": "applications.core.serializers",
+        "peekOfCode": "class EventSimpleSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Event\n        fields = (\n            \"id\",\n            \"title\",\n            \"location\",\n            \"event_datetime\",\n            \"category\",\n            \"is_free\",",
+        "detail": "applications.core.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "EventDetailSerializer",
+        "kind": 6,
+        "importPath": "applications.core.serializers",
+        "description": "applications.core.serializers",
+        "peekOfCode": "class EventDetailSerializer(serializers.ModelSerializer):\n    ticket = TicketTemplateSerializer(write_only=True, required=False)\n    histories = EventHistorySerializer(many=True, read_only=True)\n    location = PointField()\n    class Meta:\n        model = Event\n        fields = \"__all__\"\n        read_only_fields = (\n            \"created_at\",\n            \"updated_at\",",
+        "detail": "applications.core.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "send_emails",
+        "kind": 2,
+        "importPath": "applications.core.tasks",
+        "description": "applications.core.tasks",
+        "peekOfCode": "def send_emails(**kwargs):\n    \"\"\"\n    This function is the cron system for automatically sending\n    emails in users every day with new events that may interest them.\n    It triggers on 1 time every day and looks for events that were\n    added in last 24 hours.\n    After retrieve a list of this events looks for a matches with\n    followed hashtags based on relations of their with user.\n    Result is a list of events that is submiting to user as email message.\n    \"\"\"",
+        "detail": "applications.core.tasks",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "applications.core.urls",
+        "description": "applications.core.urls",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(\"categories\", views.CategoryViewSet)\nrouter.register(\n    \"followed-hashtags\", views.FollowedHashTagView, basename=\"followedHashtags\"\n)\nrouter.register(\"events\", views.EventViewSet, basename=\"events\")\nrouter.register(\"own-events\", views.EventOwnListViewSet, basename=\"own_events\")\nurlpatterns = [path(\"\", include(router.urls))]",
+        "detail": "applications.core.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "applications.core.urls",
+        "description": "applications.core.urls",
+        "peekOfCode": "urlpatterns = [path(\"\", include(router.urls))]",
+        "detail": "applications.core.urls",
+        "documentation": {}
+    },
+    {
+        "label": "CheckIfTicketProvidedIfPrivate",
+        "kind": 6,
+        "importPath": "applications.core.validators",
+        "description": "applications.core.validators",
+        "peekOfCode": "class CheckIfTicketProvidedIfPrivate:\n    def __call__(self, value):\n        if value.get(\"is_free\") == False:\n            if \"ticket\" not in value:\n                raise serializers.ValidationError(\n                    \"If you are passing is_free field, you must pass ticket field too\"\n                )",
+        "detail": "applications.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryViewSet",
+        "kind": 6,
+        "importPath": "applications.core.views",
+        "description": "applications.core.views",
+        "peekOfCode": "class CategoryViewSet(viewsets.ModelViewSet):\n    queryset = Category.objects.all()\n    serializer_class = CategorySerializer\n    permission_classes = (IsAdminOrReadOnly,)\nclass FollowedHashTagView(\n    mixins.ListModelMixin,\n    mixins.CreateModelMixin,\n    mixins.DestroyModelMixin,\n    viewsets.GenericViewSet,\n):",
+        "detail": "applications.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "FollowedHashTagView",
+        "kind": 6,
+        "importPath": "applications.core.views",
+        "description": "applications.core.views",
+        "peekOfCode": "class FollowedHashTagView(\n    mixins.ListModelMixin,\n    mixins.CreateModelMixin,\n    mixins.DestroyModelMixin,\n    viewsets.GenericViewSet,\n):\n    serializer_class = FollowedHashTagSerializer\n    def get_queryset(self):\n        return FollowedHashTag.objects.filter(user=self.request.user)\n    def perform_create(self, serializer):",
+        "detail": "applications.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "EventViewSet",
+        "kind": 6,
+        "importPath": "applications.core.views",
+        "description": "applications.core.views",
+        "peekOfCode": "class EventViewSet(viewsets.ModelViewSet):\n    queryset = Event.objects.filter(is_private=False, canceled=False, took_place=False)\n    permission_classes = (\n        IsOwnerOrReadOnly,\n        CreateAuthenticatedOnly,\n    )\n    filter_backends = (\n        filters.DjangoFilterBackend,\n        EventOrderingFilter,\n    )",
+        "detail": "applications.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "EventOwnListViewSet",
+        "kind": 6,
+        "importPath": "applications.core.views",
+        "description": "applications.core.views",
+        "peekOfCode": "class EventOwnListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):\n    serializer_class = EventSimpleSerializer\n    permission_classes = (IsAuthenticated,)\n    def get_queryset(self):\n        return Event.objects.filter(promoter=self.request.user)",
+        "detail": "applications.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.tickets.migrations.0001_initial",
+        "description": "applications.tickets.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        (\"core\", \"0008_auto_20211028_1819\"),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Ticket\",\n            fields=[\n                (",
+        "detail": "applications.tickets.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.tickets.migrations.0002_auto_20211029_0930",
+        "description": "applications.tickets.migrations.0002_auto_20211029_0930",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0009_remove_eventtemplate_event\"),\n        (\"tickets\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"TicketTemplate\",\n            fields=[\n                (",
+        "detail": "applications.tickets.migrations.0002_auto_20211029_0930",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.tickets.migrations.0003_rename_template_tickettemplate__file",
+        "description": "applications.tickets.migrations.0003_rename_template_tickettemplate__file",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"tickets\", \"0002_auto_20211029_0930\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"tickettemplate\",\n            old_name=\"template\",\n            new_name=\"_file\",\n        ),",
+        "detail": "applications.tickets.migrations.0003_rename_template_tickettemplate__file",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.tickets.migrations.0004_auto_20211029_1451",
+        "description": "applications.tickets.migrations.0004_auto_20211029_1451",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"tickets\", \"0003_rename_template_tickettemplate__file\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"ticket\",\n            old_name=\"sold\",\n            new_name=\"is_sold\",\n        ),",
+        "detail": "applications.tickets.migrations.0004_auto_20211029_1451",
+        "documentation": {}
+    },
+    {
+        "label": "TestTicketsModels",
+        "kind": 6,
+        "importPath": "applications.tickets.tests.test_models",
+        "description": "applications.tickets.tests.test_models",
+        "peekOfCode": "class TestTicketsModels:\n    def test_create_ticket_template(self):\n        entity = mixer.blend(\"tickets.TicketTemplate\")\n        assert entity.pk == 1, \"Should create a TicketTemplate instance\"\n    def test_fail_ticket_template_if_file_is_not_pdf(self):\n        with pytest.raises(ValidationError):\n            entity = mixer.blend(\"tickets.TicketTemplate\")\n            entity._file = SimpleUploadedFile(\"test_file.txt\", b\"file_content\")\n            entity.full_clean()\n            raise Exception(\"Error should have been thrown\")",
+        "detail": "applications.tickets.tests.test_models",
+        "documentation": {}
+    },
+    {
+        "label": "TestTicketsUrls",
+        "kind": 6,
+        "importPath": "applications.tickets.tests.test_urls",
+        "description": "applications.tickets.tests.test_urls",
+        "peekOfCode": "class TestTicketsUrls:\n    def test_event_tickets_url_resolves(self):\n        url = reverse(\"events-tickets\", args=[\"event123\"])\n        assert resolve(url).func.view_class == views.TicketAPIView\n    def test_event_tickets_checker_url_resolves(self):\n        url = reverse(\"events-tickets-checker\", args=[\"event123\", \"ticket123\"])\n        assert resolve(url).func.view_class == views.TicketCheckerAPIView",
+        "detail": "applications.tickets.tests.test_urls",
+        "documentation": {}
+    },
+    {
+        "label": "TicketsConfig",
+        "kind": 6,
+        "importPath": "applications.tickets.apps",
+        "description": "applications.tickets.apps",
+        "peekOfCode": "class TicketsConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"applications.tickets\"",
+        "detail": "applications.tickets.apps",
+        "documentation": {}
+    },
+    {
+        "label": "TicketGenerator",
+        "kind": 6,
+        "importPath": "applications.tickets.helpers",
+        "description": "applications.tickets.helpers",
+        "peekOfCode": "class TicketGenerator:\n    \"\"\"\n    This class generates tickets with provided quantity by user\n    if it is necessery (that means when user provided 'is_free' field\n    and is set on False). User has to pass template file and quantity\n    of tickets to generate and in this point generates them.\n    \"\"\"\n    def generate_if_provided(data, ticket, event):\n        if \"is_free\" in data and not data[\"is_free\"]:\n            # save a template",
+        "detail": "applications.tickets.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "TicketWithQRCodeSender",
+        "kind": 6,
+        "importPath": "applications.tickets.helpers",
+        "description": "applications.tickets.helpers",
+        "peekOfCode": "class TicketWithQRCodeSender:\n    \"\"\"\n    This class is up to sending ticket file to client's email address.\n    It generates unique QR code (based on id of ticket), and pdf file\n    (based on selected template file). Then it merges this 2 files saved\n    in media/tmp with unique names, and send the outcome to provided email\n    address.\n    \"\"\"\n    def generate_and_send(email, obj):\n        # get pdf file from template",
+        "detail": "applications.tickets.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "TicketTemplate",
+        "kind": 6,
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "peekOfCode": "class TicketTemplate(models.Model):\n    event = models.OneToOneField(Event, on_delete=models.CASCADE)\n    _file = models.FileField(\n        upload_to=\"media/tickets/\", validators=[FileExtensionValidator([\"pdf\"])]\n    )\n    def __str__(self):\n        return self.event.title + \" Ticket Template\"\nclass Ticket(models.Model):\n    id = models.UUIDField(\n        primary_key=True, default=uuid.uuid4, editable=False, unique=True",
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Ticket",
+        "kind": 6,
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "peekOfCode": "class Ticket(models.Model):\n    id = models.UUIDField(\n        primary_key=True, default=uuid.uuid4, editable=False, unique=True\n    )\n    template = models.ForeignKey(TicketTemplate, on_delete=models.CASCADE)\n    is_used = models.BooleanField(default=False)\n    is_sold = models.BooleanField(default=False)\n    def __str__(self):\n        return \"Ticket \" + str(self.id)",
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "IsOwner",
+        "kind": 6,
+        "importPath": "applications.tickets.permissions",
+        "description": "applications.tickets.permissions",
+        "peekOfCode": "class IsOwner(permissions.BasePermission):\n    def has_object_permission(self, request, view, obj):\n        return obj.promoter == request.user",
+        "detail": "applications.tickets.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "TicketPurchaseSerializer",
+        "kind": 6,
+        "importPath": "applications.tickets.serializers",
+        "description": "applications.tickets.serializers",
+        "peekOfCode": "class TicketPurchaseSerializer(serializers.Serializer):\n    email = serializers.EmailField(required=True)\nclass TicketSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Ticket\n        exclude = (\"template\",)\nclass TicketTemplateSerializer(serializers.ModelSerializer):\n    quantity = serializers.IntegerField(\n        required=True, validators=[MinValueValidator(0)]\n    )",
+        "detail": "applications.tickets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TicketSerializer",
+        "kind": 6,
+        "importPath": "applications.tickets.serializers",
+        "description": "applications.tickets.serializers",
+        "peekOfCode": "class TicketSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Ticket\n        exclude = (\"template\",)\nclass TicketTemplateSerializer(serializers.ModelSerializer):\n    quantity = serializers.IntegerField(\n        required=True, validators=[MinValueValidator(0)]\n    )\n    class Meta:\n        model = TicketTemplate",
+        "detail": "applications.tickets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TicketTemplateSerializer",
+        "kind": 6,
+        "importPath": "applications.tickets.serializers",
+        "description": "applications.tickets.serializers",
+        "peekOfCode": "class TicketTemplateSerializer(serializers.ModelSerializer):\n    quantity = serializers.IntegerField(\n        required=True, validators=[MinValueValidator(0)]\n    )\n    class Meta:\n        model = TicketTemplate\n        fields = (\n            \"template\",\n            \"quantity\",\n        )",
+        "detail": "applications.tickets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "applications.tickets.urls",
+        "description": "applications.tickets.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\n        \"events/<str:event_id>/tickets/\",\n        views.TicketAPIView.as_view(),\n        name=\"events-tickets\",\n    ),\n    path(\n        \"events/<str:event_id>/tickets/<str:ticket_id>/\",\n        views.TicketCheckerAPIView.as_view(),\n        name=\"events-tickets-checker\",",
+        "detail": "applications.tickets.urls",
+        "documentation": {}
+    },
+    {
+        "label": "TicketCheckerAPIView",
+        "kind": 6,
+        "importPath": "applications.tickets.views",
+        "description": "applications.tickets.views",
+        "peekOfCode": "class TicketCheckerAPIView(APIView):\n    serializer_class = TicketSerializer\n    permission_classes = (\n        IsAuthenticated,\n        IsOwner,\n    )\n    def get_object(self, event_id, ticket_id):\n        try:\n            return Ticket.objects.get(\n                id=ticket_id, template__event=event_id, is_used=False, is_sold=True",
+        "detail": "applications.tickets.views",
+        "documentation": {}
+    },
+    {
+        "label": "TicketAPIView",
+        "kind": 6,
+        "importPath": "applications.tickets.views",
+        "description": "applications.tickets.views",
+        "peekOfCode": "class TicketAPIView(APIView):\n    serializer_class = TicketPurchaseSerializer\n    permission_classes = (AllowAny,)\n    def get_object(self, event_id):\n        \"\"\"\n        Get first available ticket that belongs to the choosed event\n        \"\"\"\n        return Ticket.objects.filter(template__event=event_id, is_sold=False).first()\n    def post(self, request, event_id):\n        \"\"\"",
+        "detail": "applications.tickets.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.users.migrations.0001_initial",
+        "description": "applications.users.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        (\"auth\", \"0012_alter_user_first_name_max_length\"),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"User\",\n            fields=[\n                (",
+        "detail": "applications.users.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.users.migrations.0002_user_avatar",
+        "description": "applications.users.migrations.0002_user_avatar",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"user\",\n            name=\"avatar\",\n            field=models.ImageField(null=True, upload_to=\"media/avatars\"),\n        ),",
+        "detail": "applications.users.migrations.0002_user_avatar",
+        "documentation": {}
+    },
+    {
+        "label": "UsersConfig",
+        "kind": 6,
+        "importPath": "applications.users.apps",
+        "description": "applications.users.apps",
+        "peekOfCode": "class UsersConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"applications.users\"",
+        "detail": "applications.users.apps",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
+        "peekOfCode": "class User(AbstractUser):\n    USERNAME_FIELD = \"username\"\n    EMAIL_FIELD = \"email\"\n    phone_number = PhoneNumberField(null=True, default=\"\")\n    country = models.CharField(max_length=128)\n    state = models.CharField(max_length=128)\n    city = models.CharField(max_length=128)\n    street = models.CharField(max_length=128)\n    home_nb = models.CharField(max_length=16)\n    zip_code = models.CharField(max_length=16)",
+        "detail": "applications.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "ExtendedRegisterSerializer",
+        "kind": 6,
+        "importPath": "applications.users.serializers",
+        "description": "applications.users.serializers",
+        "peekOfCode": "class ExtendedRegisterSerializer(RegisterSerializer):\n    def get_cleaned_data(self):\n        super(ExtendedRegisterSerializer, self).get_cleaned_data()\n        return {\n            \"username\": self.validated_data.get(\"username\", \"\"),\n            \"password1\": self.validated_data.get(\"password1\", \"\"),\n            \"password2\": self.validated_data.get(\"password2\", \"\"),\n            \"email\": self.validated_data.get(\"email\", \"\"),\n            \"phone_number\": self.validated_data.get(\"phone_number\", \"\"),\n            \"country\": self.validated_data.get(\"country\", \"\"),",
+        "detail": "applications.users.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UserSerializer",
+        "kind": 6,
+        "importPath": "applications.users.serializers",
+        "description": "applications.users.serializers",
+        "peekOfCode": "class UserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = (\n            \"email\",\n            \"phone_number\",\n            \"is_superuser\",\n            \"country\",\n            \"state\",\n            \"city\",",
+        "detail": "applications.users.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "applications.users.urls",
+        "description": "applications.users.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"user/\", views.UserAPIView.as_view()),\n    path(\"registration/\", include(\"dj_rest_auth.registration.urls\")),\n    path(\"password/\", include(\"django.contrib.auth.urls\")),\n    path(\"\", include(\"dj_rest_auth.urls\")),\n]",
+        "detail": "applications.users.urls",
+        "documentation": {}
+    },
+    {
+        "label": "UserAPIView",
+        "kind": 6,
+        "importPath": "applications.users.views",
+        "description": "applications.users.views",
+        "peekOfCode": "class UserAPIView(generics.RetrieveUpdateAPIView):\n    serializer_class = UserSerializer\n    permission_classes = (IsAuthenticated,)\n    def get_object(self, **kargs):\n        return self.request.user",
+        "detail": "applications.users.views",
         "documentation": {}
     },
     {
@@ -1282,7 +1836,7 @@
         "kind": 5,
         "importPath": "backend.settings.common",
         "description": "backend.settings.common",
-        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.sites\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"users\",\n    \"core\",",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.sites\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"applications.users\",\n    \"applications.core\",",
         "detail": "backend.settings.common",
         "documentation": {}
     },
@@ -1426,7 +1980,7 @@
         "kind": 5,
         "importPath": "backend.settings.common",
         "description": "backend.settings.common",
-        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),\n    \"DEFAULT_FILTER_BACKENDS\": (\"django_filters.rest_framework.DjangoFilterBackend\",),\n}\nREST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"users.serializers.ExtendedRegisterSerializer\"",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),\n    \"DEFAULT_FILTER_BACKENDS\": (\"django_filters.rest_framework.DjangoFilterBackend\",),\n}\nREST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"applications.users.serializers.ExtendedRegisterSerializer\"",
         "detail": "backend.settings.common",
         "documentation": {}
     },
@@ -1435,7 +1989,7 @@
         "kind": 5,
         "importPath": "backend.settings.common",
         "description": "backend.settings.common",
-        "peekOfCode": "AUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),\n    \"DEFAULT_FILTER_BACKENDS\": (\"django_filters.rest_framework.DjangoFilterBackend\",),\n}\nREST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"users.serializers.ExtendedRegisterSerializer\"\n}",
+        "peekOfCode": "AUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),\n    \"DEFAULT_FILTER_BACKENDS\": (\"django_filters.rest_framework.DjangoFilterBackend\",),\n}\nREST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"applications.users.serializers.ExtendedRegisterSerializer\"\n}",
         "detail": "backend.settings.common",
         "documentation": {}
     },
@@ -1444,7 +1998,7 @@
         "kind": 5,
         "importPath": "backend.settings.common",
         "description": "backend.settings.common",
-        "peekOfCode": "REST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),\n    \"DEFAULT_FILTER_BACKENDS\": (\"django_filters.rest_framework.DjangoFilterBackend\",),\n}\nREST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"users.serializers.ExtendedRegisterSerializer\"\n}\nSITE_ID = 1",
+        "peekOfCode": "REST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),\n    \"DEFAULT_FILTER_BACKENDS\": (\"django_filters.rest_framework.DjangoFilterBackend\",),\n}\nREST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"applications.users.serializers.ExtendedRegisterSerializer\"\n}\nSITE_ID = 1",
         "detail": "backend.settings.common",
         "documentation": {}
     },
@@ -1453,7 +2007,7 @@
         "kind": 5,
         "importPath": "backend.settings.common",
         "description": "backend.settings.common",
-        "peekOfCode": "REST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"users.serializers.ExtendedRegisterSerializer\"\n}\nSITE_ID = 1\nEMAIL_USE_TLS = True\nEMAIL_HOST = \"\"\nEMAIL_PORT = \"\"\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"\nCELERY_TIMEZONE = \"Europe/London\"",
+        "peekOfCode": "REST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"applications.users.serializers.ExtendedRegisterSerializer\"\n}\nSITE_ID = 1\nEMAIL_USE_TLS = True\nEMAIL_HOST = \"\"\nEMAIL_PORT = \"\"\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"\nCELERY_TIMEZONE = \"Europe/London\"",
         "detail": "backend.settings.common",
         "documentation": {}
     },
@@ -1813,7 +2367,7 @@
         "kind": 5,
         "importPath": "backend.urls",
         "description": "backend.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"api/auth/\", include(\"users.urls\")),\n    path(\"api/core/\", include(\"core.urls\")),\n    path(\"api/tickets/\", include(\"tickets.urls\")),\n    path(\"admin/\", admin.site.urls),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"api/auth/\", include(\"applications.users.urls\")),\n    path(\"api/core/\", include(\"applications.core.urls\")),\n    path(\"api/tickets/\", include(\"applications.tickets.urls\")),\n    path(\"admin/\", admin.site.urls),\n]",
         "detail": "backend.urls",
         "documentation": {}
     },
@@ -1827,615 +2381,12 @@
         "documentation": {}
     },
     {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0001_initial",
-        "description": "core.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Category\",\n            fields=[\n                (",
-        "detail": "core.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0002_rename_id_event_key",
-        "description": "core.migrations.0002_rename_id_event_key",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"event\",\n            old_name=\"id\",\n            new_name=\"key\",\n        ),",
-        "detail": "core.migrations.0002_rename_id_event_key",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0003_rename_key_event_id",
-        "description": "core.migrations.0003_rename_key_event_id",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0002_rename_id_event_key\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"event\",\n            old_name=\"key\",\n            new_name=\"ID\",\n        ),",
-        "detail": "core.migrations.0003_rename_key_event_id",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0004_rename_id_event_id",
-        "description": "core.migrations.0004_rename_id_event_id",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0003_rename_key_event_id\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"event\",\n            old_name=\"ID\",\n            new_name=\"id\",\n        ),",
-        "detail": "core.migrations.0004_rename_id_event_id",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0005_eventhistory_event",
-        "description": "core.migrations.0005_eventhistory_event",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0004_rename_id_event_id\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"eventhistory\",\n            name=\"event\",\n            field=models.ForeignKey(\n                null=True,",
-        "detail": "core.migrations.0005_eventhistory_event",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0006_auto_20211027_1949",
-        "description": "core.migrations.0006_auto_20211027_1949",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0005_eventhistory_event\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"event\",\n            name=\"is_active\",\n            field=models.BooleanField(default=True),\n        ),",
-        "detail": "core.migrations.0006_auto_20211027_1949",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0007_auto_20211027_2059",
-        "description": "core.migrations.0007_auto_20211027_2059",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0006_auto_20211027_1949\"),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name=\"eventticket\",\n            name=\"event\",\n        ),\n        migrations.CreateModel(",
-        "detail": "core.migrations.0007_auto_20211027_2059",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0008_auto_20211028_1819",
-        "description": "core.migrations.0008_auto_20211028_1819",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0007_auto_20211027_2059\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"event\",\n            name=\"image\",\n            field=models.ImageField(\n                null=True, upload_to=core.helpers.EventFileNameGenerator.generate",
-        "detail": "core.migrations.0008_auto_20211028_1819",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0009_remove_eventtemplate_event",
-        "description": "core.migrations.0009_remove_eventtemplate_event",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0008_auto_20211028_1819\"),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name=\"eventtemplate\",\n            name=\"event\",\n        ),\n    ]",
-        "detail": "core.migrations.0009_remove_eventtemplate_event",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0010_delete_eventtemplate",
-        "description": "core.migrations.0010_delete_eventtemplate",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0009_remove_eventtemplate_event\"),\n        (\"tickets\", \"0002_auto_20211029_0930\"),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name=\"EventTemplate\",\n        ),\n    ]",
-        "detail": "core.migrations.0010_delete_eventtemplate",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0011_alter_event_image",
-        "description": "core.migrations.0011_alter_event_image",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0010_delete_eventtemplate\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"event\",\n            name=\"image\",\n            field=models.ImageField(\n                blank=True,",
-        "detail": "core.migrations.0011_alter_event_image",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0012_event_location",
-        "description": "core.migrations.0012_event_location",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0011_alter_event_image\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"event\",\n            name=\"location\",\n            field=django.contrib.gis.db.models.fields.PointField(null=True, srid=4326),\n        ),",
-        "detail": "core.migrations.0012_event_location",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0013_auto_20211030_1604",
-        "description": "core.migrations.0013_auto_20211030_1604",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0012_event_location\"),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name=\"event\",\n            name=\"latitude\",\n        ),\n        migrations.RemoveField(",
-        "detail": "core.migrations.0013_auto_20211030_1604",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0014_alter_eventhistory_label",
-        "description": "core.migrations.0014_alter_eventhistory_label",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0013_auto_20211030_1604\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"eventhistory\",\n            name=\"label\",\n            field=models.CharField(\n                choices=[",
-        "detail": "core.migrations.0014_alter_eventhistory_label",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0015_auto_20211101_1057",
-        "description": "core.migrations.0015_auto_20211101_1057",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0014_alter_eventhistory_label\"),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name=\"event\",\n            name=\"is_active\",\n        ),\n        migrations.AddField(",
-        "detail": "core.migrations.0015_auto_20211101_1057",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "core.migrations.0016_alter_followedhashtag_user",
-        "description": "core.migrations.0016_alter_followedhashtag_user",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        (\"core\", \"0015_auto_20211101_1057\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"followedhashtag\",\n            name=\"user\",\n            field=models.ForeignKey(",
-        "detail": "core.migrations.0016_alter_followedhashtag_user",
-        "documentation": {}
-    },
-    {
-        "label": "CoreConfig",
-        "kind": 6,
-        "importPath": "core.apps",
-        "description": "core.apps",
-        "peekOfCode": "class CoreConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"core\"",
-        "detail": "core.apps",
-        "documentation": {}
-    },
-    {
-        "label": "HistoryLabel",
-        "kind": 6,
-        "importPath": "core.choices",
-        "description": "core.choices",
-        "peekOfCode": "class HistoryLabel(models.TextChoices):\n    MOVED = \"1\", \"Moved\"\n    CANCELED = \"2\", \"Canceled\"\n    DETAILS_CHANGED = \"3\", \"Details Changed\"\n    TOOK_PLACE = \"4\", \"Took place\"",
-        "detail": "core.choices",
-        "documentation": {}
-    },
-    {
-        "label": "EventFilterSet",
-        "kind": 6,
-        "importPath": "core.filters",
-        "description": "core.filters",
-        "peekOfCode": "class EventFilterSet(filters.FilterSet):\n    range = filters.NumberFilter(method=\"filter_by_range\")\n    keywords = filters.CharFilter(\"keywords\", method=\"filter_by_keywords\")\n    created_at = filters.DateRangeFilter()\n    updated_at = filters.DateRangeFilter()\n    event_datetime = filters.DateRangeFilter()\n    category = filters.NumberFilter(\"category\")\n    promoter = filters.NumberFilter(\"promoter\")\n    is_free = filters.BooleanFilter(\"is_free\")\n    class Meta:",
-        "detail": "core.filters",
-        "documentation": {}
-    },
-    {
-        "label": "EventOrderingFilter",
-        "kind": 6,
-        "importPath": "core.filters",
-        "description": "core.filters",
-        "peekOfCode": "class EventOrderingFilter(OrderingFilter):\n    \"\"\"\n    Default ordering way for events list.\n    That orders by time expiriation and if user\n    provided coordinates, by distance either.\n    \"\"\"\n    def filter_queryset(self, request, queryset, view):\n        \"\"\"\n        Order by expiriation time. Expired events go to the end of a list.\n        \"\"\"",
-        "detail": "core.filters",
-        "documentation": {}
-    },
-    {
-        "label": "EventFileNameGenerator",
-        "kind": 6,
-        "importPath": "core.helpers",
-        "description": "core.helpers",
-        "peekOfCode": "class EventFileNameGenerator:\n    def generate(instance, filename):\n        extension = filename.split(\".\")[-1]\n        return \"media/events/\" + str(uuid.uuid4()) + \".\" + extension",
-        "detail": "core.helpers",
-        "documentation": {}
-    },
-    {
-        "label": "Category",
-        "kind": 6,
-        "importPath": "core.models",
-        "description": "core.models",
-        "peekOfCode": "class Category(models.Model):\n    name = models.CharField(max_length=64, unique=True)\n    slug = AutoSlugField(populate_from=\"name\")\n    def __str__(self):\n        return self.name\n\"\"\"\nMain Event model.\nIt includes all necessery data for schedule a meeting (place, time etc.)\nThis objects have own images and history additionally.\nIf is_private = True, secret key is generated as random key for sharing by link,",
-        "detail": "core.models",
-        "documentation": {}
-    },
-    {
-        "label": "Event",
-        "kind": 6,
-        "importPath": "core.models",
-        "description": "core.models",
-        "peekOfCode": "class Event(models.Model):\n    id = models.UUIDField(primary_key=True, editable=False, default=uuid.uuid4)\n    title = models.CharField(max_length=128)\n    description = models.TextField(blank=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now=True)\n    location = PointField(geography=True, null=True)\n    location_hints = models.CharField(max_length=256, blank=True, null=True)\n    event_datetime = models.DateTimeField()\n    promoter = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)",
-        "detail": "core.models",
-        "documentation": {}
-    },
-    {
-        "label": "EventHistory",
-        "kind": 6,
-        "importPath": "core.models",
-        "description": "core.models",
-        "peekOfCode": "class EventHistory(models.Model):\n    label = models.CharField(max_length=1, choices=HistoryLabel.choices)\n    text = models.CharField(max_length=256, blank=True, null=True)\n    event = models.ForeignKey(\n        Event, on_delete=models.CASCADE, related_name=\"histories\", null=True\n    )\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.name\n\"\"\"",
-        "detail": "core.models",
-        "documentation": {}
-    },
-    {
-        "label": "FollowedHashTag",
-        "kind": 6,
-        "importPath": "core.models",
-        "description": "core.models",
-        "peekOfCode": "class FollowedHashTag(models.Model):\n    value = models.CharField(max_length=128)\n    user = models.ForeignKey(\n        User, on_delete=models.CASCADE, related_name=\"followed_hashtags\"\n    )\n    def __str__(self):\n        return \"#\" + self.value",
-        "detail": "core.models",
-        "documentation": {}
-    },
-    {
-        "label": "IsAdminOrReadOnly",
-        "kind": 6,
-        "importPath": "core.permissions",
-        "description": "core.permissions",
-        "peekOfCode": "class IsAdminOrReadOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        \"\"\"\n        Allow an access for each user if method is safe (read)\n        Otherwise admin rights are required\n        \"\"\"\n        return (\n            True\n            if request.method in permissions.SAFE_METHODS\n            else request.user.is_superuser",
-        "detail": "core.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "IsOwnerOrReadOnly",
-        "kind": 6,
-        "importPath": "core.permissions",
-        "description": "core.permissions",
-        "peekOfCode": "class IsOwnerOrReadOnly(permissions.BasePermission):\n    def has_object_permission(self, request, view, obj):\n        \"\"\"\n        Read only for everybody\n        \"\"\"\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        \"\"\"\n        Edit mode only for author (promotor) of event or admin user\n        \"\"\"",
-        "detail": "core.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "CreateAuthenticatedOnly",
-        "kind": 6,
-        "importPath": "core.permissions",
-        "description": "core.permissions",
-        "peekOfCode": "class CreateAuthenticatedOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        return request.user.is_authenticated if request.method == \"POST\" else True",
-        "detail": "core.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "CategorySerializer",
-        "kind": 6,
-        "importPath": "core.serializers",
-        "description": "core.serializers",
-        "peekOfCode": "class CategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Category\n        fields = (\n            \"name\",\n            \"slug\",\n        )\n        read_only_fields = (\"slug\",)\nclass EventHistorySerializer(serializers.ModelSerializer):\n    class Meta:",
-        "detail": "core.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "EventHistorySerializer",
-        "kind": 6,
-        "importPath": "core.serializers",
-        "description": "core.serializers",
-        "peekOfCode": "class EventHistorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = EventHistory\n        exclude = (\"id\",)\n        extra_kwargs = {\"event\": {\"write_only\": True}}\nclass FollowedHashTagSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = FollowedHashTag\n        fields = (\"value\",)\nclass EventSimpleSerializer(serializers.ModelSerializer):",
-        "detail": "core.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "FollowedHashTagSerializer",
-        "kind": 6,
-        "importPath": "core.serializers",
-        "description": "core.serializers",
-        "peekOfCode": "class FollowedHashTagSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = FollowedHashTag\n        fields = (\"value\",)\nclass EventSimpleSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Event\n        fields = (\n            \"id\",\n            \"title\",",
-        "detail": "core.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "EventSimpleSerializer",
-        "kind": 6,
-        "importPath": "core.serializers",
-        "description": "core.serializers",
-        "peekOfCode": "class EventSimpleSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Event\n        fields = (\n            \"id\",\n            \"title\",\n            \"location\",\n            \"event_datetime\",\n            \"category\",\n            \"is_free\",",
-        "detail": "core.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "EventDetailSerializer",
-        "kind": 6,
-        "importPath": "core.serializers",
-        "description": "core.serializers",
-        "peekOfCode": "class EventDetailSerializer(serializers.ModelSerializer):\n    ticket = TicketTemplateSerializer(write_only=True, required=False)\n    histories = EventHistorySerializer(many=True, read_only=True)\n    location = PointField()\n    class Meta:\n        model = Event\n        fields = \"__all__\"\n        read_only_fields = (\n            \"created_at\",\n            \"updated_at\",",
-        "detail": "core.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "send_emails",
-        "kind": 2,
-        "importPath": "core.tasks",
-        "description": "core.tasks",
-        "peekOfCode": "def send_emails(**kwargs):\n    \"\"\"\n    This function is the cron system for automatically sending\n    emails in users every day with new events that may interest them.\n    It triggers on 1 time every day and looks for events that were\n    added in last 24 hours.\n    After retrieve a list of this events looks for a matches with\n    followed hashtags based on relations of their with user.\n    Result is a list of events that is submiting to user as email message.\n    \"\"\"",
-        "detail": "core.tasks",
-        "documentation": {}
-    },
-    {
-        "label": "router",
-        "kind": 5,
-        "importPath": "core.urls",
-        "description": "core.urls",
-        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(\"categories\", views.CategoryViewSet)\nrouter.register(\n    \"followed-hashtags\", views.FollowedHashTagView, basename=\"followedHashtags\"\n)\nrouter.register(\"events\", views.EventViewSet, basename=\"events\")\nrouter.register(\"own-events\", views.EventOwnListViewSet, basename=\"own_events\")\nurlpatterns = [path(\"\", include(router.urls))]",
-        "detail": "core.urls",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "kind": 5,
-        "importPath": "core.urls",
-        "description": "core.urls",
-        "peekOfCode": "urlpatterns = [path(\"\", include(router.urls))]",
-        "detail": "core.urls",
-        "documentation": {}
-    },
-    {
-        "label": "CheckIfTicketProvidedIfPrivate",
-        "kind": 6,
-        "importPath": "core.validators",
-        "description": "core.validators",
-        "peekOfCode": "class CheckIfTicketProvidedIfPrivate:\n    def __call__(self, value):\n        if value.get(\"is_free\") == False:\n            if \"ticket\" not in value:\n                raise serializers.ValidationError(\n                    \"If you are passing is_free field, you must pass ticket field too\"\n                )",
-        "detail": "core.validators",
-        "documentation": {}
-    },
-    {
-        "label": "CategoryViewSet",
-        "kind": 6,
-        "importPath": "core.views",
-        "description": "core.views",
-        "peekOfCode": "class CategoryViewSet(viewsets.ModelViewSet):\n    queryset = Category.objects.all()\n    serializer_class = CategorySerializer\n    permission_classes = (IsAdminOrReadOnly,)\nclass FollowedHashTagView(\n    mixins.ListModelMixin,\n    mixins.CreateModelMixin,\n    mixins.DestroyModelMixin,\n    viewsets.GenericViewSet,\n):",
-        "detail": "core.views",
-        "documentation": {}
-    },
-    {
-        "label": "FollowedHashTagView",
-        "kind": 6,
-        "importPath": "core.views",
-        "description": "core.views",
-        "peekOfCode": "class FollowedHashTagView(\n    mixins.ListModelMixin,\n    mixins.CreateModelMixin,\n    mixins.DestroyModelMixin,\n    viewsets.GenericViewSet,\n):\n    serializer_class = FollowedHashTagSerializer\n    def get_queryset(self):\n        return FollowedHashTag.objects.filter(user=self.request.user)\n    def perform_create(self, serializer):",
-        "detail": "core.views",
-        "documentation": {}
-    },
-    {
-        "label": "EventViewSet",
-        "kind": 6,
-        "importPath": "core.views",
-        "description": "core.views",
-        "peekOfCode": "class EventViewSet(viewsets.ModelViewSet):\n    queryset = Event.objects.filter(is_private=False, canceled=False, took_place=False)\n    permission_classes = (\n        IsOwnerOrReadOnly,\n        CreateAuthenticatedOnly,\n    )\n    filter_backends = (\n        filters.DjangoFilterBackend,\n        EventOrderingFilter,\n    )",
-        "detail": "core.views",
-        "documentation": {}
-    },
-    {
-        "label": "EventOwnListViewSet",
-        "kind": 6,
-        "importPath": "core.views",
-        "description": "core.views",
-        "peekOfCode": "class EventOwnListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):\n    serializer_class = EventSimpleSerializer\n    permission_classes = (IsAuthenticated,)\n    def get_queryset(self):\n        return Event.objects.filter(promoter=self.request.user)",
-        "detail": "core.views",
-        "documentation": {}
-    },
-    {
         "label": "pytest_configure",
         "kind": 2,
         "importPath": "test.conftest",
         "description": "test.conftest",
         "peekOfCode": "def pytest_configure(config):\n    mixer.register(\n        \"core.Event\",\n        location=lambda: Point(\n            float(mixer.faker.latitude()),\n            float(mixer.faker.longitude()),\n        ),\n    )",
         "detail": "test.conftest",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "tickets.migrations.0001_initial",
-        "description": "tickets.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        (\"core\", \"0008_auto_20211028_1819\"),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"Ticket\",\n            fields=[\n                (",
-        "detail": "tickets.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "tickets.migrations.0002_auto_20211029_0930",
-        "description": "tickets.migrations.0002_auto_20211029_0930",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0009_remove_eventtemplate_event\"),\n        (\"tickets\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"TicketTemplate\",\n            fields=[\n                (",
-        "detail": "tickets.migrations.0002_auto_20211029_0930",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "tickets.migrations.0003_rename_template_tickettemplate__file",
-        "description": "tickets.migrations.0003_rename_template_tickettemplate__file",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"tickets\", \"0002_auto_20211029_0930\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"tickettemplate\",\n            old_name=\"template\",\n            new_name=\"_file\",\n        ),",
-        "detail": "tickets.migrations.0003_rename_template_tickettemplate__file",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "tickets.migrations.0004_auto_20211029_1451",
-        "description": "tickets.migrations.0004_auto_20211029_1451",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"tickets\", \"0003_rename_template_tickettemplate__file\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"ticket\",\n            old_name=\"sold\",\n            new_name=\"is_sold\",\n        ),",
-        "detail": "tickets.migrations.0004_auto_20211029_1451",
-        "documentation": {}
-    },
-    {
-        "label": "TestTicketsModels",
-        "kind": 6,
-        "importPath": "tickets.tests.test_models",
-        "description": "tickets.tests.test_models",
-        "peekOfCode": "class TestTicketsModels:\n    def test_create_ticket_template(self):\n        entity = mixer.blend(\"tickets.TicketTemplate\")\n        assert entity.pk == 1, \"Should create a TicketTemplate instance\"\n    def test_fail_ticket_template_if_file_is_not_pdf(self):\n        with pytest.raises(ValidationError):\n            entity = mixer.blend(\"tickets.TicketTemplate\")\n            entity._file = SimpleUploadedFile(\"test_file.txt\", b\"file_content\")\n            entity.full_clean()\n            raise Exception(\"Error should have been thrown\")",
-        "detail": "tickets.tests.test_models",
-        "documentation": {}
-    },
-    {
-        "label": "TestTicketsUrls",
-        "kind": 6,
-        "importPath": "tickets.tests.test_urls",
-        "description": "tickets.tests.test_urls",
-        "peekOfCode": "class TestTicketsUrls:\n    def test_event_tickets_url_resolves(self):\n        url = reverse(\"events-tickets\", args=[\"event123\"])\n        assert resolve(url).func.view_class == views.TicketAPIView\n    def test_event_tickets_checker_url_resolves(self):\n        url = reverse(\"events-tickets-checker\", args=[\"event123\", \"ticket123\"])\n        assert resolve(url).func.view_class == views.TicketCheckerAPIView",
-        "detail": "tickets.tests.test_urls",
-        "documentation": {}
-    },
-    {
-        "label": "TicketsConfig",
-        "kind": 6,
-        "importPath": "tickets.apps",
-        "description": "tickets.apps",
-        "peekOfCode": "class TicketsConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"tickets\"",
-        "detail": "tickets.apps",
-        "documentation": {}
-    },
-    {
-        "label": "TicketGenerator",
-        "kind": 6,
-        "importPath": "tickets.helpers",
-        "description": "tickets.helpers",
-        "peekOfCode": "class TicketGenerator:\n    \"\"\"\n    This class generates tickets with provided quantity by user\n    if it is necessery (that means when user provided 'is_free' field\n    and is set on False). User has to pass template file and quantity\n    of tickets to generate and in this point generates them.\n    \"\"\"\n    def generate_if_provided(data, ticket, event):\n        if \"is_free\" in data and not data[\"is_free\"]:\n            # save a template",
-        "detail": "tickets.helpers",
-        "documentation": {}
-    },
-    {
-        "label": "TicketWithQRCodeSender",
-        "kind": 6,
-        "importPath": "tickets.helpers",
-        "description": "tickets.helpers",
-        "peekOfCode": "class TicketWithQRCodeSender:\n    \"\"\"\n    This class is up to sending ticket file to client's email address.\n    It generates unique QR code (based on id of ticket), and pdf file\n    (based on selected template file). Then it merges this 2 files saved\n    in media/tmp with unique names, and send the outcome to provided email\n    address.\n    \"\"\"\n    def generate_and_send(email, obj):\n        # get pdf file from template",
-        "detail": "tickets.helpers",
-        "documentation": {}
-    },
-    {
-        "label": "TicketTemplate",
-        "kind": 6,
-        "importPath": "tickets.models",
-        "description": "tickets.models",
-        "peekOfCode": "class TicketTemplate(models.Model):\n    event = models.OneToOneField(Event, on_delete=models.CASCADE)\n    _file = models.FileField(\n        upload_to=\"media/tickets/\", validators=[FileExtensionValidator([\"pdf\"])]\n    )\n    def __str__(self):\n        return self.event.title + \" Ticket Template\"\nclass Ticket(models.Model):\n    id = models.UUIDField(\n        primary_key=True, default=uuid.uuid4, editable=False, unique=True",
-        "detail": "tickets.models",
-        "documentation": {}
-    },
-    {
-        "label": "Ticket",
-        "kind": 6,
-        "importPath": "tickets.models",
-        "description": "tickets.models",
-        "peekOfCode": "class Ticket(models.Model):\n    id = models.UUIDField(\n        primary_key=True, default=uuid.uuid4, editable=False, unique=True\n    )\n    template = models.ForeignKey(TicketTemplate, on_delete=models.CASCADE)\n    is_used = models.BooleanField(default=False)\n    is_sold = models.BooleanField(default=False)\n    def __str__(self):\n        return \"Ticket \" + str(self.id)",
-        "detail": "tickets.models",
-        "documentation": {}
-    },
-    {
-        "label": "IsOwner",
-        "kind": 6,
-        "importPath": "tickets.permissions",
-        "description": "tickets.permissions",
-        "peekOfCode": "class IsOwner(permissions.BasePermission):\n    def has_object_permission(self, request, view, obj):\n        return obj.promoter == request.user",
-        "detail": "tickets.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "TicketPurchaseSerializer",
-        "kind": 6,
-        "importPath": "tickets.serializers",
-        "description": "tickets.serializers",
-        "peekOfCode": "class TicketPurchaseSerializer(serializers.Serializer):\n    email = serializers.EmailField(required=True)\nclass TicketSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Ticket\n        exclude = (\"template\",)\nclass TicketTemplateSerializer(serializers.ModelSerializer):\n    quantity = serializers.IntegerField(\n        required=True, validators=[MinValueValidator(0)]\n    )",
-        "detail": "tickets.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "TicketSerializer",
-        "kind": 6,
-        "importPath": "tickets.serializers",
-        "description": "tickets.serializers",
-        "peekOfCode": "class TicketSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Ticket\n        exclude = (\"template\",)\nclass TicketTemplateSerializer(serializers.ModelSerializer):\n    quantity = serializers.IntegerField(\n        required=True, validators=[MinValueValidator(0)]\n    )\n    class Meta:\n        model = TicketTemplate",
-        "detail": "tickets.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "TicketTemplateSerializer",
-        "kind": 6,
-        "importPath": "tickets.serializers",
-        "description": "tickets.serializers",
-        "peekOfCode": "class TicketTemplateSerializer(serializers.ModelSerializer):\n    quantity = serializers.IntegerField(\n        required=True, validators=[MinValueValidator(0)]\n    )\n    class Meta:\n        model = TicketTemplate\n        fields = (\n            \"template\",\n            \"quantity\",\n        )",
-        "detail": "tickets.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "kind": 5,
-        "importPath": "tickets.urls",
-        "description": "tickets.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\n        \"events/<str:event_id>/tickets/\",\n        views.TicketAPIView.as_view(),\n        name=\"events-tickets\",\n    ),\n    path(\n        \"events/<str:event_id>/tickets/<str:ticket_id>/\",\n        views.TicketCheckerAPIView.as_view(),\n        name=\"events-tickets-checker\",",
-        "detail": "tickets.urls",
-        "documentation": {}
-    },
-    {
-        "label": "TicketCheckerAPIView",
-        "kind": 6,
-        "importPath": "tickets.views",
-        "description": "tickets.views",
-        "peekOfCode": "class TicketCheckerAPIView(APIView):\n    serializer_class = TicketSerializer\n    permission_classes = (\n        IsAuthenticated,\n        IsOwner,\n    )\n    def get_object(self, event_id, ticket_id):\n        try:\n            return Ticket.objects.get(\n                id=ticket_id, template__event=event_id, is_used=False, is_sold=True",
-        "detail": "tickets.views",
-        "documentation": {}
-    },
-    {
-        "label": "TicketAPIView",
-        "kind": 6,
-        "importPath": "tickets.views",
-        "description": "tickets.views",
-        "peekOfCode": "class TicketAPIView(APIView):\n    serializer_class = TicketPurchaseSerializer\n    permission_classes = (AllowAny,)\n    def get_object(self, event_id):\n        \"\"\"\n        Get first available ticket that belongs to the choosed event\n        \"\"\"\n        return Ticket.objects.filter(template__event=event_id, is_sold=False).first()\n    def post(self, request, event_id):\n        \"\"\"",
-        "detail": "tickets.views",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "users.migrations.0001_initial",
-        "description": "users.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        (\"auth\", \"0012_alter_user_first_name_max_length\"),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name=\"User\",\n            fields=[\n                (",
-        "detail": "users.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "users.migrations.0002_user_avatar",
-        "description": "users.migrations.0002_user_avatar",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"user\",\n            name=\"avatar\",\n            field=models.ImageField(null=True, upload_to=\"media/avatars\"),\n        ),",
-        "detail": "users.migrations.0002_user_avatar",
-        "documentation": {}
-    },
-    {
-        "label": "UsersConfig",
-        "kind": 6,
-        "importPath": "users.apps",
-        "description": "users.apps",
-        "peekOfCode": "class UsersConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"users\"",
-        "detail": "users.apps",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "kind": 6,
-        "importPath": "users.models",
-        "description": "users.models",
-        "peekOfCode": "class User(AbstractUser):\n    USERNAME_FIELD = \"username\"\n    EMAIL_FIELD = \"email\"\n    phone_number = PhoneNumberField(null=True, default=\"\")\n    country = models.CharField(max_length=128)\n    state = models.CharField(max_length=128)\n    city = models.CharField(max_length=128)\n    street = models.CharField(max_length=128)\n    home_nb = models.CharField(max_length=16)\n    zip_code = models.CharField(max_length=16)",
-        "detail": "users.models",
-        "documentation": {}
-    },
-    {
-        "label": "ExtendedRegisterSerializer",
-        "kind": 6,
-        "importPath": "users.serializers",
-        "description": "users.serializers",
-        "peekOfCode": "class ExtendedRegisterSerializer(RegisterSerializer):\n    def get_cleaned_data(self):\n        super(ExtendedRegisterSerializer, self).get_cleaned_data()\n        return {\n            \"username\": self.validated_data.get(\"username\", \"\"),\n            \"password1\": self.validated_data.get(\"password1\", \"\"),\n            \"password2\": self.validated_data.get(\"password2\", \"\"),\n            \"email\": self.validated_data.get(\"email\", \"\"),\n            \"phone_number\": self.validated_data.get(\"phone_number\", \"\"),\n            \"country\": self.validated_data.get(\"country\", \"\"),",
-        "detail": "users.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "UserSerializer",
-        "kind": 6,
-        "importPath": "users.serializers",
-        "description": "users.serializers",
-        "peekOfCode": "class UserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = (\n            \"email\",\n            \"phone_number\",\n            \"is_superuser\",\n            \"country\",\n            \"state\",\n            \"city\",",
-        "detail": "users.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "kind": 5,
-        "importPath": "users.urls",
-        "description": "users.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"user/\", views.UserAPIView.as_view()),\n    path(\"registration/\", include(\"dj_rest_auth.registration.urls\")),\n    path(\"password/\", include(\"django.contrib.auth.urls\")),\n    path(\"\", include(\"dj_rest_auth.urls\")),\n]",
-        "detail": "users.urls",
-        "documentation": {}
-    },
-    {
-        "label": "UserAPIView",
-        "kind": 6,
-        "importPath": "users.views",
-        "description": "users.views",
-        "peekOfCode": "class UserAPIView(generics.RetrieveUpdateAPIView):\n    serializer_class = UserSerializer\n    permission_classes = (IsAuthenticated,)\n    def get_object(self, **kargs):\n        return self.request.user",
-        "detail": "users.views",
         "documentation": {}
     },
     {

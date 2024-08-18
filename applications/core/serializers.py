@@ -1,8 +1,8 @@
 from rest_framework import serializers
 from . import validators
 from .models import Category, Event, FollowedHashTag, EventHistory
-from tickets.helpers import TicketGenerator
-from tickets.serializers import TicketTemplateSerializer
+from applications.tickets.helpers import TicketGenerator
+from applications.tickets.serializers import TicketTemplateSerializer
 from drf_extra_fields.geo_fields import PointField
 
 

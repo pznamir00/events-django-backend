@@ -1,7 +1,6 @@
 from rest_framework.views import APIView
-from rest_framework.generics import RetrieveAPIView
 from rest_framework.response import Response
-from core.models import Event
+from applications.core.models import Event
 from .serializers import TicketSerializer, TicketPurchaseSerializer
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from .permissions import IsOwner
