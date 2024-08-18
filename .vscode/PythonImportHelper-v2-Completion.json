@@ -9,6 +9,22 @@
         "documentation": {}
     },
     {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "get_random_secret_key",
+        "importPath": "django.core.management.utils",
+        "description": "django.core.management.utils",
+        "isExtraImport": true,
+        "detail": "django.core.management.utils",
+        "documentation": {}
+    },
+    {
         "label": "get_asgi_application",
         "importPath": "django.core.asgi",
         "description": "django.core.asgi",
@@ -65,30 +81,6 @@
         "documentation": {}
     },
     {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "get_random_secret_key",
-        "importPath": "django.core.management.utils",
-        "description": "django.core.management.utils",
-        "isExtraImport": true,
-        "detail": "django.core.management.utils",
-        "documentation": {}
-    },
-    {
-        "label": "crontab",
-        "importPath": "celery.schedules",
-        "description": "celery.schedules",
-        "isExtraImport": true,
-        "detail": "celery.schedules",
-        "documentation": {}
-    },
-    {
         "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -146,6 +138,22 @@
     },
     {
         "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "resolve",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -679,6 +687,14 @@
         "documentation": {}
     },
     {
+        "label": "Point",
+        "importPath": "django.contrib.gis.geos",
+        "description": "django.contrib.gis.geos",
+        "isExtraImport": true,
+        "detail": "django.contrib.gis.geos",
+        "documentation": {}
+    },
+    {
         "label": "OrderingFilter",
         "importPath": "rest_framework.filters",
         "description": "rest_framework.filters",
@@ -953,14 +969,6 @@
         "documentation": {}
     },
     {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
         "label": "base64",
         "kind": 6,
         "isExtraImport": true,
@@ -1023,6 +1031,47 @@
         "description": "django.template.defaultfilters",
         "isExtraImport": true,
         "detail": "django.template.defaultfilters",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleUploadedFile",
+        "importPath": "django.core.files.uploadedfile",
+        "description": "django.core.files.uploadedfile",
+        "isExtraImport": true,
+        "detail": "django.core.files.uploadedfile",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
         "documentation": {}
     },
     {
@@ -1193,6 +1242,555 @@
         "documentation": {}
     },
     {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nos.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"backend.settings\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = get_random_secret_key()\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = []\n# Application definition",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "SECRET_KEY = get_random_secret_key()\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.sites\",\n    \"django.contrib.messages\",",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.sites\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.sites\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"users\",\n    \"core\",",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "MIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",\n]\nROOT_URLCONF = \"backend.urls\"",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "ROOT_URLCONF = \"backend.urls\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [os.path.join(BASE_DIR, \"static/templates/\")],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [os.path.join(BASE_DIR, \"static/templates/\")],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "WSGI_APPLICATION = \"backend.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.contrib.gis.db.backends.postgis\",\n        \"NAME\": \"\",\n        \"USER\": \"\",\n        \"PASSWORD\": \"\",\n        \"HOST\": \"\",",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.contrib.gis.db.backends.postgis\",\n        \"NAME\": \"\",\n        \"USER\": \"\",\n        \"PASSWORD\": \"\",\n        \"HOST\": \"\",\n        \"PORT\": \"\",\n    }\n}",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.CommonPasswordValidator\",\n    },",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "USE_L10N",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "STATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "MEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),\n    \"DEFAULT_FILTER_BACKENDS\": (\"django_filters.rest_framework.DjangoFilterBackend\",),\n}\nREST_AUTH_REGISTER_SERIALIZERS = {",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),\n    \"DEFAULT_FILTER_BACKENDS\": (\"django_filters.rest_framework.DjangoFilterBackend\",),\n}\nREST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"users.serializers.ExtendedRegisterSerializer\"",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_USER_MODEL",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "AUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),\n    \"DEFAULT_FILTER_BACKENDS\": (\"django_filters.rest_framework.DjangoFilterBackend\",),\n}\nREST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"users.serializers.ExtendedRegisterSerializer\"\n}",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "REST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),\n    \"DEFAULT_FILTER_BACKENDS\": (\"django_filters.rest_framework.DjangoFilterBackend\",),\n}\nREST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"users.serializers.ExtendedRegisterSerializer\"\n}\nSITE_ID = 1",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "REST_AUTH_REGISTER_SERIALIZERS",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "REST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"users.serializers.ExtendedRegisterSerializer\"\n}\nSITE_ID = 1\nEMAIL_USE_TLS = True\nEMAIL_HOST = \"\"\nEMAIL_PORT = \"\"\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"\nCELERY_TIMEZONE = \"Europe/London\"",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "SITE_ID",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "SITE_ID = 1\nEMAIL_USE_TLS = True\nEMAIL_HOST = \"\"\nEMAIL_PORT = \"\"\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"\nCELERY_TIMEZONE = \"Europe/London\"\nCELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_HOST = \"\"\nEMAIL_PORT = \"\"\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"\nCELERY_TIMEZONE = \"Europe/London\"\nCELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "EMAIL_HOST = \"\"\nEMAIL_PORT = \"\"\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"\nCELERY_TIMEZONE = \"Europe/London\"\nCELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "EMAIL_PORT = \"\"\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"\nCELERY_TIMEZONE = \"Europe/London\"\nCELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "EMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"\nCELERY_TIMEZONE = \"Europe/London\"\nCELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASSWORD",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = \"\"\nCELERY_TIMEZONE = \"Europe/London\"\nCELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_TIMEZONE",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "CELERY_TIMEZONE = \"Europe/London\"\nCELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_TASK_TRACK_STARTED",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "CELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_TASK_TIME_LIMIT",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "CELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_BROKER_URL",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "CELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_BROKER_BACKEND",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "CELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "BROKER_URL",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "BROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "CELERY_BEAT_SCHEDULE",
+        "kind": 5,
+        "importPath": "backend.settings.common",
+        "description": "backend.settings.common",
+        "peekOfCode": "CELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
+        "detail": "backend.settings.common",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "backend.settings.dev",
+        "description": "backend.settings.dev",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"*\"]\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.contrib.gis.db.backends.postgis\",\n        \"NAME\": \"postgres\",\n        \"USER\": \"postgres\",\n        \"PASSWORD\": \"postgres\",\n        \"HOST\": \"db\",\n        \"PORT\": 5432,",
+        "detail": "backend.settings.dev",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "backend.settings.dev",
+        "description": "backend.settings.dev",
+        "peekOfCode": "ALLOWED_HOSTS = [\"*\"]\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.contrib.gis.db.backends.postgis\",\n        \"NAME\": \"postgres\",\n        \"USER\": \"postgres\",\n        \"PASSWORD\": \"postgres\",\n        \"HOST\": \"db\",\n        \"PORT\": 5432,\n    }",
+        "detail": "backend.settings.dev",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "backend.settings.dev",
+        "description": "backend.settings.dev",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.contrib.gis.db.backends.postgis\",\n        \"NAME\": \"postgres\",\n        \"USER\": \"postgres\",\n        \"PASSWORD\": \"postgres\",\n        \"HOST\": \"db\",\n        \"PORT\": 5432,\n    }\n}",
+        "detail": "backend.settings.dev",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "backend.settings.dev",
+        "description": "backend.settings.dev",
+        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"",
+        "detail": "backend.settings.dev",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "backend.settings.dev",
+        "description": "backend.settings.dev",
+        "peekOfCode": "EMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"",
+        "detail": "backend.settings.dev",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "backend.settings.dev",
+        "description": "backend.settings.dev",
+        "peekOfCode": "EMAIL_PORT = 587\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"",
+        "detail": "backend.settings.dev",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "backend.settings.dev",
+        "description": "backend.settings.dev",
+        "peekOfCode": "EMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"",
+        "detail": "backend.settings.dev",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASSWORD",
+        "kind": 5,
+        "importPath": "backend.settings.dev",
+        "description": "backend.settings.dev",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = \"\"",
+        "detail": "backend.settings.dev",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "backend.settings.prod",
+        "description": "backend.settings.prod",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = []\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.contrib.gis.db.backends.postgis\",\n        \"NAME\": \"\",\n        \"USER\": \"\",\n        \"PASSWORD\": \"\",\n        \"HOST\": \"\",\n        \"PORT\": 5432,",
+        "detail": "backend.settings.prod",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "backend.settings.prod",
+        "description": "backend.settings.prod",
+        "peekOfCode": "ALLOWED_HOSTS = []\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.contrib.gis.db.backends.postgis\",\n        \"NAME\": \"\",\n        \"USER\": \"\",\n        \"PASSWORD\": \"\",\n        \"HOST\": \"\",\n        \"PORT\": 5432,\n    }",
+        "detail": "backend.settings.prod",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "backend.settings.prod",
+        "description": "backend.settings.prod",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.contrib.gis.db.backends.postgis\",\n        \"NAME\": \"\",\n        \"USER\": \"\",\n        \"PASSWORD\": \"\",\n        \"HOST\": \"\",\n        \"PORT\": 5432,\n    }\n}",
+        "detail": "backend.settings.prod",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "backend.settings.prod",
+        "description": "backend.settings.prod",
+        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"",
+        "detail": "backend.settings.prod",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "backend.settings.prod",
+        "description": "backend.settings.prod",
+        "peekOfCode": "EMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"",
+        "detail": "backend.settings.prod",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "backend.settings.prod",
+        "description": "backend.settings.prod",
+        "peekOfCode": "EMAIL_PORT = 587\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"",
+        "detail": "backend.settings.prod",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "backend.settings.prod",
+        "description": "backend.settings.prod",
+        "peekOfCode": "EMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"",
+        "detail": "backend.settings.prod",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASSWORD",
+        "kind": 5,
+        "importPath": "backend.settings.prod",
+        "description": "backend.settings.prod",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = \"\"",
+        "detail": "backend.settings.prod",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "backend.settings.test",
+        "description": "backend.settings.test",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"*\"]\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.contrib.gis.db.backends.postgis\",\n        \"NAME\": \"test\",\n        \"USER\": \"test\",\n        \"PASSWORD\": \"test\",\n        \"HOST\": \"test_db\",\n        \"PORT\": 5432,",
+        "detail": "backend.settings.test",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "backend.settings.test",
+        "description": "backend.settings.test",
+        "peekOfCode": "ALLOWED_HOSTS = [\"*\"]\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.contrib.gis.db.backends.postgis\",\n        \"NAME\": \"test\",\n        \"USER\": \"test\",\n        \"PASSWORD\": \"test\",\n        \"HOST\": \"test_db\",\n        \"PORT\": 5432,\n    }",
+        "detail": "backend.settings.test",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "backend.settings.test",
+        "description": "backend.settings.test",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.contrib.gis.db.backends.postgis\",\n        \"NAME\": \"test\",\n        \"USER\": \"test\",\n        \"PASSWORD\": \"test\",\n        \"HOST\": \"test_db\",\n        \"PORT\": 5432,\n    }\n}",
+        "detail": "backend.settings.test",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "backend.settings.test",
+        "description": "backend.settings.test",
+        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"",
+        "detail": "backend.settings.test",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "backend.settings.test",
+        "description": "backend.settings.test",
+        "peekOfCode": "EMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"",
+        "detail": "backend.settings.test",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "backend.settings.test",
+        "description": "backend.settings.test",
+        "peekOfCode": "EMAIL_PORT = 587\nEMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"",
+        "detail": "backend.settings.test",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "backend.settings.test",
+        "description": "backend.settings.test",
+        "peekOfCode": "EMAIL_HOST_USER = \"\"\nEMAIL_HOST_PASSWORD = \"\"",
+        "detail": "backend.settings.test",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASSWORD",
+        "kind": 5,
+        "importPath": "backend.settings.test",
+        "description": "backend.settings.test",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = \"\"",
+        "detail": "backend.settings.test",
+        "documentation": {}
+    },
+    {
         "label": "application",
         "kind": 5,
         "importPath": "backend.asgi",
@@ -1208,339 +1806,6 @@
         "description": "backend.celery",
         "peekOfCode": "app = Celery(\"backend\")\napp.config_from_object(\"django.conf:settings\", namespace=\"CELERY\")\napp.autodiscover_tasks()",
         "detail": "backend.celery",
-        "documentation": {}
-    },
-    {
-        "label": "BASE_DIR",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nos.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"backend.settings\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = get_random_secret_key()\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"*\"]\n# Application definition",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "SECRET_KEY",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "SECRET_KEY = get_random_secret_key()\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"*\"]\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "DEBUG",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"*\"]\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.sites\",\n    \"django.contrib.messages\",",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "ALLOWED_HOSTS",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [\"*\"]\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.sites\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "INSTALLED_APPS",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.sites\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"users\",\n    \"core\",",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MIDDLEWARE",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",\n]\nROOT_URLCONF = \"backend.urls\"",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "ROOT_URLCONF",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "ROOT_URLCONF = \"backend.urls\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [os.path.join(BASE_DIR, \"static/templates/\")],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "TEMPLATES",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [os.path.join(BASE_DIR, \"static/templates/\")],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "WSGI_APPLICATION",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "WSGI_APPLICATION = \"backend.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.contrib.gis.db.backends.postgis\",\n        \"NAME\": \"postgres\",\n        \"USER\": \"postgres\",\n        \"PASSWORD\": \"postgres\",\n        \"HOST\": \"db\",",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "DATABASES",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.contrib.gis.db.backends.postgis\",\n        \"NAME\": \"postgres\",\n        \"USER\": \"postgres\",\n        \"PASSWORD\": \"postgres\",\n        \"HOST\": \"db\",\n        \"PORT\": \"5432\",\n    }\n}",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "AUTH_PASSWORD_VALIDATORS",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.CommonPasswordValidator\",\n    },",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "LANGUAGE_CODE",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "TIME_ZONE",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "USE_I18N",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "USE_L10N",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "USE_TZ",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "STATIC_URL",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "STATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MEDIA_ROOT",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MEDIA_URL",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "MEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "DEFAULT_AUTO_FIELD",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),\n    \"DEFAULT_FILTER_BACKENDS\": (\"django_filters.rest_framework.DjangoFilterBackend\",),\n}\nREST_AUTH_REGISTER_SERIALIZERS = {",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_BACKEND",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),\n    \"DEFAULT_FILTER_BACKENDS\": (\"django_filters.rest_framework.DjangoFilterBackend\",),\n}\nREST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"users.serializers.ExtendedRegisterSerializer\"",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "AUTH_USER_MODEL",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "AUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),\n    \"DEFAULT_FILTER_BACKENDS\": (\"django_filters.rest_framework.DjangoFilterBackend\",),\n}\nREST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"users.serializers.ExtendedRegisterSerializer\"\n}",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "REST_FRAMEWORK",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "REST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",\n    ),\n    \"DEFAULT_FILTER_BACKENDS\": (\"django_filters.rest_framework.DjangoFilterBackend\",),\n}\nREST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"users.serializers.ExtendedRegisterSerializer\"\n}\nSITE_ID = 1",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "REST_AUTH_REGISTER_SERIALIZERS",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "REST_AUTH_REGISTER_SERIALIZERS = {\n    \"REGISTER_SERIALIZER\": \"users.serializers.ExtendedRegisterSerializer\"\n}\nSITE_ID = 1\nEMAIL_USE_TLS = True\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"***\"\nEMAIL_HOST_PASSWORD = \"***\"\nCELERY_TIMEZONE = \"Europe/London\"",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "SITE_ID",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "SITE_ID = 1\nEMAIL_USE_TLS = True\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"***\"\nEMAIL_HOST_PASSWORD = \"***\"\nCELERY_TIMEZONE = \"Europe/London\"\nCELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_USE_TLS",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "EMAIL_USE_TLS = True\nEMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"***\"\nEMAIL_HOST_PASSWORD = \"***\"\nCELERY_TIMEZONE = \"Europe/London\"\nCELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_HOST",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "EMAIL_HOST = \"smtp.gmail.com\"\nEMAIL_PORT = 587\nEMAIL_HOST_USER = \"***\"\nEMAIL_HOST_PASSWORD = \"***\"\nCELERY_TIMEZONE = \"Europe/London\"\nCELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_PORT",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "EMAIL_PORT = 587\nEMAIL_HOST_USER = \"***\"\nEMAIL_HOST_PASSWORD = \"***\"\nCELERY_TIMEZONE = \"Europe/London\"\nCELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_HOST_USER",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "EMAIL_HOST_USER = \"***\"\nEMAIL_HOST_PASSWORD = \"***\"\nCELERY_TIMEZONE = \"Europe/London\"\nCELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_HOST_PASSWORD",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "EMAIL_HOST_PASSWORD = \"***\"\nCELERY_TIMEZONE = \"Europe/London\"\nCELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "CELERY_TIMEZONE",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "CELERY_TIMEZONE = \"Europe/London\"\nCELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "CELERY_TASK_TRACK_STARTED",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "CELERY_TASK_TRACK_STARTED = True\nCELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "CELERY_TASK_TIME_LIMIT",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "CELERY_TASK_TIME_LIMIT = 30 * 60\nCELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "CELERY_BROKER_URL",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "CELERY_BROKER_URL = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nCELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "CELERY_BROKER_BACKEND",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "CELERY_BROKER_BACKEND = os.environ.get(\"CELERY_BROKER\", \"redis://redis:6379/0\")\nBROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "BROKER_URL",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "BROKER_URL = \"django://\"\nCELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
-        "detail": "backend.settings",
-        "documentation": {}
-    },
-    {
-        "label": "CELERY_BEAT_SCHEDULE",
-        "kind": 5,
-        "importPath": "backend.settings",
-        "description": "backend.settings",
-        "peekOfCode": "CELERY_BEAT_SCHEDULE = {\n    \"send_emails\": {\"task\": \"core.tasks.send_emails\", \"schedule\": 10}\n}",
-        "detail": "backend.settings",
         "documentation": {}
     },
     {
@@ -1931,6 +2196,15 @@
         "documentation": {}
     },
     {
+        "label": "pytest_configure",
+        "kind": 2,
+        "importPath": "test.conftest",
+        "description": "test.conftest",
+        "peekOfCode": "def pytest_configure(config):\n    mixer.register(\n        \"core.Event\",\n        location=lambda: Point(\n            float(mixer.faker.latitude()),\n            float(mixer.faker.longitude()),\n        ),\n    )",
+        "detail": "test.conftest",
+        "documentation": {}
+    },
+    {
         "label": "Migration",
         "kind": 6,
         "importPath": "tickets.migrations.0001_initial",
@@ -1964,6 +2238,24 @@
         "description": "tickets.migrations.0004_auto_20211029_1451",
         "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"tickets\", \"0003_rename_template_tickettemplate__file\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"ticket\",\n            old_name=\"sold\",\n            new_name=\"is_sold\",\n        ),",
         "detail": "tickets.migrations.0004_auto_20211029_1451",
+        "documentation": {}
+    },
+    {
+        "label": "TestTicketsModels",
+        "kind": 6,
+        "importPath": "tickets.tests.test_models",
+        "description": "tickets.tests.test_models",
+        "peekOfCode": "class TestTicketsModels:\n    def test_create_ticket_template(self):\n        entity = mixer.blend(\"tickets.TicketTemplate\")\n        assert entity.pk == 1, \"Should create a TicketTemplate instance\"\n    def test_fail_ticket_template_if_file_is_not_pdf(self):\n        with pytest.raises(ValidationError):\n            entity = mixer.blend(\"tickets.TicketTemplate\")\n            entity._file = SimpleUploadedFile(\"test_file.txt\", b\"file_content\")\n            entity.full_clean()\n            raise Exception(\"Error should have been thrown\")",
+        "detail": "tickets.tests.test_models",
+        "documentation": {}
+    },
+    {
+        "label": "TestTicketsUrls",
+        "kind": 6,
+        "importPath": "tickets.tests.test_urls",
+        "description": "tickets.tests.test_urls",
+        "peekOfCode": "class TestTicketsUrls:\n    def test_event_tickets_url_resolves(self):\n        url = reverse(\"events-tickets\", args=[\"event123\"])\n        assert resolve(url).func.view_class == views.TicketAPIView\n    def test_event_tickets_checker_url_resolves(self):\n        url = reverse(\"events-tickets-checker\", args=[\"event123\", \"ticket123\"])\n        assert resolve(url).func.view_class == views.TicketCheckerAPIView",
+        "detail": "tickets.tests.test_urls",
         "documentation": {}
     },
     {
@@ -2052,7 +2344,7 @@
         "kind": 5,
         "importPath": "tickets.urls",
         "description": "tickets.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"events/<str:event_id>/tickets/\", views.TicketAPIView.as_view()),\n    path(\n        \"events/<str:event_id>/tickets/<str:ticket_id>/\",\n        views.TicketCheckerAPIView.as_view(),\n    ),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\n        \"events/<str:event_id>/tickets/\",\n        views.TicketAPIView.as_view(),\n        name=\"events-tickets\",\n    ),\n    path(\n        \"events/<str:event_id>/tickets/<str:ticket_id>/\",\n        views.TicketCheckerAPIView.as_view(),\n        name=\"events-tickets-checker\",",
         "detail": "tickets.urls",
         "documentation": {}
     },
@@ -2151,7 +2443,7 @@
         "kind": 2,
         "importPath": "manage",
         "description": "manage",
-        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"backend.settings\")\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    env = os.environ.get(\"DJANGO_ENV\", \"dev\")\n    os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", f\"backend.settings.{env}\")\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"",
         "detail": "manage",
         "documentation": {}
     }

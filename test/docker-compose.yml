@@ -1,0 +1,38 @@
+version: "2.1"
+
+volumes:
+  data:
+
+services:
+  test_db:
+    image: kartoza/postgis:14-3.1
+    environment:
+      - POSTGRES_DB=test
+      - POSTGRES_USER=test
+      - POSTGRES_PASS=test
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - ../data:/test/var/lib/postgresql
+  test_web:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    container_name: test_web
+    command:
+      [
+        "./scripts/wait-for-it.sh",
+        "test_db:5432",
+        "--",
+        "sh",
+        "-c",
+        "python manage.py migrate && pytest",
+      ]
+    volumes:
+      - ../:/code
+    environment:
+      - DEBUG=1
+      - DJANGO_ENV=test
+    depends_on:
+      - test_db

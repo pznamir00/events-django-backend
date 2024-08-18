@@ -9,3 +9,10 @@ repos:
     hooks:
     - id: black
       args: [--check]
+-   repo: local
+    hooks:
+    -   id: tests
+        name: run tests
+        entry: ./test/run_test
+        language: system
+        stages: [commit]

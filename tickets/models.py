@@ -5,9 +5,9 @@ import uuid
 
 
 """
-If event is private is necessery to get a ticket before arrive to event
+If event is private is necessary to get a ticket before arrive to event
 Each ticket is generated based on template file with unique key as id of that ticket.
-The quantity of tickets depends on promotor of event.
+The quantity of tickets depends on promoter of event.
 """
 
 

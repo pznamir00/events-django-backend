@@ -32,6 +32,7 @@ services:
     ports:
       - "8000:8000"
     environment:
+      - DJANGO_ENV=dev
       - DEBUG=1
       - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
       - CELERY_BROKER=redis://redis:6379/0

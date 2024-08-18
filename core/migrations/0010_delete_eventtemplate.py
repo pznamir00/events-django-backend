@@ -4,7 +4,6 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("core", "0009_remove_eventtemplate_event"),
         ("tickets", "0002_auto_20211029_0930"),

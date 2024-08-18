@@ -6,7 +6,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("core", "0009_remove_eventtemplate_event"),
         ("tickets", "0001_initial"),
