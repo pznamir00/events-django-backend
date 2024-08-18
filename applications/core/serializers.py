@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from . import validators
-from .models import Category, Event, FollowedHashTag, EventHistory
+from drf_extra_fields.geo_fields import PointField
 from applications.tickets.helpers import TicketGenerator
 from applications.tickets.serializers import TicketTemplateSerializer
-from drf_extra_fields.geo_fields import PointField
+from . import validators
+from .models import Category, Event, FollowedHashTag, EventHistory
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -72,4 +72,4 @@ class EventDetailSerializer(serializers.ModelSerializer):
     def update(self, instance, validated_data):
         ticket = validated_data.pop("ticket", None)
         TicketGenerator.generate_if_provided(validated_data, ticket, instance)
-        return super(EventDetailSerializer, self).update(instance, validated_data)
+        return super().update(instance, validated_data)

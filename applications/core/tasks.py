@@ -1,12 +1,12 @@
 from __future__ import absolute_import, unicode_literals
-from celery import shared_task
-from .models import Event
-from applications.users.models import User
-from django.db.models import Count
 from datetime import datetime, timedelta
+from celery import shared_task
+from django.db.models import Count
 from django.core import mail
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
+from applications.users.models import User
+from .models import Event
 
 
 @shared_task
@@ -18,7 +18,7 @@ def send_emails(**kwargs):
     added in last 24 hours.
     After retrieve a list of this events looks for a matches with
     followed hashtags based on relations of their with user.
-    Result is a list of events that is submiting to user as email message.
+    Result is a list of events that is submitting to user as email message.
     """
     # get datetime exactly 24 hours before
     yesterday = datetime.today() - timedelta(days=1)
@@ -36,7 +36,8 @@ def send_emails(**kwargs):
             filter(
                 lambda e: True
                 in [
-                    "#" + hashtag in e.description for hashtag in user.followed_hashtags
+                    f"#{hashtag}" in e.description
+                    for hashtag in user.followed_hashtags  # pylint: disable=cell-var-from-loop
                 ],
                 recent_events,
             )

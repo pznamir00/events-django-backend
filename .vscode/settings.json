@@ -1,0 +1,8 @@
+{
+    "cSpell.words": [
+        "autoslug",
+        "viewsets"
+    ],
+    "python.pythonPath": ".venv/bin/python",
+    "python.linting.pylintPath": ".venv/bin/pylint"
+}

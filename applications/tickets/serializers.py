@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from .models import Ticket, TicketTemplate
 from django.core.validators import MinValueValidator
+from .models import Ticket, TicketTemplate
 
 
 class TicketPurchaseSerializer(serializers.Serializer):

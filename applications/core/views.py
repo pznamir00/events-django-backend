@@ -82,7 +82,7 @@ class EventViewSet(viewsets.ModelViewSet):
         if serializer.validated_data.get("took_place"):
             # The event took place
             EventHistory.objects.create(event=event, label="4")
-        if serializer.validated_data.get("canceled") == True:
+        if serializer.validated_data.get("canceled"):
             # Canceled an event
             EventHistory.objects.create(event=event, label="2")
         else:

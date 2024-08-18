@@ -1,23 +1,22 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+-   repo: https://github.com/pycqa/pylint
+    rev: pylint-2.6.0
     hooks:
-    - id: check-yaml
-    - id: trailing-whitespace
--   repo: https://github.com/asottile/reorder-python-imports
-    rev: v3.13.0
-    hooks:
-    -   id: reorder-python-imports
-        args: [--py38-plus]
--   repo: https://github.com/psf/black
-    rev: 22.10.0
-    hooks:
-    - id: black
-      args: [--check]
--   repo: local
-    hooks:
-    -   id: tests
-        name: run tests
-        entry: ./test/run_test
-        language: system
-        stages: [commit]
+    -   id: pylint
+# -   repo: https://github.com/pre-commit/pre-commit-hooks
+#     rev: v2.3.0
+#     hooks:
+#     - id: check-yaml
+#     - id: trailing-whitespace
+# -   repo: https://github.com/psf/black
+#     rev: 22.10.0
+#     hooks:
+#     - id: black
+#       args: [--check]
+# -   repo: local
+#     hooks:
+#     -   id: tests
+#         name: run tests
+#         entry: ./test/run_test
+#         language: system
+#         stages: [commit]

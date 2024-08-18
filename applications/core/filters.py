@@ -1,13 +1,14 @@
-from rest_framework.serializers import ValidationError
+from datetime import datetime
 from django.db.models import Q
 from django.contrib.gis.measure import D
 from django.contrib.gis.geos import Point
-from rest_framework.filters import OrderingFilter
-from django.db.models import Case, When, Value
+from django.db.models import Case, When, Value, QuerySet
 from django.contrib.gis.db.models.functions import Distance
-from datetime import datetime
-from .models import Event
+from rest_framework.serializers import ValidationError
+from rest_framework.filters import OrderingFilter
+from rest_framework.request import Request
 import django_filters as filters
+from .models import Event
 
 
 class EventFilterSet(filters.FilterSet):
@@ -32,7 +33,7 @@ class EventFilterSet(filters.FilterSet):
             "is_free",
         ]
 
-    def filter_by_range(self, queryset, name, value):
+    def filter_by_range(self, queryset, _, value):
         """
         This filters queryset by range.
         Get only this events that location is inside a range in
@@ -40,16 +41,20 @@ class EventFilterSet(filters.FilterSet):
         (fields 'latitude' and 'longitude' are required)
         """
         try:
+            assert isinstance(self.request, Request)
             lat = self.request.query_params["latitude"]
             lon = self.request.query_params["longitude"]
             point = Point(float(lat), float(lon))
-        except:
+        except Exception as exc:
             raise ValidationError(
-                "Excepted 'latitude' and 'longitude' parameters (both decimal) when you pass 'range' field"
-            )
+                """
+                Excepted 'latitude' and 'longitude' parameters 
+                (both decimal) when you pass 'range' field
+                """
+            ) from exc
         return queryset.filter(location__dwithin=(point, D(km=value)))
 
-    def filter_by_keywords(self, queryset, name, value):
+    def filter_by_keywords(self, queryset: QuerySet, _, value):
         """
         Filter by 3 fields (title, description and location_hints)
         """
@@ -63,13 +68,13 @@ class EventFilterSet(filters.FilterSet):
 class EventOrderingFilter(OrderingFilter):
     """
     Default ordering way for events list.
-    That orders by time expiriation and if user
+    That orders by time expiration and if user
     provided coordinates, by distance either.
     """
 
-    def filter_queryset(self, request, queryset, view):
+    def filter_queryset(self, request: Request, queryset: QuerySet, view):
         """
-        Order by expiriation time. Expired events go to the end of a list.
+        Order by expiration time. Expired events go to the end of a list.
         """
         queryset.annotate(
             event_datetime_expired=Case(
@@ -79,15 +84,14 @@ class EventOrderingFilter(OrderingFilter):
         )
 
         try:
-            """
-            Order by distance if lat and lon are provided.
-            """
-            lat = self.request.query_params.get("latitude")
-            lon = self.request.query_params.get("longitude")
+            # Order by distance if lat and lon are provided.
+            lat = request.query_params.get("latitude")
+            lon = request.query_params.get("longitude")
+            assert isinstance(lat, float) and isinstance(lon, float)
             queryset.annotate(
                 distance=Distance("location", Point(float(lat), float(lon)))
             )
-        except:
+        except AssertionError:
             queryset.annotate(distance=Value(0))
 
         return queryset
