@@ -14,7 +14,7 @@ services:
       - "5432:5432"
     restart: always
     volumes:
-      - ../data:/test/var/lib/postgresql
+      - .:/data:/test/var/lib/postgresql
   test_web:
     build:
       context: ../

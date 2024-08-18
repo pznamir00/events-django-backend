@@ -4,6 +4,11 @@ repos:
     hooks:
     - id: check-yaml
     - id: trailing-whitespace
+-   repo: https://github.com/asottile/reorder-python-imports
+    rev: v3.13.0
+    hooks:
+    -   id: reorder-python-imports
+        args: [--py38-plus]
 -   repo: https://github.com/psf/black
     rev: 22.10.0
     hooks:

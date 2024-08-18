@@ -14,7 +14,7 @@ services:
       - "5432:5432"
     restart: always
     volumes:
-      - ../data:/database/var/lib/postgresql
+      - .:/data:/database/var/lib/postgresql
   web:
     build: .
     container_name: web
