@@ -1246,7 +1246,7 @@
         "kind": 5,
         "importPath": "backend.settings.common",
         "description": "backend.settings.common",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nos.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"backend.settings\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = get_random_secret_key()\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = []\n# Application definition",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent.parent\nos.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"backend.settings\")\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = get_random_secret_key()\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = []\n# Application definition",
         "detail": "backend.settings.common",
         "documentation": {}
     },
@@ -1345,7 +1345,7 @@
         "kind": 5,
         "importPath": "backend.settings.common",
         "description": "backend.settings.common",
-        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"",
         "detail": "backend.settings.common",
         "documentation": {}
     },
@@ -1354,7 +1354,7 @@
         "kind": 5,
         "importPath": "backend.settings.common",
         "description": "backend.settings.common",
-        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type",
         "detail": "backend.settings.common",
         "documentation": {}
     },
@@ -1363,7 +1363,7 @@
         "kind": 5,
         "importPath": "backend.settings.common",
         "description": "backend.settings.common",
-        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field",
+        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field",
         "detail": "backend.settings.common",
         "documentation": {}
     },
@@ -1372,7 +1372,7 @@
         "kind": 5,
         "importPath": "backend.settings.common",
         "description": "backend.settings.common",
-        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
         "detail": "backend.settings.common",
         "documentation": {}
     },
@@ -1381,7 +1381,7 @@
         "kind": 5,
         "importPath": "backend.settings.common",
         "description": "backend.settings.common",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"",
         "detail": "backend.settings.common",
         "documentation": {}
     },
@@ -1390,7 +1390,7 @@
         "kind": 5,
         "importPath": "backend.settings.common",
         "description": "backend.settings.common",
-        "peekOfCode": "STATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (",
+        "peekOfCode": "STATIC_URL = \"/static/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (",
         "detail": "backend.settings.common",
         "documentation": {}
     },
@@ -1399,7 +1399,7 @@
         "kind": 5,
         "importPath": "backend.settings.common",
         "description": "backend.settings.common",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, \"/\")  # 'data' is my media folder\nMEDIA_URL = \"/media/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\nAUTH_USER_MODEL = \"users.User\"\nREST_FRAMEWORK = {\n    \"DEFAULT_AUTHENTICATION_CLASSES\": (\n        \"rest_framework.authentication.TokenAuthentication\",",
         "detail": "backend.settings.common",
         "documentation": {}
     },

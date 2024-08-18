@@ -15,7 +15,7 @@ from pathlib import Path
 from django.core.management.utils import get_random_secret_key
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "backend.settings")
 
@@ -144,7 +144,7 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "media/")  # 'data' is my media folder
+MEDIA_ROOT = os.path.join(BASE_DIR, "/")  # 'data' is my media folder
 
 MEDIA_URL = "/media/"
 
