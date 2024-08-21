@@ -17,6 +17,6 @@ repos:
     hooks:
     -   id: tests
         name: run tests
-        entry: ./scripts/bash/test.sh
+        entry: poetry run test
         language: system
         stages: [commit]
