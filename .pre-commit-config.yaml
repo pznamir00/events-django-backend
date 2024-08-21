@@ -8,25 +8,26 @@ repos:
     rev: 22.10.0
     hooks:
     - id: black
+      name: Black
       args: [--check]
 -   repo: local
     hooks:
     - id: tests
-      name: run tests
+      name: Running Tests
       entry: poetry run test
       language: system
       stages: [commit]
 -   repo: local
     hooks:
     - id: lint
-      name: run lint
+      name: Running Lint
       entry: poetry run lint
       language: system
       stages: [commit]
 -   repo: local
     hooks:
     - id: static-type-checking
-      name: run static type checking
+      name: Running Static Type Checking
       entry: poetry run pyright .
       language: system
       stages: [commit]
