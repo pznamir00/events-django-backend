@@ -16,21 +16,19 @@ services:
     volumes:
       - .:/data:/test/var/lib/postgresql
   test_web:
-    build:
-      context: ../
-      dockerfile: Dockerfile
+    build: .
     container_name: test_web
     command:
       [
-        "./scripts/wait-for-it.sh",
+        "./scripts/bash/wait-for-it.sh",
         "test_db:5432",
         "--",
         "sh",
         "-c",
-        "python manage.py migrate && pytest",
+        "poetry run ./manage.py migrate && poetry run pytest",
       ]
     volumes:
-      - ../:/code
+      - .:/code
     environment:
       - DEBUG=1
       - DJANGO_ENV=test

@@ -20,12 +20,12 @@ services:
     container_name: web
     command:
       [
-        "./scripts/wait-for-it.sh",
+        "./scripts/bash/wait-for-it.sh",
         "db:5432",
         "--",
         "sh",
         "-c",
-        "python manage.py migrate && python manage.py runserver 0.0.0.0:8000",
+        "poetry run ./manage.py migrate && poetry run ./manage.py runserver 0.0.0.0:8000",
       ]
     volumes:
       - .:/code

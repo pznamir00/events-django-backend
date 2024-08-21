@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "events-django-backend"
+version = "0.1.0"
+description = ""
+authors = ["pznamir00 <pznamir00@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "scripts" }
+]
+
+[tool.poetry.scripts]
+dev = 'scripts.entrypoints:dev'
+test = 'scripts.entrypoints:test'
+
+[tool.poetry.dependencies]
+python = "^3.8"
+celery = "^5.4.0"
+dj-rest-auth = "^6.0.0"
+django-allauth = "^64.1.0"
+django-autoslug = "^1.9.9"
+django-celery-beat = "^2.6.0"
+django-filter = "^24.3"
+django-phonenumber-field = "^8.0.0"
+django-timezone-field = "^7.0"
+djangorestframework = "^3.15.2"
+djangorestframework-gis = "^1.1"
+drf-extra-fields = "^3.7.0"
+html5lib = "^1.1"
+psycopg2 = "^2.9.9"
+psycopg2-binary = "^2.9.9"
+pypdf2 = "^3.0.1"
+qrcode = "^7.4.2"
+redis = "^5.0.8"
+reportlab = "^4.2.2"
+django-celery-results = "^2.5.1"
+phonenumbers = "^8.13.43"
+requests = "^2.32.3"
+requests-oauthlib = "^2.0.0"
+
+[tool.poetry.group.dev.dependencies]
+faker = "^6.0.0"
+pre-commit = "3.2.1"
+pytest = "^8.3.2"
+pytest-django = "^4.8.0"
+mixer = "7.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

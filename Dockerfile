@@ -1,20 +1,24 @@
 FROM python:3.8
 
-#init
 ENV PYTHONUNBUFFERED=1
 WORKDIR /code
 
-COPY requirements.txt /code/
-RUN pip install -r requirements.txt
+# Install Poetry
+RUN curl -sSL https://install.python-poetry.org | python3 -
+ENV PATH="/root/.local/bin:$PATH"
 
-#Django gis
-RUN apt-get update -y
-RUN apt-get install -y gdal-bin
-RUN apt-get update -y
-RUN apt-get install -y python3-gdal
-RUN apt-get update -y
-RUN apt-get install -y rabbitmq-server
+# Install dependencies with Poetry
+COPY pyproject.toml poetry.lock /code/
+RUN poetry install
 
-#copy source code
+# Django gis dependencies
+RUN apt-get update -y; \
+    apt-get install -y gdal-bin; \
+    apt-get update -y; \
+    apt-get install -y python3-gdal; \
+    apt-get update -y; \
+    apt-get install -y rabbitmq-server;
+
+# Copy source code
 COPY . /code/
-RUN chmod +x /code/scripts/wait-for-it.sh
+RUN chmod +x /code/scripts/bash/wait-for-it.sh
