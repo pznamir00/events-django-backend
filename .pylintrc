@@ -1,7 +1,0 @@
-[MASTER]
-init-hook='import sys; sys.path.append(".")'
-ignore=applications/users/migrations, applications/core/migrations, applications/tickets/migrations
-ignore-patterns=test_.*?py
-
-[MESSAGES CONTROL]
-disable=missing-module-docstring,missing-class-docstring,missing-function-docstring,too-few-public-methods,unsupported-binary-operation,too-many-ancestors,no-member,abstract-method,unused-argument

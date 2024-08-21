@@ -895,6 +895,14 @@
         "documentation": {}
     },
     {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "IsAuthenticated",
         "importPath": "rest_framework.permissions",
         "description": "rest_framework.permissions",
@@ -1403,7 +1411,7 @@
         "kind": 6,
         "importPath": "applications.core.models",
         "description": "applications.core.models",
-        "peekOfCode": "class Category(models.Model):\n    \"\"\"\n    Basic category model\n    Slug is generating based on the name after creating\n    \"\"\"\n    name = models.CharField(max_length=64, unique=True)\n    slug = AutoSlugField(populate_from=\"name\")\n    def __str__(self):\n        return f\"{self.name}\"\nclass Event(models.Model):",
+        "peekOfCode": "class Category(models.Model):\n    \"\"\"\n    Basic category model\n    Slug is generating based on the name after creating\n    \"\"\"\n    name = models.CharField(max_length=64, unique=True)\n    slug = AutoSlugField(populate_from=\"name\")  # type: ignore\n    def __str__(self):\n        return f\"{self.name}\"\nclass Event(models.Model):",
         "detail": "applications.core.models",
         "documentation": {}
     },
@@ -1556,7 +1564,7 @@
         "kind": 6,
         "importPath": "applications.core.views",
         "description": "applications.core.views",
-        "peekOfCode": "class FollowedHashTagView(\n    mixins.ListModelMixin,\n    mixins.CreateModelMixin,\n    mixins.DestroyModelMixin,\n    viewsets.GenericViewSet,\n):\n    serializer_class = FollowedHashTagSerializer\n    def get_queryset(self):\n        return FollowedHashTag.objects.filter(user=self.request.user)\n    def perform_create(self, serializer):",
+        "peekOfCode": "class FollowedHashTagView(\n    mixins.ListModelMixin,\n    mixins.CreateModelMixin,\n    mixins.DestroyModelMixin,\n    viewsets.GenericViewSet,\n):\n    serializer_class = FollowedHashTagSerializer\n    def get_queryset(self):  # type: ignore\n        return FollowedHashTag.objects.filter(user=self.request.user)\n    def perform_create(self, serializer):",
         "detail": "applications.core.views",
         "documentation": {}
     },
@@ -1574,7 +1582,7 @@
         "kind": 6,
         "importPath": "applications.core.views",
         "description": "applications.core.views",
-        "peekOfCode": "class EventOwnListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):\n    serializer_class = EventSimpleSerializer\n    permission_classes = (IsAuthenticated,)\n    def get_queryset(self):\n        return Event.objects.filter(promoter=self.request.user)",
+        "peekOfCode": "class EventOwnListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):\n    serializer_class = EventSimpleSerializer\n    permission_classes = (IsAuthenticated,)\n    def get_queryset(self):  # type: ignore\n        return Event.objects.filter(promoter=self.request.user)",
         "detail": "applications.core.views",
         "documentation": {}
     },
@@ -1619,7 +1627,7 @@
         "kind": 6,
         "importPath": "applications.tickets.tests.test_models",
         "description": "applications.tickets.tests.test_models",
-        "peekOfCode": "class TestTicketsModels:\n    def test_create_ticket_template(self):\n        entity = mixer.blend(\"tickets.TicketTemplate\")\n        assert entity.pk == 1, \"Should create a TicketTemplate instance\"\n    def test_fail_ticket_template_if_file_is_not_pdf(self):\n        with pytest.raises(ValidationError):\n            entity = mixer.blend(\"tickets.TicketTemplate\")\n            entity._file = SimpleUploadedFile(\"test_file.txt\", b\"file_content\")\n            entity.full_clean()\n            raise Exception(\"Error should have been thrown\")",
+        "peekOfCode": "class TestTicketsModels:\n    def test_create_ticket_template(self):\n        entity = mixer.blend(\"tickets.TicketTemplate\")\n        assert entity.pk == 1, \"Should create a TicketTemplate instance\"  # type: ignore\n    def test_fail_ticket_template_if_file_is_not_pdf(self):\n        with pytest.raises(ValidationError):\n            entity = mixer.blend(\"tickets.TicketTemplate\")\n            entity._file = SimpleUploadedFile(\"test_file.txt\", b\"file_content\")  # type: ignore\n            entity.full_clean()  # type: ignore\n            raise Exception(\"Error should have been thrown\")",
         "detail": "applications.tickets.tests.test_models",
         "documentation": {}
     },
@@ -1781,7 +1789,7 @@
         "kind": 6,
         "importPath": "applications.users.serializers",
         "description": "applications.users.serializers",
-        "peekOfCode": "class ExtendedRegisterSerializer(RegisterSerializer):\n    def get_cleaned_data(self):\n        super().get_cleaned_data()\n        return {\n            \"username\": self.validated_data.get(\"username\", \"\"),\n            \"password1\": self.validated_data.get(\"password1\", \"\"),\n            \"password2\": self.validated_data.get(\"password2\", \"\"),\n            \"email\": self.validated_data.get(\"email\", \"\"),\n            \"phone_number\": self.validated_data.get(\"phone_number\", \"\"),\n            \"country\": self.validated_data.get(\"country\", \"\"),",
+        "peekOfCode": "class ExtendedRegisterSerializer(RegisterSerializer):\n    def get_cleaned_data(self):\n        super().get_cleaned_data()\n        assert isinstance(self.validated_data, dict)\n        return {\n            \"username\": self.validated_data.get(\"username\", \"\"),\n            \"password1\": self.validated_data.get(\"password1\", \"\"),\n            \"password2\": self.validated_data.get(\"password2\", \"\"),\n            \"email\": self.validated_data.get(\"email\", \"\"),\n            \"phone_number\": self.validated_data.get(\"phone_number\", \"\"),",
         "detail": "applications.users.serializers",
         "documentation": {}
     },

@@ -32,5 +32,6 @@ services:
     environment:
       - DEBUG=1
       - DJANGO_ENV=test
+      - DJANGO_SETTINGS_MODULE=backend.settings.test
     depends_on:
       - test_db

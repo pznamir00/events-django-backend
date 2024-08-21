@@ -14,7 +14,7 @@ class Category(models.Model):
     """
 
     name = models.CharField(max_length=64, unique=True)
-    slug = AutoSlugField(populate_from="name")
+    slug = AutoSlugField(populate_from="name")  # type: ignore
 
     def __str__(self):
         return f"{self.name}"

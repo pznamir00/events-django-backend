@@ -541,6 +541,21 @@ phonenumbers = ["phonenumbers (>=7.0.2)"]
 phonenumberslite = ["phonenumberslite (>=7.0.2)"]
 
 [[package]]
+name = "django-stubs-ext"
+version = "5.0.4"
+description = "Monkey-patching and extensions for django-stubs"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "django_stubs_ext-5.0.4-py3-none-any.whl", hash = "sha256:910cbaff3d1e8e806a5c27d5ddd4088535aae8371ea921b7fd680fdfa5f14e30"},
+    {file = "django_stubs_ext-5.0.4.tar.gz", hash = "sha256:85da065224204774208be29c7d02b4482d5a69218a728465c2fbe41725fdc819"},
+]
+
+[package.dependencies]
+django = "*"
+typing-extensions = "*"
+
+[[package]]
 name = "django-timezone-field"
 version = "7.0"
 description = "A Django app providing DB, form, and REST framework fields for zoneinfo and pytz timezone objects."
@@ -554,6 +569,20 @@ files = [
 [package.dependencies]
 "backports.zoneinfo" = {version = ">=0.2.1,<0.3.0", markers = "python_version < \"3.9\""}
 Django = ">=3.2,<6.0"
+
+[[package]]
+name = "django-types"
+version = "0.19.1"
+description = "Type stubs for Django"
+optional = false
+python-versions = ">=3.7,<4.0"
+files = [
+    {file = "django_types-0.19.1-py3-none-any.whl", hash = "sha256:b3f529de17f6374d41ca67232aa01330c531bbbaa3ac4097896f31ac33c96c30"},
+    {file = "django_types-0.19.1.tar.gz", hash = "sha256:5ae7988612cf6fbc357b018bbc3b3a878b65e04275cc46e0d35d66a708daff12"},
+]
+
+[package.dependencies]
+types-psycopg2 = ">=2.9.21.13"
 
 [[package]]
 name = "djangorestframework"
@@ -584,6 +613,17 @@ files = [
 [package.dependencies]
 django-filter = ">=23.5,<25.0"
 djangorestframework = ">=3.12,<3.16"
+
+[[package]]
+name = "djangorestframework-types"
+version = "0.8.0"
+description = "Type stubs for Django Rest Framework"
+optional = false
+python-versions = ">=3.7,<4.0"
+files = [
+    {file = "djangorestframework-types-0.8.0.tar.gz", hash = "sha256:bed5dc8ce4f3500a4d29632e333262059e2218f2291c88313ce8443c24e50a76"},
+    {file = "djangorestframework_types-0.8.0-py3-none-any.whl", hash = "sha256:5136212ec0df2c11d5ebcf217246f606e68f1d46a770419de84ed676bdab0113"},
+]
 
 [[package]]
 name = "drf-extra-fields"
@@ -1165,6 +1205,24 @@ files = [
 ]
 
 [[package]]
+name = "pyright"
+version = "1.1.377"
+description = "Command line wrapper for pyright"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "pyright-1.1.377-py3-none-any.whl", hash = "sha256:af0dd2b6b636c383a6569a083f8c5a8748ae4dcde5df7914b3f3f267e14dd162"},
+    {file = "pyright-1.1.377.tar.gz", hash = "sha256:aabc30fedce0ded34baa0c49b24f10e68f4bfc8f68ae7f3d175c4b0f256b4fcf"},
+]
+
+[package.dependencies]
+nodeenv = ">=1.6.0"
+
+[package.extras]
+all = ["twine (>=3.4.1)"]
+dev = ["twine (>=3.4.1)"]
+
+[[package]]
 name = "pytest"
 version = "8.3.2"
 description = "pytest: simple powerful testing with Python"
@@ -1458,6 +1516,17 @@ files = [
 ]
 
 [[package]]
+name = "types-psycopg2"
+version = "2.9.21.20240819"
+description = "Typing stubs for psycopg2"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "types-psycopg2-2.9.21.20240819.tar.gz", hash = "sha256:4ed6b47464d6374fa64e5e3b234cea0f710e72123a4596d67ab50b7415a84666"},
+    {file = "types_psycopg2-2.9.21.20240819-py3-none-any.whl", hash = "sha256:c9192311c27d7ad561eef705f1b2df1074f2cdcf445a98a6a2fcaaaad43278cf"},
+]
+
+[[package]]
 name = "typing-extensions"
 version = "4.12.2"
 description = "Backported and Experimental Type Hints for Python 3.8+"
@@ -1552,4 +1621,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "229abe9def822dd00ebd915b7fa5c70b56997f00267fc6511591a51203609de6"
+content-hash = "aa132d92198fdc3c6e2eabb4e5b5daa875ca702be7c85023e086d8711ccf6ed6"

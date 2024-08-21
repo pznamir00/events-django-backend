@@ -6,6 +6,7 @@ from .models import User
 class ExtendedRegisterSerializer(RegisterSerializer):
     def get_cleaned_data(self):
         super().get_cleaned_data()
+        assert isinstance(self.validated_data, dict)
         return {
             "username": self.validated_data.get("username", ""),
             "password1": self.validated_data.get("password1", ""),

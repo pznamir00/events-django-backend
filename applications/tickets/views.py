@@ -68,6 +68,7 @@ class TicketAPIView(APIView):
                 if not obj:
                     raise Http404
 
+                assert isinstance(serializer.data, dict)
                 # Generate PDF and send to provided email address
                 TicketWithQRCodeSender.generate_and_send(serializer.data["email"], obj)
                 obj.is_sold = True
@@ -75,7 +76,7 @@ class TicketAPIView(APIView):
                 return Response(
                     {
                         "Message": """
-                            The ticket was sent to the provided email address. 
+                            The ticket was sent to the provided email address.
                             You should be able to see it in a moment
                         """,
                         "data": serializer.data,

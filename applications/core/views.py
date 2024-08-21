@@ -1,3 +1,4 @@
+from typing import Union
 from rest_framework import viewsets, mixins
 from rest_framework.permissions import IsAuthenticated
 from django.template.defaultfilters import slugify
@@ -27,7 +28,7 @@ class FollowedHashTagView(
 ):
     serializer_class = FollowedHashTagSerializer
 
-    def get_queryset(self):
+    def get_queryset(self):  # type: ignore
         return FollowedHashTag.objects.filter(user=self.request.user)
 
     def perform_create(self, serializer):
@@ -55,7 +56,7 @@ class EventViewSet(viewsets.ModelViewSet):
         "-create_at",
     )
 
-    def get_serializer_class(self):
+    def get_serializer_class(self):  # type: ignore
         """
         For list method user can get simplify version of objects.
         """
@@ -64,14 +65,18 @@ class EventViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         return serializer.save(promoter=self.request.user)
 
-    def perform_update(self, serializer):
+    def perform_update(
+        self, serializer: Union[EventSimpleSerializer, EventDetailSerializer]
+    ):
         """
         In this point application creates history logs.
         Each of them is generated automatically based on
         updated properties
         """
         event = serializer.instance
+        assert isinstance(serializer.validated_data, dict)
         if "event_datetime" in serializer.validated_data:
+            assert isinstance(serializer.instance, Event)
             # Changed event datetime
             text = (
                 str(serializer.instance.event_datetime)
@@ -95,5 +100,5 @@ class EventOwnListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     serializer_class = EventSimpleSerializer
     permission_classes = (IsAuthenticated,)
 
-    def get_queryset(self):
+    def get_queryset(self):  # type: ignore
         return Event.objects.filter(promoter=self.request.user)

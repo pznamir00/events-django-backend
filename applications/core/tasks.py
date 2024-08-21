@@ -37,7 +37,7 @@ def send_emails(**kwargs):
                 lambda e: True
                 in [
                     f"#{hashtag}" in e.description
-                    for hashtag in user.followed_hashtags  # pylint: disable=cell-var-from-loop
+                    for hashtag in user.followed_hashtags  # pylint: disable=cell-var-from-loop # type: ignore
                 ],
                 recent_events,
             )

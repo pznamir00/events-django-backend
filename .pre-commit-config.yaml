@@ -23,3 +23,10 @@ repos:
       entry: poetry run lint
       language: system
       stages: [commit]
+-   repo: local
+    hooks:
+    - id: static-type-checking
+      name: run static type checking
+      entry: poetry run pyright .
+      language: system
+      stages: [commit]
