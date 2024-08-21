@@ -11,6 +11,7 @@ packages = [
 [tool.poetry.scripts]
 dev = 'scripts.entrypoints:dev'
 test = 'scripts.entrypoints:test'
+lint = 'scripts.entrypoints:lint'
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -43,6 +44,7 @@ pre-commit = "3.2.1"
 pytest = "^8.3.2"
 pytest-django = "^4.8.0"
 mixer = "7.1.1"
+pylint = "^3.2.6"
 
 [build-system]
 requires = ["poetry-core"]

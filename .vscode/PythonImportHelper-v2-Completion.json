@@ -2402,7 +2402,7 @@
         "kind": 2,
         "importPath": "scripts.entrypoints",
         "description": "scripts.entrypoints",
-        "peekOfCode": "def dev():\n    return _run(\"./scripts/bash/dev.sh\")\ndef test():\n    return _run(\"./scripts/bash/test.sh\")",
+        "peekOfCode": "def dev():\n    return _run(\"./scripts/bash/dev.sh\")\ndef test():\n    return _run(\"./scripts/bash/test.sh\")\ndef lint():\n    return _run(\"./scripts/bash/lint.sh\")",
         "detail": "scripts.entrypoints",
         "documentation": {}
     },
@@ -2411,7 +2411,16 @@
         "kind": 2,
         "importPath": "scripts.entrypoints",
         "description": "scripts.entrypoints",
-        "peekOfCode": "def test():\n    return _run(\"./scripts/bash/test.sh\")",
+        "peekOfCode": "def test():\n    return _run(\"./scripts/bash/test.sh\")\ndef lint():\n    return _run(\"./scripts/bash/lint.sh\")",
+        "detail": "scripts.entrypoints",
+        "documentation": {}
+    },
+    {
+        "label": "lint",
+        "kind": 2,
+        "importPath": "scripts.entrypoints",
+        "description": "scripts.entrypoints",
+        "peekOfCode": "def lint():\n    return _run(\"./scripts/bash/lint.sh\")",
         "detail": "scripts.entrypoints",
         "documentation": {}
     },
