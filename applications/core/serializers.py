@@ -66,10 +66,15 @@ class EventDetailSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         ticket = validated_data.pop("ticket", None)
         event = Event.objects.create(**validated_data)
-        TicketGenerator.generate_if_provided(validated_data, ticket, event)
+        self.__generate_tickets_if_needed(validated_data, ticket, event)
         return event
 
     def update(self, instance, validated_data):
         ticket = validated_data.pop("ticket", None)
-        TicketGenerator.generate_if_provided(validated_data, ticket, instance)
+        self.__generate_tickets_if_needed(validated_data, ticket, instance)
         return super().update(instance, validated_data)
+
+    def __generate_tickets_if_needed(self, data: dict, ticket: dict, event: Event):
+        ticket_generator = TicketGenerator(data)
+        if ticket_generator.should_generate_tickets():
+            ticket_generator.generate_tickets(ticket, event)

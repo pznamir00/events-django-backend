@@ -639,6 +639,38 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
+        "isExtraImport": true,
+        "detail": "applications.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
+        "isExtraImport": true,
+        "detail": "applications.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
+        "isExtraImport": true,
+        "detail": "applications.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
+        "isExtraImport": true,
+        "detail": "applications.users.models",
+        "documentation": {}
+    },
+    {
         "label": "permissions",
         "importPath": "rest_framework",
         "description": "rest_framework",
@@ -735,6 +767,15 @@
         "documentation": {}
     },
     {
+        "label": "applications.tickets.helpers",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "applications.tickets.helpers",
+        "description": "applications.tickets.helpers",
+        "detail": "applications.tickets.helpers",
+        "documentation": {}
+    },
+    {
         "label": "TicketGenerator",
         "importPath": "applications.tickets.helpers",
         "description": "applications.tickets.helpers",
@@ -744,6 +785,22 @@
     },
     {
         "label": "TicketTemplateSerializer",
+        "importPath": "applications.tickets.serializers",
+        "description": "applications.tickets.serializers",
+        "isExtraImport": true,
+        "detail": "applications.tickets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TicketPurchaseSerializer",
+        "importPath": "applications.tickets.serializers",
+        "description": "applications.tickets.serializers",
+        "isExtraImport": true,
+        "detail": "applications.tickets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TicketSerializer",
         "importPath": "applications.tickets.serializers",
         "description": "applications.tickets.serializers",
         "isExtraImport": true,
@@ -863,6 +920,22 @@
         "documentation": {}
     },
     {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "resolve",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -896,6 +969,38 @@
     },
     {
         "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "cast",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "cast",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -943,6 +1048,71 @@
         "documentation": {}
     },
     {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
         "label": "pytest",
         "kind": 6,
         "isExtraImport": true,
@@ -960,6 +1130,142 @@
         "documentation": {}
     },
     {
+        "label": "SimpleUploadedFile",
+        "importPath": "django.core.files.uploadedfile",
+        "description": "django.core.files.uploadedfile",
+        "isExtraImport": true,
+        "detail": "django.core.files.uploadedfile",
+        "documentation": {}
+    },
+    {
+        "label": "load_mock_image",
+        "importPath": "applications.tickets.tests.utils",
+        "description": "applications.tickets.tests.utils",
+        "isExtraImport": true,
+        "detail": "applications.tickets.tests.utils",
+        "documentation": {}
+    },
+    {
+        "label": "load_mock_pdf",
+        "importPath": "applications.tickets.tests.utils",
+        "description": "applications.tickets.tests.utils",
+        "isExtraImport": true,
+        "detail": "applications.tickets.tests.utils",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
         "label": "ValidationError",
         "importPath": "django.core.exceptions",
         "description": "django.core.exceptions",
@@ -968,28 +1274,147 @@
         "documentation": {}
     },
     {
-        "label": "mixer",
-        "importPath": "mixer.backend.django",
-        "description": "mixer.backend.django",
+        "label": "IsOwner",
+        "importPath": "applications.tickets.permissions",
+        "description": "applications.tickets.permissions",
         "isExtraImport": true,
-        "detail": "mixer.backend.django",
+        "detail": "applications.tickets.permissions",
         "documentation": {}
     },
     {
-        "label": "mixer",
-        "importPath": "mixer.backend.django",
-        "description": "mixer.backend.django",
+        "label": "Ticket",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
         "isExtraImport": true,
-        "detail": "mixer.backend.django",
+        "detail": "applications.tickets.models",
         "documentation": {}
     },
     {
-        "label": "os",
-        "kind": 6,
+        "label": "Ticket",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
         "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "TicketTemplate",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "isExtraImport": true,
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Ticket",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "isExtraImport": true,
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "TicketTemplate",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "isExtraImport": true,
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "APIRequestFactory",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
+        "label": "APIClient",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
+        "label": "force_authenticate",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
+        "label": "APIRequestFactory",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
+        "label": "APIClient",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
+        "label": "force_authenticate",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
+        "label": "TicketAPIView",
+        "importPath": "applications.tickets.views",
+        "description": "applications.tickets.views",
+        "isExtraImport": true,
+        "detail": "applications.tickets.views",
+        "documentation": {}
+    },
+    {
+        "label": "TicketCheckerAPIView",
+        "importPath": "applications.tickets.views",
+        "description": "applications.tickets.views",
+        "isExtraImport": true,
+        "detail": "applications.tickets.views",
+        "documentation": {}
+    },
+    {
+        "label": "PdfFileReader",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "PdfFileWriter",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "PdfFileReader",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
         "documentation": {}
     },
     {
@@ -1036,19 +1461,11 @@
         "documentation": {}
     },
     {
-        "label": "PdfFileWriter",
-        "importPath": "PyPDF2",
-        "description": "PyPDF2",
+        "label": "File",
+        "importPath": "django.core.files",
+        "description": "django.core.files",
         "isExtraImport": true,
-        "detail": "PyPDF2",
-        "documentation": {}
-    },
-    {
-        "label": "PdfFileReader",
-        "importPath": "PyPDF2",
-        "description": "PyPDF2",
-        "isExtraImport": true,
-        "detail": "PyPDF2",
+        "detail": "django.core.files",
         "documentation": {}
     },
     {
@@ -1065,22 +1482,6 @@
         "description": "reportlab.lib.pagesizes",
         "isExtraImport": true,
         "detail": "reportlab.lib.pagesizes",
-        "documentation": {}
-    },
-    {
-        "label": "Event",
-        "importPath": "applications.core.models",
-        "description": "applications.core.models",
-        "isExtraImport": true,
-        "detail": "applications.core.models",
-        "documentation": {}
-    },
-    {
-        "label": "Event",
-        "importPath": "applications.core.models",
-        "description": "applications.core.models",
-        "isExtraImport": true,
-        "detail": "applications.core.models",
         "documentation": {}
     },
     {
@@ -1157,6 +1558,38 @@
         "description": "phonenumber_field.modelfields",
         "isExtraImport": true,
         "detail": "phonenumber_field.modelfields",
+        "documentation": {}
+    },
+    {
+        "label": "ExtendedRegisterSerializer",
+        "importPath": "applications.users.serializers",
+        "description": "applications.users.serializers",
+        "isExtraImport": true,
+        "detail": "applications.users.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UserSerializer",
+        "importPath": "applications.users.serializers",
+        "description": "applications.users.serializers",
+        "isExtraImport": true,
+        "detail": "applications.users.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "applications.users",
+        "description": "applications.users",
+        "isExtraImport": true,
+        "detail": "applications.users",
+        "documentation": {}
+    },
+    {
+        "label": "UserAPIView",
+        "importPath": "applications.users.views",
+        "description": "applications.users.views",
+        "isExtraImport": true,
+        "detail": "applications.users.views",
         "documentation": {}
     },
     {
@@ -1623,12 +2056,66 @@
         "documentation": {}
     },
     {
-        "label": "TestTicketsModels",
+        "label": "TestTicketGenerator",
+        "kind": 6,
+        "importPath": "applications.tickets.tests.test_helpers",
+        "description": "applications.tickets.tests.test_helpers",
+        "peekOfCode": "class TestTicketGenerator:\n    def test_should_generate_tickets_returns_true_if_event_is_not_free(self):\n        generator = helpers.TicketGenerator({\"is_free\": False})\n        assert generator.should_generate_tickets()\n    def test_should_generate_tickets_returns_false_if_event_is_free(self):\n        generator = helpers.TicketGenerator({\"is_free\": True})\n        assert not generator.should_generate_tickets()\n    @pytest.mark.django_db\n    def test_generate_tickets_creates_ticket_template(self):\n        template = SimpleUploadedFile(\"test_file.pdf\", b\"file_content\")",
+        "detail": "applications.tickets.tests.test_helpers",
+        "documentation": {}
+    },
+    {
+        "label": "TestTicketWithQRCodeSender",
+        "kind": 6,
+        "importPath": "applications.tickets.tests.test_helpers",
+        "description": "applications.tickets.tests.test_helpers",
+        "peekOfCode": "class TestTicketWithQRCodeSender:\n    email_mock = MagicMock()\n    @pytest.fixture(autouse=True)\n    def remove_tmp_files(self):\n        files = [i for i in os.listdir(\"media/tmp/\") if i != \".gitignore\"]\n        for file in files:\n            os.unlink(f\"media/tmp/{file}\")\n    @pytest.mark.django_db\n    def test_send_does_not_leave_redundant_media_tmp_files(self):\n        ticket: Ticket = mixer.blend(\"tickets.Ticket\")",
+        "detail": "applications.tickets.tests.test_helpers",
+        "documentation": {}
+    },
+    {
+        "label": "TestTicketTemplate",
         "kind": 6,
         "importPath": "applications.tickets.tests.test_models",
         "description": "applications.tickets.tests.test_models",
-        "peekOfCode": "class TestTicketsModels:\n    def test_create_ticket_template(self):\n        entity = mixer.blend(\"tickets.TicketTemplate\")\n        assert entity.pk == 1, \"Should create a TicketTemplate instance\"  # type: ignore\n    def test_fail_ticket_template_if_file_is_not_pdf(self):\n        with pytest.raises(ValidationError):\n            entity = mixer.blend(\"tickets.TicketTemplate\")\n            entity._file = SimpleUploadedFile(\"test_file.txt\", b\"file_content\")  # type: ignore\n            entity.full_clean()  # type: ignore\n            raise Exception(\"Error should have been thrown\")",
+        "peekOfCode": "class TestTicketTemplate:\n    def test_create_ticket_template(self):\n        entity = mixer.blend(\"tickets.TicketTemplate\")\n        assert isinstance(entity, TicketTemplate)\n    def test_fail_ticket_template_if_file_is_not_pdf(self):\n        with pytest.raises(ValidationError):\n            entity = mixer.blend(\"tickets.TicketTemplate\")\n            entity._file = SimpleUploadedFile(\"test_file.txt\", b\"file_content\")  # type: ignore\n            entity.full_clean()  # type: ignore\n            raise Exception(\"Error should have been thrown\")",
         "detail": "applications.tickets.tests.test_models",
+        "documentation": {}
+    },
+    {
+        "label": "TestTicket",
+        "kind": 6,
+        "importPath": "applications.tickets.tests.test_models",
+        "description": "applications.tickets.tests.test_models",
+        "peekOfCode": "class TestTicket:\n    def test_create_ticket(self):\n        entity = mixer.blend(\"tickets.Ticket\")\n        assert isinstance(entity.id, uuid.UUID), \"Should create a Ticket instance\"  # type: ignore",
+        "detail": "applications.tickets.tests.test_models",
+        "documentation": {}
+    },
+    {
+        "label": "TestIsOwnerPermission",
+        "kind": 6,
+        "importPath": "applications.tickets.tests.test_permissions",
+        "description": "applications.tickets.tests.test_permissions",
+        "peekOfCode": "class TestIsOwnerPermission:\n    @pytest.fixture(autouse=True)\n    def req(self):\n        req = MagicMock()\n        req.user = {\"email\": \"test@gamil.com\"}\n        return req\n    @pytest.fixture(autouse=True)\n    def obj(self):\n        return MagicMock()\n    def test_has_object_permission_returns_true_if_promoter_is_user(",
+        "detail": "applications.tickets.tests.test_permissions",
+        "documentation": {}
+    },
+    {
+        "label": "TestTicketPurchaseSerializer",
+        "kind": 6,
+        "importPath": "applications.tickets.tests.test_serializers",
+        "description": "applications.tickets.tests.test_serializers",
+        "peekOfCode": "class TestTicketPurchaseSerializer:\n    def test_validation_passes_if_email_is_provided(self):\n        instance = TicketPurchaseSerializer(data={\"email\": \"test@gamil.com\"})\n        assert instance.is_valid()\n    def test_validation_does_not_pass_if_email_is_missing(self):\n        instance = TicketPurchaseSerializer(data={})\n        assert not instance.is_valid()\n    def test_validation_does_not_pass_if_email_is_not_valid_email(self):\n        instance = TicketPurchaseSerializer(data={\"email\": \"aaa\"})\n        assert not instance.is_valid()",
+        "detail": "applications.tickets.tests.test_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TestTicketSerializer",
+        "kind": 6,
+        "importPath": "applications.tickets.tests.test_serializers",
+        "description": "applications.tickets.tests.test_serializers",
+        "peekOfCode": "class TestTicketSerializer:\n    def test_validation_passes_if_data_is_valid(self):\n        instance = TicketSerializer(data={\"is_used\": True, \"is_sold\": True})\n        assert instance.is_valid()\n    @pytest.mark.django_db\n    def test_returns_object_without_template(self):\n        ticket: Ticket = mixer.blend(\"tickets.Ticket\")\n        instance = TicketSerializer(instance=ticket)\n        assert \"template\" not in instance.data",
+        "detail": "applications.tickets.tests.test_serializers",
         "documentation": {}
     },
     {
@@ -1636,8 +2123,53 @@
         "kind": 6,
         "importPath": "applications.tickets.tests.test_urls",
         "description": "applications.tickets.tests.test_urls",
-        "peekOfCode": "class TestTicketsUrls:\n    def test_event_tickets_url_resolves(self):\n        url = reverse(\"events-tickets\", args=[\"event123\"])\n        assert resolve(url).func.view_class == views.TicketAPIView\n    def test_event_tickets_checker_url_resolves(self):\n        url = reverse(\"events-tickets-checker\", args=[\"event123\", \"ticket123\"])\n        assert resolve(url).func.view_class == views.TicketCheckerAPIView",
+        "peekOfCode": "class TestTicketsUrls:\n    def test_event_tickets_url_resolves(self):\n        url = reverse(\"events-tickets\", args=[\"event123\"])\n        assert resolve(url).func.view_class == views.TicketAPIView  # type: ignore\n    def test_event_tickets_checker_url_resolves(self):\n        url = reverse(\"events-tickets-checker\", args=[\"event123\", \"ticket123\"])\n        assert resolve(url).func.view_class == views.TicketCheckerAPIView  # type: ignore",
         "detail": "applications.tickets.tests.test_urls",
+        "documentation": {}
+    },
+    {
+        "label": "TestTicketCheckerAPIView",
+        "kind": 6,
+        "importPath": "applications.tickets.tests.test_views",
+        "description": "applications.tickets.tests.test_views",
+        "peekOfCode": "class TestTicketCheckerAPIView:\n    @pytest.fixture(autouse=True)\n    def setup(self):\n        self.user = User.objects.create_user(username=\"testuser\", password=\"password\")\n        self.client = APIClient()\n    @pytest.fixture\n    def entities(self):\n        event: Event = mixer.blend(\"core.Event\")\n        template: TicketTemplate = mixer.blend(\"tickets.TicketTemplate\")\n        template.event = event",
+        "detail": "applications.tickets.tests.test_views",
+        "documentation": {}
+    },
+    {
+        "label": "TestTicketAPIView",
+        "kind": 6,
+        "importPath": "applications.tickets.tests.test_views",
+        "description": "applications.tickets.tests.test_views",
+        "peekOfCode": "class TestTicketAPIView:\n    ticket_sender_cls = MagicMock()\n    sender_mock: MagicMock\n    @pytest.fixture(autouse=True)\n    def setup(self):\n        self.sender_mock = MagicMock()\n        ticket_sender_cls: MagicMock = self.ticket_sender_cls\n        ticket_sender_cls.return_value = self.sender_mock\n    @pytest.fixture\n    def entities(self):",
+        "detail": "applications.tickets.tests.test_views",
+        "documentation": {}
+    },
+    {
+        "label": "load_mock_pdf",
+        "kind": 2,
+        "importPath": "applications.tickets.tests.utils",
+        "description": "applications.tickets.tests.utils",
+        "peekOfCode": "def load_mock_pdf() -> bytes:\n    reader = PdfFileReader(f\"{_dir}/fixtures/document.pdf\")\n    return cast(bytes, reader.stream)\ndef load_mock_image():\n    return Image.open(f\"{_dir}/fixtures/qr.png\")",
+        "detail": "applications.tickets.tests.utils",
+        "documentation": {}
+    },
+    {
+        "label": "load_mock_image",
+        "kind": 2,
+        "importPath": "applications.tickets.tests.utils",
+        "description": "applications.tickets.tests.utils",
+        "peekOfCode": "def load_mock_image():\n    return Image.open(f\"{_dir}/fixtures/qr.png\")",
+        "detail": "applications.tickets.tests.utils",
+        "documentation": {}
+    },
+    {
+        "label": "_dir",
+        "kind": 5,
+        "importPath": "applications.tickets.tests.utils",
+        "description": "applications.tickets.tests.utils",
+        "peekOfCode": "_dir = os.path.dirname(os.path.realpath(__file__))\ndef load_mock_pdf() -> bytes:\n    reader = PdfFileReader(f\"{_dir}/fixtures/document.pdf\")\n    return cast(bytes, reader.stream)\ndef load_mock_image():\n    return Image.open(f\"{_dir}/fixtures/qr.png\")",
+        "detail": "applications.tickets.tests.utils",
         "documentation": {}
     },
     {
@@ -1654,7 +2186,7 @@
         "kind": 6,
         "importPath": "applications.tickets.helpers",
         "description": "applications.tickets.helpers",
-        "peekOfCode": "class TicketGenerator:\n    \"\"\"\n    This class generates tickets with provided quantity by user\n    if it is necessary (that means when user provided 'is_free' field\n    and is set on False). User has to pass template file and quantity\n    of tickets to generate and in this point generates them.\n    \"\"\"\n    @staticmethod\n    def generate_if_provided(data, ticket, event):\n        if \"is_free\" in data and not data[\"is_free\"]:",
+        "peekOfCode": "class TicketGenerator:\n    \"\"\"\n    This class generates tickets with provided quantity by user\n    if it is necessary (that means when user provided 'is_free' field\n    and is set on False). User has to pass template file and quantity\n    of tickets to generate and in this point generates them.\n    \"\"\"\n    def __init__(self, data: Dict[str, Any]):\n        self.__data = data\n    def should_generate_tickets(self):",
         "detail": "applications.tickets.helpers",
         "documentation": {}
     },
@@ -1663,7 +2195,7 @@
         "kind": 6,
         "importPath": "applications.tickets.helpers",
         "description": "applications.tickets.helpers",
-        "peekOfCode": "class TicketWithQRCodeSender:\n    \"\"\"\n    This class is up to sending ticket file to client's email address.\n    It generates unique QR code (based on id of ticket), and pdf file\n    (based on selected template file). Then it merges this 2 files saved\n    in media/tmp with unique names, and send the outcome to provided email\n    address.\n    \"\"\"\n    @staticmethod\n    def generate_and_send(email, obj):",
+        "peekOfCode": "class TicketWithQRCodeSender:\n    \"\"\"\n    This class is up to sending ticket file to client's email address.\n    It generates unique QR code (based on id of ticket), and pdf file\n    (based on selected template file). Then it merges this 2 files saved\n    in media/tmp with unique names, and sends the result to provided email\n    address.\n    \"\"\"\n    def send(self, email: str, obj: Ticket):\n        # get pdf file from template",
         "detail": "applications.tickets.helpers",
         "documentation": {}
     },
@@ -1735,7 +2267,7 @@
         "kind": 6,
         "importPath": "applications.tickets.views",
         "description": "applications.tickets.views",
-        "peekOfCode": "class TicketCheckerAPIView(APIView):\n    serializer_class = TicketSerializer\n    permission_classes = (\n        IsAuthenticated,\n        IsOwner,\n    )\n    def get_object(self, event_id, ticket_id):\n        try:\n            return Ticket.objects.get(\n                id=ticket_id, template__event=event_id, is_used=False, is_sold=True",
+        "peekOfCode": "class TicketCheckerAPIView(APIView):\n    serializer_class = TicketSerializer\n    permission_classes = (IsAuthenticated,)\n    def get_object(self, event_id, ticket_id):\n        try:\n            return Ticket.objects.get(\n                id=ticket_id, template__event=event_id, is_used=False, is_sold=True\n            )\n        except Exception as exc:\n            raise Http404 from exc",
         "detail": "applications.tickets.views",
         "documentation": {}
     },
@@ -1744,7 +2276,7 @@
         "kind": 6,
         "importPath": "applications.tickets.views",
         "description": "applications.tickets.views",
-        "peekOfCode": "class TicketAPIView(APIView):\n    serializer_class = TicketPurchaseSerializer\n    permission_classes = (AllowAny,)\n    def get_object(self, event_id):\n        \"\"\"\n        Get first available ticket that belongs to the chosen event\n        \"\"\"\n        return Ticket.objects.filter(template__event=event_id, is_sold=False).first()\n    def post(self, request, event_id):\n        \"\"\"",
+        "peekOfCode": "class TicketAPIView(APIView):\n    serializer_class = TicketPurchaseSerializer\n    permission_classes = (AllowAny,)\n    def get_object(self, event_id):\n        \"\"\"\n        Get first available ticket that belongs to the chosen event\n        \"\"\"\n        return Ticket.objects.get(template__event=event_id, is_sold=False)\n    def post(self, request, event_id):\n        \"\"\"",
         "detail": "applications.tickets.views",
         "documentation": {}
     },
@@ -1764,6 +2296,51 @@
         "description": "applications.users.migrations.0002_user_avatar",
         "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"user\",\n            name=\"avatar\",\n            field=models.ImageField(null=True, upload_to=\"media/avatars\"),\n        ),",
         "detail": "applications.users.migrations.0002_user_avatar",
+        "documentation": {}
+    },
+    {
+        "label": "TestUser",
+        "kind": 6,
+        "importPath": "applications.users.tests.test_models",
+        "description": "applications.users.tests.test_models",
+        "peekOfCode": "class TestUser:\n    def test_create_user(self):\n        entity = mixer.blend(\"users.User\")\n        assert isinstance(entity, User), \"Should create a User instance\"  # type: ignore",
+        "detail": "applications.users.tests.test_models",
+        "documentation": {}
+    },
+    {
+        "label": "TestExtendedRegisterSerializer",
+        "kind": 6,
+        "importPath": "applications.users.tests.test_serializers",
+        "description": "applications.users.tests.test_serializers",
+        "peekOfCode": "class TestExtendedRegisterSerializer:\n    @pytest.mark.django_db\n    def test_passes_if_data_is_valid(self):\n        data = {\n            \"username\": \"piklop\",\n            \"password1\": \"111qrtp9b3d5\",\n            \"password2\": \"111qrtp9b3d5\",\n            \"email\": \"test@gmail.com\",\n            \"phone_number\": \"499038195\",\n            \"country\": \"USA\",",
+        "detail": "applications.users.tests.test_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TestUserSerializer",
+        "kind": 6,
+        "importPath": "applications.users.tests.test_serializers",
+        "description": "applications.users.tests.test_serializers",
+        "peekOfCode": "class TestUserSerializer:\n    @pytest.mark.django_db\n    def test_returns_object(self):\n        user: User = mixer.blend(\"users.User\")\n        instance = UserSerializer(instance=user)\n        assert \"email\" in instance.data\n        assert \"phone_number\" in instance.data\n        assert \"is_superuser\" in instance.data\n        assert \"country\" in instance.data\n        assert \"state\" in instance.data",
+        "detail": "applications.users.tests.test_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TestUsersUrls",
+        "kind": 6,
+        "importPath": "applications.users.tests.test_urls",
+        "description": "applications.users.tests.test_urls",
+        "peekOfCode": "class TestUsersUrls:\n    def test_user_url_resolves(self):\n        url = reverse(\"user\")\n        assert resolve(url).func.view_class == views.UserAPIView  # type: ignore",
+        "detail": "applications.users.tests.test_urls",
+        "documentation": {}
+    },
+    {
+        "label": "TestUserAPIView",
+        "kind": 6,
+        "importPath": "applications.users.tests.test_views",
+        "description": "applications.users.tests.test_views",
+        "peekOfCode": "class TestUserAPIView:\n    @pytest.fixture(autouse=True)\n    def setup(self):\n        self.user = User.objects.create_user(\n            username=\"testuser\", password=\"password\", email=\"test@gmail.com\"\n        )\n        self.client = APIClient()\n    def test_get_throws_an_401_if_user_is_not_auth(self):\n        request = APIRequestFactory().get(\"\")\n        view = UserAPIView.as_view()",
+        "detail": "applications.users.tests.test_views",
         "documentation": {}
     },
     {
@@ -1807,7 +2384,7 @@
         "kind": 5,
         "importPath": "applications.users.urls",
         "description": "applications.users.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"user/\", views.UserAPIView.as_view()),\n    path(\"registration/\", include(\"dj_rest_auth.registration.urls\")),\n    path(\"password/\", include(\"django.contrib.auth.urls\")),\n    path(\"\", include(\"dj_rest_auth.urls\")),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"user/\", views.UserAPIView.as_view(), name=\"user\"),\n    path(\"registration/\", include(\"dj_rest_auth.registration.urls\")),\n    path(\"password/\", include(\"django.contrib.auth.urls\")),\n    path(\"\", include(\"dj_rest_auth.urls\")),\n]",
         "detail": "applications.users.urls",
         "documentation": {}
     },
@@ -2410,7 +2987,7 @@
         "kind": 2,
         "importPath": "scripts.entrypoints",
         "description": "scripts.entrypoints",
-        "peekOfCode": "def dev():\n    return _run(\"./scripts/bash/dev.sh\")\ndef test():\n    return _run(\"./scripts/bash/test.sh\")\ndef lint():\n    return _run(\"./scripts/bash/lint.sh\")",
+        "peekOfCode": "def dev():\n    return _run(\"./scripts/bash/dev.sh\")\ndef test():\n    return _run(\"./scripts/bash/test.sh\")\ndef test_dev():\n    return _run(\"./scripts/bash/test-dev.sh\")\ndef lint():\n    return _run(\"./scripts/bash/lint.sh\")",
         "detail": "scripts.entrypoints",
         "documentation": {}
     },
@@ -2419,7 +2996,16 @@
         "kind": 2,
         "importPath": "scripts.entrypoints",
         "description": "scripts.entrypoints",
-        "peekOfCode": "def test():\n    return _run(\"./scripts/bash/test.sh\")\ndef lint():\n    return _run(\"./scripts/bash/lint.sh\")",
+        "peekOfCode": "def test():\n    return _run(\"./scripts/bash/test.sh\")\ndef test_dev():\n    return _run(\"./scripts/bash/test-dev.sh\")\ndef lint():\n    return _run(\"./scripts/bash/lint.sh\")",
+        "detail": "scripts.entrypoints",
+        "documentation": {}
+    },
+    {
+        "label": "test_dev",
+        "kind": 2,
+        "importPath": "scripts.entrypoints",
+        "description": "scripts.entrypoints",
+        "peekOfCode": "def test_dev():\n    return _run(\"./scripts/bash/test-dev.sh\")\ndef lint():\n    return _run(\"./scripts/bash/lint.sh\")",
         "detail": "scripts.entrypoints",
         "documentation": {}
     },

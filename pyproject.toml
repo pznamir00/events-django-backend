@@ -9,6 +9,7 @@ packages = [{ include = "scripts" }]
 [tool.poetry.scripts]
 dev = 'scripts.entrypoints:dev'
 test = 'scripts.entrypoints:test'
+test-dev = 'scripts.entrypoints:test_dev'
 lint = 'scripts.entrypoints:lint'
 
 [tool.poetry.dependencies]
@@ -27,7 +28,7 @@ drf-extra-fields = "^3.7.0"
 html5lib = "^1.1"
 psycopg2 = "^2.9.9"
 psycopg2-binary = "^2.9.9"
-pypdf2 = "^3.0.1"
+pypdf2 = "<3.0"
 qrcode = "^7.4.2"
 redis = "^5.0.8"
 reportlab = "^4.2.2"
@@ -58,12 +59,15 @@ exclude = [
     "**/migrations/**",
     ".vscode",
     "**/test_*.py",
+    "**/*.png",
+    "**/*.pdf",
     "poetry.lock",
     "pyproject.toml",
     ".pre-commit-config.yaml",
     'docker-compose.dev.yml',
     'docker-compose.test.yml',
     'Dockerfile',
+    'scripts',
 ]
 reportIncompatibleVariableOverride = "none"
 reportIncompatibleMethodOverride = "none"

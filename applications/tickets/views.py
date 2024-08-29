@@ -6,16 +6,12 @@ from django.http import Http404
 from applications.core.models import Event
 from .helpers import TicketWithQRCodeSender
 from .serializers import TicketSerializer, TicketPurchaseSerializer
-from .permissions import IsOwner
 from .models import Ticket
 
 
 class TicketCheckerAPIView(APIView):
     serializer_class = TicketSerializer
-    permission_classes = (
-        IsAuthenticated,
-        IsOwner,
-    )
+    permission_classes = (IsAuthenticated,)
 
     def get_object(self, event_id, ticket_id):
         try:
@@ -46,13 +42,13 @@ class TicketAPIView(APIView):
         """
         Get first available ticket that belongs to the chosen event
         """
-        return Ticket.objects.filter(template__event=event_id, is_sold=False).first()
+        return Ticket.objects.get(template__event=event_id, is_sold=False)
 
     def post(self, request, event_id):
         """
         This route returns available ticket by sending it to retrieved email address.
-        Actually this should checking if user paid for a ticket, but this version
-        of the application has no payment system implemented yet, this is why
+        Actually this should check if user paid for a ticket, but this version
+        of the application has no payment system implemented, this is why
         it returns the ticket immediately
         """
         data = request.data
@@ -70,7 +66,8 @@ class TicketAPIView(APIView):
 
                 assert isinstance(serializer.data, dict)
                 # Generate PDF and send to provided email address
-                TicketWithQRCodeSender.generate_and_send(serializer.data["email"], obj)
+                sender = TicketWithQRCodeSender()
+                sender.send(serializer.data["email"], obj)
                 obj.is_sold = True
                 obj.save()
                 return Response(
@@ -83,5 +80,5 @@ class TicketAPIView(APIView):
                     },
                     status=status.HTTP_200_OK,
                 )
-            return Response(serializer.errors)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         raise Http404

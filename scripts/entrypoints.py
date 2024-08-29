@@ -13,5 +13,9 @@ def test():
     return _run("./scripts/bash/test.sh")
 
 
+def test_dev():
+    return _run("./scripts/bash/test-dev.sh")
+
+
 def lint():
     return _run("./scripts/bash/lint.sh")
