@@ -15,7 +15,7 @@ class TestTicketTemplate:
     def test_fail_ticket_template_if_file_is_not_pdf(self):
         with pytest.raises(ValidationError):
             entity = mixer.blend("tickets.TicketTemplate")
-            entity._file = SimpleUploadedFile("test_file.txt", b"file_content")  # type: ignore
+            entity.file = SimpleUploadedFile("test_file.txt", b"file_content")  # type: ignore
             entity.full_clean()  # type: ignore
             raise Exception("Error should have been thrown")
 

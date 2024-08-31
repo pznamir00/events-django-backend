@@ -1,23 +1,9 @@
 import uuid
-from autoslug import AutoSlugField
 from django.contrib.gis.db.models import PointField
 from django.db import models
 from applications.users.models import User
-from .choices import HistoryLabel
+from .choices import Category, HistoryLabel
 from .helpers import EventFileNameGenerator
-
-
-class Category(models.Model):
-    """
-    Basic category model
-    Slug is generating based on the name after creating
-    """
-
-    name = models.CharField(max_length=64, unique=True)
-    slug = AutoSlugField(populate_from="name")  # type: ignore
-
-    def __str__(self):
-        return f"{self.name}"
 
 
 class Event(models.Model):
@@ -38,7 +24,7 @@ class Event(models.Model):
     location_hints = models.CharField(max_length=256, blank=True, null=True)
     event_datetime = models.DateTimeField()
     promoter = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
+    category = models.CharField(max_length=1, choices=Category.choices, null=True)
     is_free = models.BooleanField(default=True)
     is_private = models.BooleanField(default=False)
     took_place = models.BooleanField(default=False)

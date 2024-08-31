@@ -48,7 +48,7 @@ class EventFilterSet(filters.FilterSet):
         except Exception as exc:
             raise ValidationError(
                 """
-                Excepted 'latitude' and 'longitude' parameters 
+                Excepted 'latitude' and 'longitude' parameters
                 (both decimal) when you pass 'range' field
                 """
             ) from exc
@@ -76,7 +76,7 @@ class EventOrderingFilter(OrderingFilter):
         """
         Order by expiration time. Expired events go to the end of a list.
         """
-        queryset.annotate(
+        queryset = queryset.annotate(
             event_datetime_expired=Case(
                 When(event_datetime__lte=datetime.now(), then=Value("0")),
                 default=Value("1"),
@@ -85,13 +85,13 @@ class EventOrderingFilter(OrderingFilter):
 
         try:
             # Order by distance if lat and lon are provided.
-            lat = request.query_params.get("latitude")
-            lon = request.query_params.get("longitude")
-            assert isinstance(lat, float) and isinstance(lon, float)
-            queryset.annotate(
-                distance=Distance("location", Point(float(lat), float(lon)))
+            lat = request.query_params.get("latitude", "")
+            lon = request.query_params.get("longitude", "")
+            assert lat.isnumeric() and lon.isnumeric()
+            queryset = queryset.annotate(
+                distance=Distance("location", Point(float(lat), float(lon), srid=4326))
             )
         except AssertionError:
-            queryset.annotate(distance=Value(0))
+            queryset = queryset.annotate(distance=Value(0))
 
-        return queryset
+        return super().filter_queryset(request, queryset, view)

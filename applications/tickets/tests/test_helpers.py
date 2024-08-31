@@ -24,16 +24,16 @@ class TestTicketGenerator:
         template = SimpleUploadedFile("test_file.pdf", b"file_content")
         event: Event = mixer.blend("core.Event")
         generator = helpers.TicketGenerator({})
-        generator.generate_tickets({"template": template, "quantity": 2}, event)
+        generator.generate_tickets({"file": template, "quantity": 2}, event)
         obj = TicketTemplate.objects.latest("id")
-        assert obj._file.name.startswith("media/tickets/test_file")
+        assert obj.file.name.startswith("media/tickets/test_file")
 
     @pytest.mark.django_db
     def test_generate_tickets_creates_tickets(self):
         template = SimpleUploadedFile("test_file.pdf", b"file_content")
         event: Event = mixer.blend("core.Event")
         generator = helpers.TicketGenerator({})
-        generator.generate_tickets({"template": template, "quantity": 5}, event)
+        generator.generate_tickets({"file": template, "quantity": 5}, event)
         assert Ticket.objects.count() == 5
 
 
@@ -49,7 +49,7 @@ class TestTicketWithQRCodeSender:
     @pytest.mark.django_db
     def test_send_does_not_leave_redundant_media_tmp_files(self):
         ticket: Ticket = mixer.blend("tickets.Ticket")
-        ticket.template._file = load_mock_pdf()  # type:ignore
+        ticket.template.file = load_mock_pdf()  # type:ignore
         sender = helpers.TicketWithQRCodeSender()
         sender.send("test@gmail.com", ticket)
         tmp_files = [i for i in os.listdir("media/tmp/") if i != ".gitignore"]
@@ -59,7 +59,7 @@ class TestTicketWithQRCodeSender:
     @patch("applications.tickets.helpers.qrcode.make", return_value=load_mock_image())
     def test_send_calls_qr_make_with_correct_url(self, mock_make: MagicMock):
         ticket: Ticket = mixer.blend("tickets.Ticket")
-        ticket.template._file = load_mock_pdf()  # type:ignore
+        ticket.template.file = load_mock_pdf()  # type:ignore
         ticket.id = "123-321-456-654"
         sender = helpers.TicketWithQRCodeSender()
         sender.send("test@gmail.com", ticket)
@@ -73,7 +73,7 @@ class TestTicketWithQRCodeSender:
     ):
         helpers.time.time = lambda: 123
         ticket: Ticket = mixer.blend("tickets.Ticket")
-        ticket.template._file = load_mock_pdf()  # type:ignore
+        ticket.template.file = load_mock_pdf()  # type:ignore
         sender = helpers.TicketWithQRCodeSender()
         sender.send("test@gmail.com", ticket)
         email_message.assert_called_once_with(

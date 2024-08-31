@@ -1,7 +1,6 @@
 import os
 import io
 import time
-from typing import Any, Dict
 import qrcode
 from django.contrib.sites.models import Site
 from django.core.mail import EmailMessage
@@ -9,33 +8,10 @@ from django.core.files import File
 from PyPDF2 import PdfFileWriter, PdfFileReader
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
-from applications.core.models import Event
-from .models import Ticket, TicketTemplate
+from applications.tickets.models import Ticket
 
 
-class TicketGenerator:
-    """
-    This class generates tickets with provided quantity by user
-    if it is necessary (that means when user provided 'is_free' field
-    and is set on False). User has to pass template file and quantity
-    of tickets to generate and in this point generates them.
-    """
-
-    def __init__(self, data: Dict[str, Any]):
-        self.__data = data
-
-    def should_generate_tickets(self):
-        return "is_free" in self.__data and not self.__data["is_free"]
-
-    def generate_tickets(self, ticket: dict, event: Event):
-        # save a template
-        file = ticket["file"]
-        template = TicketTemplate.objects.create(event=event, file=file)
-        q = ticket.get("quantity", 0)
-        Ticket.objects.bulk_create([Ticket(template=template) for _ in range(q)])
-
-
-class TicketWithQRCodeSender:
+class TicketSenderService:
     """
     This class is up to sending ticket file to client's email address.
     It generates unique QR code (based on id of ticket), and pdf file
@@ -44,11 +20,11 @@ class TicketWithQRCodeSender:
     address.
     """
 
-    def send(self, email: str, obj: Ticket):
+    def send(self, email: str, ticket: Ticket):
         # get pdf file from template
-        pdf = obj.template.file  # pylint: disable=protected-access
+        pdf = ticket.template.file  # pylint: disable=protected-access
         # generate qr code and get path to it
-        qr_path = self.__make_qr(obj)
+        qr_path = self.__make_qr(ticket)
         # generate new pdf (ticket) and get path to it
         pdf_path = self.__make_pdf(qr_path, pdf)
         # send files
@@ -56,7 +32,7 @@ class TicketWithQRCodeSender:
         # delete files from tmp
         self.__delete_files(pdf_path, qr_path)
 
-    def __make_qr(self, obj: Ticket):
+    def __make_qr(self, ticket: Ticket):
         """
         This method generates qr code and saves it in media/tmp directory.
         For this purpose it uses a qrcode lib.
@@ -65,7 +41,7 @@ class TicketWithQRCodeSender:
         current_site = Site.objects.get_current()
         domain = current_site.domain
         # prepare link to validate ticket
-        path = f"{domain}/api/tickets/check/{obj.id}/"
+        path = f"{domain}/api/tickets/check/{ticket.id}/"
         # generate qr code
         img = qrcode.make(path)
         # save code as .png in media/tmp

@@ -225,6 +225,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -290,6 +306,46 @@
     },
     {
         "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -372,6 +428,14 @@
         "documentation": {}
     },
     {
+        "label": "EventFileNameGenerator",
+        "importPath": "applications.core.helpers",
+        "description": "applications.core.helpers",
+        "isExtraImport": true,
+        "detail": "applications.core.helpers",
+        "documentation": {}
+    },
+    {
         "label": "django.core.validators",
         "kind": 6,
         "isExtraImport": true,
@@ -406,59 +470,340 @@
         "documentation": {}
     },
     {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
         "isExtraImport": true,
-        "detail": "django.contrib",
+        "detail": "unittest.mock",
         "documentation": {}
     },
     {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
         "isExtraImport": true,
-        "detail": "django.contrib",
+        "detail": "unittest.mock",
         "documentation": {}
     },
     {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
         "isExtraImport": true,
-        "detail": "django.contrib",
+        "detail": "unittest.mock",
         "documentation": {}
     },
     {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
         "isExtraImport": true,
-        "detail": "django.contrib",
+        "detail": "unittest.mock",
         "documentation": {}
     },
     {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
         "isExtraImport": true,
-        "detail": "django.apps",
+        "detail": "unittest.mock",
         "documentation": {}
     },
     {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
         "isExtraImport": true,
-        "detail": "django.apps",
+        "detail": "unittest.mock",
         "documentation": {}
     },
     {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
         "isExtraImport": true,
-        "detail": "django.apps",
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "EventHistory",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "FollowedHashTag",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "FollowedHashTag",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
+        "isExtraImport": true,
+        "detail": "applications.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
+        "isExtraImport": true,
+        "detail": "applications.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
+        "isExtraImport": true,
+        "detail": "applications.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
+        "isExtraImport": true,
+        "detail": "applications.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
+        "isExtraImport": true,
+        "detail": "applications.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
+        "isExtraImport": true,
+        "detail": "applications.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
+        "isExtraImport": true,
+        "detail": "applications.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
+        "isExtraImport": true,
+        "detail": "applications.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "CreateAuthenticatedOnly",
+        "importPath": "applications.core.permissions",
+        "description": "applications.core.permissions",
+        "isExtraImport": true,
+        "detail": "applications.core.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsOwnerOrReadOnly",
+        "importPath": "applications.core.permissions",
+        "description": "applications.core.permissions",
+        "isExtraImport": true,
+        "detail": "applications.core.permissions",
         "documentation": {}
     },
     {
@@ -483,6 +828,592 @@
         "description": "datetime",
         "isExtraImport": true,
         "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "applications.core.choices",
+        "description": "applications.core.choices",
+        "isExtraImport": true,
+        "detail": "applications.core.choices",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "applications.core.choices",
+        "description": "applications.core.choices",
+        "isExtraImport": true,
+        "detail": "applications.core.choices",
+        "documentation": {}
+    },
+    {
+        "label": "EventDetailSerializer",
+        "importPath": "applications.core.serializers",
+        "description": "applications.core.serializers",
+        "isExtraImport": true,
+        "detail": "applications.core.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "EventSimpleSerializer",
+        "importPath": "applications.core.serializers",
+        "description": "applications.core.serializers",
+        "isExtraImport": true,
+        "detail": "applications.core.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "FollowedHashTagSerializer",
+        "importPath": "applications.core.serializers",
+        "description": "applications.core.serializers",
+        "isExtraImport": true,
+        "detail": "applications.core.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleUploadedFile",
+        "importPath": "django.core.files.uploadedfile",
+        "description": "django.core.files.uploadedfile",
+        "isExtraImport": true,
+        "detail": "django.core.files.uploadedfile",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleUploadedFile",
+        "importPath": "django.core.files.uploadedfile",
+        "description": "django.core.files.uploadedfile",
+        "isExtraImport": true,
+        "detail": "django.core.files.uploadedfile",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleUploadedFile",
+        "importPath": "django.core.files.uploadedfile",
+        "description": "django.core.files.uploadedfile",
+        "isExtraImport": true,
+        "detail": "django.core.files.uploadedfile",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleUploadedFile",
+        "importPath": "django.core.files.uploadedfile",
+        "description": "django.core.files.uploadedfile",
+        "isExtraImport": true,
+        "detail": "django.core.files.uploadedfile",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "resolve",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "resolve",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "resolve",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "applications.core",
+        "description": "applications.core",
+        "isExtraImport": true,
+        "detail": "applications.core",
+        "documentation": {}
+    },
+    {
+        "label": "CheckIfTicketProvidedIfPrivate",
+        "importPath": "applications.core.validators",
+        "description": "applications.core.validators",
+        "isExtraImport": true,
+        "detail": "applications.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "rest_framework.serializers",
+        "description": "rest_framework.serializers",
+        "isExtraImport": true,
+        "detail": "rest_framework.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "rest_framework.serializers",
+        "description": "rest_framework.serializers",
+        "isExtraImport": true,
+        "detail": "rest_framework.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "PyPDF2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "PdfFileReader",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "PdfFileWriter",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "PdfFileReader",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "PdfFileReader",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "PdfFileWriter",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "PdfFileReader",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "cast",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "cast",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "cast",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "APIRequestFactory",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
+        "label": "APIClient",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
+        "label": "force_authenticate",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
+        "label": "APIRequestFactory",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
+        "label": "APIClient",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
+        "label": "force_authenticate",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
+        "label": "APIRequestFactory",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
+        "label": "APIClient",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
+        "label": "force_authenticate",
+        "importPath": "rest_framework.test",
+        "description": "rest_framework.test",
+        "isExtraImport": true,
+        "detail": "rest_framework.test",
+        "documentation": {}
+    },
+    {
+        "label": "errors_to_dict",
+        "importPath": "applications.core.tests.utils",
+        "description": "applications.core.tests.utils",
+        "isExtraImport": true,
+        "detail": "applications.core.tests.utils",
+        "documentation": {}
+    },
+    {
+        "label": "EventOwnListViewSet",
+        "importPath": "applications.core.views",
+        "description": "applications.core.views",
+        "isExtraImport": true,
+        "detail": "applications.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "EventViewSet",
+        "importPath": "applications.core.views",
+        "description": "applications.core.views",
+        "isExtraImport": true,
+        "detail": "applications.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "FollowedHashTagView",
+        "importPath": "applications.core.views",
+        "description": "applications.core.views",
+        "isExtraImport": true,
+        "detail": "applications.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "Ticket",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "isExtraImport": true,
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Ticket",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "isExtraImport": true,
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Ticket",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "isExtraImport": true,
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Ticket",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "isExtraImport": true,
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Ticket",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "isExtraImport": true,
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "TicketTemplate",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "isExtraImport": true,
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "importPath": "django.contrib.gis.geos",
+        "description": "django.contrib.gis.geos",
+        "isExtraImport": true,
+        "detail": "django.contrib.gis.geos",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "importPath": "django.contrib.gis.geos",
+        "description": "django.contrib.gis.geos",
+        "isExtraImport": true,
+        "detail": "django.contrib.gis.geos",
+        "documentation": {}
+    },
+    {
+        "label": "Point",
+        "importPath": "django.contrib.gis.geos",
+        "description": "django.contrib.gis.geos",
+        "isExtraImport": true,
+        "detail": "django.contrib.gis.geos",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -542,35 +1473,11 @@
         "documentation": {}
     },
     {
-        "label": "Point",
-        "importPath": "django.contrib.gis.geos",
-        "description": "django.contrib.gis.geos",
-        "isExtraImport": true,
-        "detail": "django.contrib.gis.geos",
-        "documentation": {}
-    },
-    {
-        "label": "Point",
-        "importPath": "django.contrib.gis.geos",
-        "description": "django.contrib.gis.geos",
-        "isExtraImport": true,
-        "detail": "django.contrib.gis.geos",
-        "documentation": {}
-    },
-    {
         "label": "Distance",
         "importPath": "django.contrib.gis.db.models.functions",
         "description": "django.contrib.gis.db.models.functions",
         "isExtraImport": true,
         "detail": "django.contrib.gis.db.models.functions",
-        "documentation": {}
-    },
-    {
-        "label": "ValidationError",
-        "importPath": "rest_framework.serializers",
-        "description": "rest_framework.serializers",
-        "isExtraImport": true,
-        "detail": "rest_framework.serializers",
         "documentation": {}
     },
     {
@@ -607,67 +1514,11 @@
         "documentation": {}
     },
     {
-        "label": "AutoSlugField",
-        "importPath": "autoslug",
-        "description": "autoslug",
-        "isExtraImport": true,
-        "detail": "autoslug",
-        "documentation": {}
-    },
-    {
         "label": "PointField",
         "importPath": "django.contrib.gis.db.models",
         "description": "django.contrib.gis.db.models",
         "isExtraImport": true,
         "detail": "django.contrib.gis.db.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "applications.users.models",
-        "description": "applications.users.models",
-        "isExtraImport": true,
-        "detail": "applications.users.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "applications.users.models",
-        "description": "applications.users.models",
-        "isExtraImport": true,
-        "detail": "applications.users.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "applications.users.models",
-        "description": "applications.users.models",
-        "isExtraImport": true,
-        "detail": "applications.users.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "applications.users.models",
-        "description": "applications.users.models",
-        "isExtraImport": true,
-        "detail": "applications.users.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "applications.users.models",
-        "description": "applications.users.models",
-        "isExtraImport": true,
-        "detail": "applications.users.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "applications.users.models",
-        "description": "applications.users.models",
-        "isExtraImport": true,
-        "detail": "applications.users.models",
         "documentation": {}
     },
     {
@@ -880,134 +1731,6 @@
         "documentation": {}
     },
     {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "reverse",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "resolve",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "reverse",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "resolve",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "cast",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "cast",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Dict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "IsAuthenticated",
         "importPath": "rest_framework.permissions",
         "description": "rest_framework.permissions",
@@ -1057,367 +1780,6 @@
         "documentation": {}
     },
     {
-        "label": "MagicMock",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "patch",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "MagicMock",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "MagicMock",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "patch",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "MagicMock",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "patch",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "pytest",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pytest",
-        "description": "pytest",
-        "detail": "pytest",
-        "documentation": {}
-    },
-    {
-        "label": "SimpleUploadedFile",
-        "importPath": "django.core.files.uploadedfile",
-        "description": "django.core.files.uploadedfile",
-        "isExtraImport": true,
-        "detail": "django.core.files.uploadedfile",
-        "documentation": {}
-    },
-    {
-        "label": "SimpleUploadedFile",
-        "importPath": "django.core.files.uploadedfile",
-        "description": "django.core.files.uploadedfile",
-        "isExtraImport": true,
-        "detail": "django.core.files.uploadedfile",
-        "documentation": {}
-    },
-    {
-        "label": "load_mock_image",
-        "importPath": "applications.tickets.tests.utils",
-        "description": "applications.tickets.tests.utils",
-        "isExtraImport": true,
-        "detail": "applications.tickets.tests.utils",
-        "documentation": {}
-    },
-    {
-        "label": "load_mock_pdf",
-        "importPath": "applications.tickets.tests.utils",
-        "description": "applications.tickets.tests.utils",
-        "isExtraImport": true,
-        "detail": "applications.tickets.tests.utils",
-        "documentation": {}
-    },
-    {
-        "label": "Event",
-        "importPath": "applications.core.models",
-        "description": "applications.core.models",
-        "isExtraImport": true,
-        "detail": "applications.core.models",
-        "documentation": {}
-    },
-    {
-        "label": "Event",
-        "importPath": "applications.core.models",
-        "description": "applications.core.models",
-        "isExtraImport": true,
-        "detail": "applications.core.models",
-        "documentation": {}
-    },
-    {
-        "label": "Event",
-        "importPath": "applications.core.models",
-        "description": "applications.core.models",
-        "isExtraImport": true,
-        "detail": "applications.core.models",
-        "documentation": {}
-    },
-    {
-        "label": "Event",
-        "importPath": "applications.core.models",
-        "description": "applications.core.models",
-        "isExtraImport": true,
-        "detail": "applications.core.models",
-        "documentation": {}
-    },
-    {
-        "label": "Event",
-        "importPath": "applications.core.models",
-        "description": "applications.core.models",
-        "isExtraImport": true,
-        "detail": "applications.core.models",
-        "documentation": {}
-    },
-    {
-        "label": "Event",
-        "importPath": "applications.core.models",
-        "description": "applications.core.models",
-        "isExtraImport": true,
-        "detail": "applications.core.models",
-        "documentation": {}
-    },
-    {
-        "label": "mixer",
-        "importPath": "mixer.backend.django",
-        "description": "mixer.backend.django",
-        "isExtraImport": true,
-        "detail": "mixer.backend.django",
-        "documentation": {}
-    },
-    {
-        "label": "mixer",
-        "importPath": "mixer.backend.django",
-        "description": "mixer.backend.django",
-        "isExtraImport": true,
-        "detail": "mixer.backend.django",
-        "documentation": {}
-    },
-    {
-        "label": "mixer",
-        "importPath": "mixer.backend.django",
-        "description": "mixer.backend.django",
-        "isExtraImport": true,
-        "detail": "mixer.backend.django",
-        "documentation": {}
-    },
-    {
-        "label": "mixer",
-        "importPath": "mixer.backend.django",
-        "description": "mixer.backend.django",
-        "isExtraImport": true,
-        "detail": "mixer.backend.django",
-        "documentation": {}
-    },
-    {
-        "label": "mixer",
-        "importPath": "mixer.backend.django",
-        "description": "mixer.backend.django",
-        "isExtraImport": true,
-        "detail": "mixer.backend.django",
-        "documentation": {}
-    },
-    {
-        "label": "mixer",
-        "importPath": "mixer.backend.django",
-        "description": "mixer.backend.django",
-        "isExtraImport": true,
-        "detail": "mixer.backend.django",
-        "documentation": {}
-    },
-    {
-        "label": "mixer",
-        "importPath": "mixer.backend.django",
-        "description": "mixer.backend.django",
-        "isExtraImport": true,
-        "detail": "mixer.backend.django",
-        "documentation": {}
-    },
-    {
-        "label": "mixer",
-        "importPath": "mixer.backend.django",
-        "description": "mixer.backend.django",
-        "isExtraImport": true,
-        "detail": "mixer.backend.django",
-        "documentation": {}
-    },
-    {
-        "label": "ValidationError",
-        "importPath": "django.core.exceptions",
-        "description": "django.core.exceptions",
-        "isExtraImport": true,
-        "detail": "django.core.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "IsOwner",
-        "importPath": "applications.tickets.permissions",
-        "description": "applications.tickets.permissions",
-        "isExtraImport": true,
-        "detail": "applications.tickets.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "Ticket",
-        "importPath": "applications.tickets.models",
-        "description": "applications.tickets.models",
-        "isExtraImport": true,
-        "detail": "applications.tickets.models",
-        "documentation": {}
-    },
-    {
-        "label": "Ticket",
-        "importPath": "applications.tickets.models",
-        "description": "applications.tickets.models",
-        "isExtraImport": true,
-        "detail": "applications.tickets.models",
-        "documentation": {}
-    },
-    {
-        "label": "TicketTemplate",
-        "importPath": "applications.tickets.models",
-        "description": "applications.tickets.models",
-        "isExtraImport": true,
-        "detail": "applications.tickets.models",
-        "documentation": {}
-    },
-    {
-        "label": "Ticket",
-        "importPath": "applications.tickets.models",
-        "description": "applications.tickets.models",
-        "isExtraImport": true,
-        "detail": "applications.tickets.models",
-        "documentation": {}
-    },
-    {
-        "label": "TicketTemplate",
-        "importPath": "applications.tickets.models",
-        "description": "applications.tickets.models",
-        "isExtraImport": true,
-        "detail": "applications.tickets.models",
-        "documentation": {}
-    },
-    {
-        "label": "APIRequestFactory",
-        "importPath": "rest_framework.test",
-        "description": "rest_framework.test",
-        "isExtraImport": true,
-        "detail": "rest_framework.test",
-        "documentation": {}
-    },
-    {
-        "label": "APIClient",
-        "importPath": "rest_framework.test",
-        "description": "rest_framework.test",
-        "isExtraImport": true,
-        "detail": "rest_framework.test",
-        "documentation": {}
-    },
-    {
-        "label": "force_authenticate",
-        "importPath": "rest_framework.test",
-        "description": "rest_framework.test",
-        "isExtraImport": true,
-        "detail": "rest_framework.test",
-        "documentation": {}
-    },
-    {
-        "label": "APIRequestFactory",
-        "importPath": "rest_framework.test",
-        "description": "rest_framework.test",
-        "isExtraImport": true,
-        "detail": "rest_framework.test",
-        "documentation": {}
-    },
-    {
-        "label": "APIClient",
-        "importPath": "rest_framework.test",
-        "description": "rest_framework.test",
-        "isExtraImport": true,
-        "detail": "rest_framework.test",
-        "documentation": {}
-    },
-    {
-        "label": "force_authenticate",
-        "importPath": "rest_framework.test",
-        "description": "rest_framework.test",
-        "isExtraImport": true,
-        "detail": "rest_framework.test",
-        "documentation": {}
-    },
-    {
-        "label": "TicketAPIView",
-        "importPath": "applications.tickets.views",
-        "description": "applications.tickets.views",
-        "isExtraImport": true,
-        "detail": "applications.tickets.views",
-        "documentation": {}
-    },
-    {
-        "label": "TicketCheckerAPIView",
-        "importPath": "applications.tickets.views",
-        "description": "applications.tickets.views",
-        "isExtraImport": true,
-        "detail": "applications.tickets.views",
-        "documentation": {}
-    },
-    {
-        "label": "PdfFileReader",
-        "importPath": "PyPDF2",
-        "description": "PyPDF2",
-        "isExtraImport": true,
-        "detail": "PyPDF2",
-        "documentation": {}
-    },
-    {
-        "label": "PdfFileWriter",
-        "importPath": "PyPDF2",
-        "description": "PyPDF2",
-        "isExtraImport": true,
-        "detail": "PyPDF2",
-        "documentation": {}
-    },
-    {
-        "label": "PdfFileReader",
-        "importPath": "PyPDF2",
-        "description": "PyPDF2",
-        "isExtraImport": true,
-        "detail": "PyPDF2",
-        "documentation": {}
-    },
-    {
-        "label": "Image",
-        "importPath": "PIL",
-        "description": "PIL",
-        "isExtraImport": true,
-        "detail": "PIL",
-        "documentation": {}
-    },
-    {
         "label": "io",
         "kind": 6,
         "isExtraImport": true,
@@ -1453,11 +1815,35 @@
         "documentation": {}
     },
     {
+        "label": "Site",
+        "importPath": "django.contrib.sites.models",
+        "description": "django.contrib.sites.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.sites.models",
+        "documentation": {}
+    },
+    {
         "label": "EmailMessage",
         "importPath": "django.core.mail",
         "description": "django.core.mail",
         "isExtraImport": true,
         "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "EmailMessage",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "django.core.files",
+        "description": "django.core.files",
+        "isExtraImport": true,
+        "detail": "django.core.files",
         "documentation": {}
     },
     {
@@ -1477,11 +1863,91 @@
         "documentation": {}
     },
     {
+        "label": "canvas",
+        "importPath": "reportlab.pdfgen",
+        "description": "reportlab.pdfgen",
+        "isExtraImport": true,
+        "detail": "reportlab.pdfgen",
+        "documentation": {}
+    },
+    {
         "label": "letter",
         "importPath": "reportlab.lib.pagesizes",
         "description": "reportlab.lib.pagesizes",
         "isExtraImport": true,
         "detail": "reportlab.lib.pagesizes",
+        "documentation": {}
+    },
+    {
+        "label": "letter",
+        "importPath": "reportlab.lib.pagesizes",
+        "description": "reportlab.lib.pagesizes",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.pagesizes",
+        "documentation": {}
+    },
+    {
+        "label": "TicketSenderService",
+        "importPath": "applications.tickets.services.ticket_sender_service",
+        "description": "applications.tickets.services.ticket_sender_service",
+        "isExtraImport": true,
+        "detail": "applications.tickets.services.ticket_sender_service",
+        "documentation": {}
+    },
+    {
+        "label": "load_mock_image",
+        "importPath": "applications.tickets.tests.utils",
+        "description": "applications.tickets.tests.utils",
+        "isExtraImport": true,
+        "detail": "applications.tickets.tests.utils",
+        "documentation": {}
+    },
+    {
+        "label": "load_mock_pdf",
+        "importPath": "applications.tickets.tests.utils",
+        "description": "applications.tickets.tests.utils",
+        "isExtraImport": true,
+        "detail": "applications.tickets.tests.utils",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "IsOwner",
+        "importPath": "applications.tickets.permissions",
+        "description": "applications.tickets.permissions",
+        "isExtraImport": true,
+        "detail": "applications.tickets.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "TicketAPIView",
+        "importPath": "applications.tickets.views",
+        "description": "applications.tickets.views",
+        "isExtraImport": true,
+        "detail": "applications.tickets.views",
+        "documentation": {}
+    },
+    {
+        "label": "TicketCheckerAPIView",
+        "importPath": "applications.tickets.views",
+        "description": "applications.tickets.views",
+        "isExtraImport": true,
+        "detail": "applications.tickets.views",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
         "documentation": {}
     },
     {
@@ -1795,6 +2261,186 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.core.migrations.0017_alter_event_category_delete_category",
+        "description": "applications.core.migrations.0017_alter_event_category_delete_category",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"core\", \"0016_alter_followedhashtag_user\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"event\",\n            name=\"category\",\n            field=models.CharField(\n                choices=[",
+        "detail": "applications.core.migrations.0017_alter_event_category_delete_category",
+        "documentation": {}
+    },
+    {
+        "label": "TestEventFileNameGenerator",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_helpers",
+        "description": "applications.core.tests.test_helpers",
+        "peekOfCode": "class TestEventFileNameGenerator:\n    @patch(\"applications.core.helpers.uuid.uuid4\", return_value=\"2137\")\n    def test_generate_makes_new_filename_from_provided(self, _: MagicMock):\n        result = EventFileNameGenerator.generate(None, \"example.png\")\n        assert result == \"media/events/2137.png\"",
+        "detail": "applications.core.tests.test_helpers",
+        "documentation": {}
+    },
+    {
+        "label": "TestEvent",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_models",
+        "description": "applications.core.tests.test_models",
+        "peekOfCode": "class TestEvent:\n    def test_create_event(self):\n        entity = mixer.blend(\"core.Event\")\n        assert isinstance(entity, Event), \"Should create a Event instance\"\n@pytest.mark.django_db\nclass TestEventHistory:\n    def test_create_event_history(self):\n        entity = mixer.blend(\"core.EventHistory\")\n        assert isinstance(entity, EventHistory), \"Should create a EventHistory instance\"\n@pytest.mark.django_db",
+        "detail": "applications.core.tests.test_models",
+        "documentation": {}
+    },
+    {
+        "label": "TestEventHistory",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_models",
+        "description": "applications.core.tests.test_models",
+        "peekOfCode": "class TestEventHistory:\n    def test_create_event_history(self):\n        entity = mixer.blend(\"core.EventHistory\")\n        assert isinstance(entity, EventHistory), \"Should create a EventHistory instance\"\n@pytest.mark.django_db\nclass TestFollowedHashTag:\n    def test_create_followed_hashtag(self):\n        entity = mixer.blend(\"core.FollowedHashTag\")\n        assert isinstance(\n            entity, FollowedHashTag",
+        "detail": "applications.core.tests.test_models",
+        "documentation": {}
+    },
+    {
+        "label": "TestFollowedHashTag",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_models",
+        "description": "applications.core.tests.test_models",
+        "peekOfCode": "class TestFollowedHashTag:\n    def test_create_followed_hashtag(self):\n        entity = mixer.blend(\"core.FollowedHashTag\")\n        assert isinstance(\n            entity, FollowedHashTag\n        ), \"Should create a FollowedHashTag instance\"",
+        "detail": "applications.core.tests.test_models",
+        "documentation": {}
+    },
+    {
+        "label": "TestIsOwnerOrReadOnly",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_permissions",
+        "description": "applications.core.tests.test_permissions",
+        "peekOfCode": "class TestIsOwnerOrReadOnly:\n    def test_has_object_permission_returns_true_if_method_is_safe(self):\n        permission = IsOwnerOrReadOnly()\n        user = MagicMock(email=\"admin@gmail.com\", is_superuser=True)\n        other_user = MagicMock(email=\"test@gmail.com\")\n        req = MagicMock(method=\"GET\", user=user)\n        obj = MagicMock(promoter=other_user)\n        assert permission.has_object_permission(req, None, obj)\n    def test_has_object_permission_returns_true_if_user_is_superuser(self):\n        permission = IsOwnerOrReadOnly()",
+        "detail": "applications.core.tests.test_permissions",
+        "documentation": {}
+    },
+    {
+        "label": "TestCreateAuthenticatedOnly",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_permissions",
+        "description": "applications.core.tests.test_permissions",
+        "peekOfCode": "class TestCreateAuthenticatedOnly:\n    def test_has_permission_returns_true_if_method_is_not_post(self):\n        permission = CreateAuthenticatedOnly()\n        user = MagicMock(email=\"test@gmail.com\", is_authenticated=False)\n        req = MagicMock(method=\"GET\", user=user)\n        assert permission.has_permission(req, None)\n    def test_has_permission_returns_true_if_method_is_post_and_user_is_authenticated(\n        self,\n    ):\n        permission = CreateAuthenticatedOnly()",
+        "detail": "applications.core.tests.test_permissions",
+        "documentation": {}
+    },
+    {
+        "label": "TestFollowedHashTagSerializer",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_serializers",
+        "description": "applications.core.tests.test_serializers",
+        "peekOfCode": "class TestFollowedHashTagSerializer:\n    def test_validation_passes_if_data_is_correct(self):\n        instance = FollowedHashTagSerializer(data={\"value\": \"New hashtag\"})\n        assert instance.is_valid()\n    def test_validation_does_not_pass_if_value_is_missing(self):\n        instance = FollowedHashTagSerializer(data={})\n        assert not instance.is_valid()\n    @pytest.mark.django_db\n    def test_returns_data_in_correct_format(self):\n        hashtag = mixer.blend(\"core.FollowedHashTag\")",
+        "detail": "applications.core.tests.test_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TestEventSimpleSerializer",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_serializers",
+        "description": "applications.core.tests.test_serializers",
+        "peekOfCode": "class TestEventSimpleSerializer:\n    def test_validation_passes_if_data_is_correct(self):\n        instance = EventSimpleSerializer(data=get_event_detail_data())\n        assert instance.is_valid()\n    def test_validation_does_not_pass_if_data_is_invalid(self):\n        instance = EventSimpleSerializer(\n            data={\n                \"title\": \"new event\",\n                \"category\": Category.CONCERT,\n                \"is_free\": True,",
+        "detail": "applications.core.tests.test_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TestEventDetailSerializer",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_serializers",
+        "description": "applications.core.tests.test_serializers",
+        "peekOfCode": "class TestEventDetailSerializer:\n    def test_validation_passes_if_data_is_correct(self):\n        instance = EventDetailSerializer(data=get_event_detail_data())\n        assert instance.is_valid()\n    def test_validation_does_not_pass_if_data_is_missing(self):\n        data = get_event_detail_data()\n        del data[\"title\"]\n        instance = EventDetailSerializer(data=data)\n        assert not instance.is_valid()\n    def test_validation_does_not_pass_if_is_not_free_but_ticket_is_missing(self):",
+        "detail": "applications.core.tests.test_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "get_event_detail_data",
+        "kind": 2,
+        "importPath": "applications.core.tests.test_serializers",
+        "description": "applications.core.tests.test_serializers",
+        "peekOfCode": "def get_event_detail_data():\n    return {\n        \"title\": \"new event\",\n        \"description\": \"this is new event\",\n        \"location\": {\"latitude\": 3.14, \"longitude\": 21.37},\n        \"event_datetime\": datetime(2020, 10, 10, 10, 10, 10),\n        \"category\": Category.CONCERT,\n        \"is_free\": True,\n    }",
+        "detail": "applications.core.tests.test_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TestCoreUrls",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_urls",
+        "description": "applications.core.tests.test_urls",
+        "peekOfCode": "class TestCoreUrls:\n    def test_followed_hashtags_url_resolves(self):\n        url = reverse(\"followed-hashtags-list\")\n        assert resolve(url).func.cls == views.FollowedHashTagView  # type: ignore\n    def test_events_url_resolves(self):\n        url = reverse(\"events-list\")\n        assert resolve(url).func.cls == views.EventViewSet  # type: ignore\n    def test_own_events_url_resolves(self):\n        url = reverse(\"own-events-list\")\n        assert resolve(url).func.cls == views.EventOwnListViewSet  # type: ignore",
+        "detail": "applications.core.tests.test_urls",
+        "documentation": {}
+    },
+    {
+        "label": "TestCheckIfTicketProvidedIfPrivate",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_validators",
+        "description": "applications.core.tests.test_validators",
+        "peekOfCode": "class TestCheckIfTicketProvidedIfPrivate:\n    def test_throws_error_if_event_is_not_free_and_ticket_is_missing(self):\n        validator = CheckIfTicketProvidedIfPrivate()\n        with pytest.raises(ValidationError):\n            validator({\"is_free\": False})\n            raise Exception(\"Error should have been thrown\")\n    def test_passes_if_is_free_is_not_provided(self):\n        validator = CheckIfTicketProvidedIfPrivate()\n        validator({})\n    def test_passes_if_event_is_not_free_but_ticket_is_provided(self):",
+        "detail": "applications.core.tests.test_validators",
+        "documentation": {}
+    },
+    {
+        "label": "TestFollowedHashTagView",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_views",
+        "description": "applications.core.tests.test_views",
+        "peekOfCode": "class TestFollowedHashTagView:\n    @pytest.fixture(autouse=True)\n    def setup(self):\n        self.user = User.objects.create_user(\n            username=\"testuser\", password=\"password\", email=\"test@gmail.com\"\n        )\n        self.client = APIClient()\n        self.view = FollowedHashTagView.as_view(\n            {\"get\": \"list\", \"post\": \"create\", \"delete\": \"destroy\"}\n        )",
+        "detail": "applications.core.tests.test_views",
+        "documentation": {}
+    },
+    {
+        "label": "TestEventOwnListViewSet",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_views",
+        "description": "applications.core.tests.test_views",
+        "peekOfCode": "class TestEventOwnListViewSet:\n    @pytest.fixture(autouse=True)\n    def setup(self):\n        self.user = User.objects.create_user(\n            username=\"testuser\", password=\"password\", email=\"test@gmail.com\"\n        )\n        self.client = APIClient()\n        self.view = EventOwnListViewSet.as_view({\"get\": \"list\"})\n    def test_view_throws_an_401_if_user_is_not_auth(self):\n        request = APIRequestFactory().get(\"\")",
+        "detail": "applications.core.tests.test_views",
+        "documentation": {}
+    },
+    {
+        "label": "TestEventViewSet",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_views",
+        "description": "applications.core.tests.test_views",
+        "peekOfCode": "class TestEventViewSet:\n    @pytest.fixture(autouse=True)\n    def setup(self):\n        self.user = User.objects.create_user(\n            username=\"testuser\", password=\"password\", email=\"test@gmail.com\"\n        )\n        self.client = APIClient()\n        self.view = EventViewSet.as_view(\n            {\"get\": \"list\", \"post\": \"create\", \"delete\": \"destroy\", \"put\": \"update\"}\n        )",
+        "detail": "applications.core.tests.test_views",
+        "documentation": {}
+    },
+    {
+        "label": "create_event",
+        "kind": 2,
+        "importPath": "applications.core.tests.test_views",
+        "description": "applications.core.tests.test_views",
+        "peekOfCode": "def create_event(title: str, location: Point, in_days=0, **kwargs):\n    return cast(\n        Event,\n        mixer.blend(\n            \"core.Event\",\n            title=title,\n            location=location,\n            event_datetime=datetime.now() + timedelta(days=in_days),\n            **kwargs,\n        ),",
+        "detail": "applications.core.tests.test_views",
+        "documentation": {}
+    },
+    {
+        "label": "get_event_payload",
+        "kind": 2,
+        "importPath": "applications.core.tests.test_views",
+        "description": "applications.core.tests.test_views",
+        "peekOfCode": "def get_event_payload():\n    return {\n        \"title\": \"new event\",\n        \"description\": \"some description\",\n        \"location\": {\"latitude\": 13, \"longitude\": 33.89},\n        \"event_datetime\": datetime(2020, 10, 10),\n        \"category\": Category.MOVIE_FESTIVAL,\n    }\ndef create_superuser():\n    return User.objects.create_superuser(",
+        "detail": "applications.core.tests.test_views",
+        "documentation": {}
+    },
+    {
+        "label": "create_superuser",
+        "kind": 2,
+        "importPath": "applications.core.tests.test_views",
+        "description": "applications.core.tests.test_views",
+        "peekOfCode": "def create_superuser():\n    return User.objects.create_superuser(\n        username=\"other\", password=\"123passWord\", email=\"super@gmail.com\"\n    )",
+        "detail": "applications.core.tests.test_views",
+        "documentation": {}
+    },
+    {
+        "label": "errors_to_dict",
+        "kind": 2,
+        "importPath": "applications.core.tests.utils",
+        "description": "applications.core.tests.utils",
+        "peekOfCode": "def errors_to_dict(errors: Any):\n    return json.loads(json.dumps(errors))",
+        "detail": "applications.core.tests.utils",
+        "documentation": {}
+    },
+    {
         "label": "CoreConfig",
         "kind": 6,
         "importPath": "applications.core.apps",
@@ -1808,7 +2454,16 @@
         "kind": 6,
         "importPath": "applications.core.choices",
         "description": "applications.core.choices",
-        "peekOfCode": "class HistoryLabel(models.TextChoices):\n    MOVED = \"1\", \"Moved\"\n    CANCELED = \"2\", \"Canceled\"\n    DETAILS_CHANGED = \"3\", \"Details Changed\"\n    TOOK_PLACE = \"4\", \"Took place\"",
+        "peekOfCode": "class HistoryLabel(models.TextChoices):\n    MOVED = \"1\", \"Moved\"\n    CANCELED = \"2\", \"Canceled\"\n    DETAILS_CHANGED = \"3\", \"Details Changed\"\n    TOOK_PLACE = \"4\", \"Took place\"\nclass Category(models.TextChoices):\n    MUSIC_FESTIVAL = \"1\", \"Music Festival\"\n    ART_EXHIBITION = \"2\", \"Art Exhibition\"\n    CONCERT = \"3\", \"Concert\"\n    THEATRE_PERFORMANCE = \"4\", \"Theatre performance\"",
+        "detail": "applications.core.choices",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "kind": 6,
+        "importPath": "applications.core.choices",
+        "description": "applications.core.choices",
+        "peekOfCode": "class Category(models.TextChoices):\n    MUSIC_FESTIVAL = \"1\", \"Music Festival\"\n    ART_EXHIBITION = \"2\", \"Art Exhibition\"\n    CONCERT = \"3\", \"Concert\"\n    THEATRE_PERFORMANCE = \"4\", \"Theatre performance\"\n    MOVIE_FESTIVAL = \"5\", \"Movie Festival\"",
         "detail": "applications.core.choices",
         "documentation": {}
     },
@@ -1840,15 +2495,6 @@
         "documentation": {}
     },
     {
-        "label": "Category",
-        "kind": 6,
-        "importPath": "applications.core.models",
-        "description": "applications.core.models",
-        "peekOfCode": "class Category(models.Model):\n    \"\"\"\n    Basic category model\n    Slug is generating based on the name after creating\n    \"\"\"\n    name = models.CharField(max_length=64, unique=True)\n    slug = AutoSlugField(populate_from=\"name\")  # type: ignore\n    def __str__(self):\n        return f\"{self.name}\"\nclass Event(models.Model):",
-        "detail": "applications.core.models",
-        "documentation": {}
-    },
-    {
         "label": "Event",
         "kind": 6,
         "importPath": "applications.core.models",
@@ -1876,15 +2522,6 @@
         "documentation": {}
     },
     {
-        "label": "IsAdminOrReadOnly",
-        "kind": 6,
-        "importPath": "applications.core.permissions",
-        "description": "applications.core.permissions",
-        "peekOfCode": "class IsAdminOrReadOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        \"\"\"\n        Allow an access for each user if method is safe (read)\n        Otherwise admin rights are required\n        \"\"\"\n        return (\n            True\n            if request.method in permissions.SAFE_METHODS\n            else request.user.is_superuser",
-        "detail": "applications.core.permissions",
-        "documentation": {}
-    },
-    {
         "label": "IsOwnerOrReadOnly",
         "kind": 6,
         "importPath": "applications.core.permissions",
@@ -1903,20 +2540,11 @@
         "documentation": {}
     },
     {
-        "label": "CategorySerializer",
+        "label": "_EventHistorySerializer",
         "kind": 6,
         "importPath": "applications.core.serializers",
         "description": "applications.core.serializers",
-        "peekOfCode": "class CategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Category\n        fields = (\n            \"name\",\n            \"slug\",\n        )\n        read_only_fields = (\"slug\",)\nclass EventHistorySerializer(serializers.ModelSerializer):\n    class Meta:",
-        "detail": "applications.core.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "EventHistorySerializer",
-        "kind": 6,
-        "importPath": "applications.core.serializers",
-        "description": "applications.core.serializers",
-        "peekOfCode": "class EventHistorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = EventHistory\n        exclude = (\"id\",)\n        extra_kwargs = {\"event\": {\"write_only\": True}}\nclass FollowedHashTagSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = FollowedHashTag\n        fields = (\"value\",)\nclass EventSimpleSerializer(serializers.ModelSerializer):",
+        "peekOfCode": "class _EventHistorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = EventHistory\n        exclude = (\"id\",)\n        extra_kwargs = {\"event\": {\"write_only\": True}}\nclass FollowedHashTagSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = FollowedHashTag\n        fields = (\"value\",)\nclass EventSimpleSerializer(serializers.ModelSerializer):",
         "detail": "applications.core.serializers",
         "documentation": {}
     },
@@ -1943,7 +2571,7 @@
         "kind": 6,
         "importPath": "applications.core.serializers",
         "description": "applications.core.serializers",
-        "peekOfCode": "class EventDetailSerializer(serializers.ModelSerializer):\n    ticket = TicketTemplateSerializer(write_only=True, required=False)\n    histories = EventHistorySerializer(many=True, read_only=True)\n    location = PointField()\n    class Meta:\n        model = Event\n        fields = \"__all__\"\n        read_only_fields = (\n            \"created_at\",\n            \"updated_at\",",
+        "peekOfCode": "class EventDetailSerializer(serializers.ModelSerializer):\n    ticket = TicketTemplateSerializer(write_only=True, required=False)\n    histories = _EventHistorySerializer(many=True, read_only=True)\n    location = PointField()\n    class Meta:\n        model = Event\n        fields = \"__all__\"\n        read_only_fields = (\n            \"created_at\",\n            \"updated_at\",",
         "detail": "applications.core.serializers",
         "documentation": {}
     },
@@ -1961,7 +2589,7 @@
         "kind": 5,
         "importPath": "applications.core.urls",
         "description": "applications.core.urls",
-        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(\"categories\", views.CategoryViewSet)\nrouter.register(\n    \"followed-hashtags\", views.FollowedHashTagView, basename=\"followedHashtags\"\n)\nrouter.register(\"events\", views.EventViewSet, basename=\"events\")\nrouter.register(\"own-events\", views.EventOwnListViewSet, basename=\"own_events\")\nurlpatterns = [path(\"\", include(router.urls))]",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(\n    \"followed-hashtags\", views.FollowedHashTagView, basename=\"followed-hashtags\"\n)\nrouter.register(\"events\", views.EventViewSet, basename=\"events\")\nrouter.register(\"own-events\", views.EventOwnListViewSet, basename=\"own-events\")\nurlpatterns = [path(\"\", include(router.urls))]",
         "detail": "applications.core.urls",
         "documentation": {}
     },
@@ -1979,17 +2607,8 @@
         "kind": 6,
         "importPath": "applications.core.validators",
         "description": "applications.core.validators",
-        "peekOfCode": "class CheckIfTicketProvidedIfPrivate:\n    def __call__(self, value: dict):\n        if not value.get(\"is_free\"):\n            if \"ticket\" not in value:\n                raise serializers.ValidationError(\n                    \"If you are passing is_free field, you must pass ticket field too\"\n                )",
+        "peekOfCode": "class CheckIfTicketProvidedIfPrivate:\n    def __call__(self, value: dict):\n        if \"is_free\" in value and not value[\"is_free\"] and \"ticket\" not in value:\n            raise serializers.ValidationError(\n                \"If you are passing is_free field, you must pass ticket field too\"\n            )",
         "detail": "applications.core.validators",
-        "documentation": {}
-    },
-    {
-        "label": "CategoryViewSet",
-        "kind": 6,
-        "importPath": "applications.core.views",
-        "description": "applications.core.views",
-        "peekOfCode": "class CategoryViewSet(viewsets.ModelViewSet):\n    queryset = Category.objects.all()\n    serializer_class = CategorySerializer\n    permission_classes = (IsAdminOrReadOnly,)\nclass FollowedHashTagView(\n    mixins.ListModelMixin,\n    mixins.CreateModelMixin,\n    mixins.DestroyModelMixin,\n    viewsets.GenericViewSet,\n):",
-        "detail": "applications.core.views",
         "documentation": {}
     },
     {
@@ -1997,7 +2616,7 @@
         "kind": 6,
         "importPath": "applications.core.views",
         "description": "applications.core.views",
-        "peekOfCode": "class FollowedHashTagView(\n    mixins.ListModelMixin,\n    mixins.CreateModelMixin,\n    mixins.DestroyModelMixin,\n    viewsets.GenericViewSet,\n):\n    serializer_class = FollowedHashTagSerializer\n    def get_queryset(self):  # type: ignore\n        return FollowedHashTag.objects.filter(user=self.request.user)\n    def perform_create(self, serializer):",
+        "peekOfCode": "class FollowedHashTagView(\n    mixins.ListModelMixin,\n    mixins.CreateModelMixin,\n    mixins.DestroyModelMixin,\n    viewsets.GenericViewSet,\n):\n    serializer_class = FollowedHashTagSerializer\n    permission_classes = (IsAuthenticated,)\n    def get_queryset(self):  # type: ignore\n        return FollowedHashTag.objects.filter(user=self.request.user)",
         "detail": "applications.core.views",
         "documentation": {}
     },
@@ -2056,6 +2675,51 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.tickets.migrations.0005_rename__file_tickettemplate_file",
+        "description": "applications.tickets.migrations.0005_rename__file_tickettemplate_file",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"tickets\", \"0004_auto_20211029_1451\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"tickettemplate\",\n            old_name=\"_file\",\n            new_name=\"file\",\n        ),",
+        "detail": "applications.tickets.migrations.0005_rename__file_tickettemplate_file",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.tickets.migrations.0006_rename_file_tickettemplate__file",
+        "description": "applications.tickets.migrations.0006_rename_file_tickettemplate__file",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"tickets\", \"0005_rename__file_tickettemplate_file\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"tickettemplate\",\n            old_name=\"file\",\n            new_name=\"_file\",\n        ),",
+        "detail": "applications.tickets.migrations.0006_rename_file_tickettemplate__file",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.tickets.migrations.0007_rename__file_tickettemplate_file",
+        "description": "applications.tickets.migrations.0007_rename__file_tickettemplate_file",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"tickets\", \"0006_rename_file_tickettemplate__file\"),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name=\"tickettemplate\",\n            old_name=\"_file\",\n            new_name=\"file\",\n        ),",
+        "detail": "applications.tickets.migrations.0007_rename__file_tickettemplate_file",
+        "documentation": {}
+    },
+    {
+        "label": "TicketSenderService",
+        "kind": 6,
+        "importPath": "applications.tickets.services.ticket_sender_service",
+        "description": "applications.tickets.services.ticket_sender_service",
+        "peekOfCode": "class TicketSenderService:\n    \"\"\"\n    This class is up to sending ticket file to client's email address.\n    It generates unique QR code (based on id of ticket), and pdf file\n    (based on selected template file). Then it merges this 2 files saved\n    in media/tmp with unique names, and sends the result to provided email\n    address.\n    \"\"\"\n    def send(self, email: str, ticket: Ticket):\n        # get pdf file from template",
+        "detail": "applications.tickets.services.ticket_sender_service",
+        "documentation": {}
+    },
+    {
+        "label": "TicketService",
+        "kind": 6,
+        "importPath": "applications.tickets.services.ticket_service",
+        "description": "applications.tickets.services.ticket_service",
+        "peekOfCode": "class TicketService:\n    def mark_as_used(self, ticket: Ticket):\n        ticket.is_used = True\n        ticket.save()\n    def mark_as_sold(self, ticket: Ticket):\n        ticket.is_sold = True\n        ticket.save()\n    def checkout(self, email: str, ticket: Ticket):\n        sender_service = TicketSenderService()\n        sender_service.send(email, ticket)",
+        "detail": "applications.tickets.services.ticket_service",
+        "documentation": {}
+    },
+    {
         "label": "TestTicketGenerator",
         "kind": 6,
         "importPath": "applications.tickets.tests.test_helpers",
@@ -2078,7 +2742,7 @@
         "kind": 6,
         "importPath": "applications.tickets.tests.test_models",
         "description": "applications.tickets.tests.test_models",
-        "peekOfCode": "class TestTicketTemplate:\n    def test_create_ticket_template(self):\n        entity = mixer.blend(\"tickets.TicketTemplate\")\n        assert isinstance(entity, TicketTemplate)\n    def test_fail_ticket_template_if_file_is_not_pdf(self):\n        with pytest.raises(ValidationError):\n            entity = mixer.blend(\"tickets.TicketTemplate\")\n            entity._file = SimpleUploadedFile(\"test_file.txt\", b\"file_content\")  # type: ignore\n            entity.full_clean()  # type: ignore\n            raise Exception(\"Error should have been thrown\")",
+        "peekOfCode": "class TestTicketTemplate:\n    def test_create_ticket_template(self):\n        entity = mixer.blend(\"tickets.TicketTemplate\")\n        assert isinstance(entity, TicketTemplate)\n    def test_fail_ticket_template_if_file_is_not_pdf(self):\n        with pytest.raises(ValidationError):\n            entity = mixer.blend(\"tickets.TicketTemplate\")\n            entity.file = SimpleUploadedFile(\"test_file.txt\", b\"file_content\")  # type: ignore\n            entity.full_clean()  # type: ignore\n            raise Exception(\"Error should have been thrown\")",
         "detail": "applications.tickets.tests.test_models",
         "documentation": {}
     },
@@ -2204,7 +2868,7 @@
         "kind": 6,
         "importPath": "applications.tickets.models",
         "description": "applications.tickets.models",
-        "peekOfCode": "class TicketTemplate(models.Model):\n    \"\"\"\n    If event is private is necessary to get a ticket before arrive to event\n    Each ticket is generated based on template file with unique key as id of that ticket.\n    The quantity of tickets depends on promoter of event.\n    \"\"\"\n    event = models.OneToOneField(Event, on_delete=models.CASCADE)\n    _file = models.FileField(\n        upload_to=\"media/tickets/\", validators=[FileExtensionValidator([\"pdf\"])]\n    )",
+        "peekOfCode": "class TicketTemplate(models.Model):\n    \"\"\"\n    If event is private is necessary to get a ticket before arrive to event\n    Each ticket is generated based on template file with unique key as id of that ticket.\n    The quantity of tickets depends on promoter of event.\n    \"\"\"\n    event = models.OneToOneField(Event, on_delete=models.CASCADE)\n    file = models.FileField(\n        upload_to=\"media/tickets/\", validators=[FileExtensionValidator([\"pdf\"])]\n    )",
         "detail": "applications.tickets.models",
         "documentation": {}
     },
@@ -2249,7 +2913,7 @@
         "kind": 6,
         "importPath": "applications.tickets.serializers",
         "description": "applications.tickets.serializers",
-        "peekOfCode": "class TicketTemplateSerializer(serializers.ModelSerializer):\n    quantity = serializers.IntegerField(\n        required=True, validators=[MinValueValidator(0)]\n    )\n    class Meta:\n        model = TicketTemplate\n        fields = (\n            \"template\",\n            \"quantity\",\n        )",
+        "peekOfCode": "class TicketTemplateSerializer(serializers.ModelSerializer):\n    quantity = serializers.IntegerField(\n        required=True, validators=[MinValueValidator(0)]\n    )\n    class Meta:\n        model = TicketTemplate\n        fields = (\n            \"file\",\n            \"quantity\",\n        )",
         "detail": "applications.tickets.serializers",
         "documentation": {}
     },
@@ -2296,6 +2960,15 @@
         "description": "applications.users.migrations.0002_user_avatar",
         "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0001_initial\"),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name=\"user\",\n            name=\"avatar\",\n            field=models.ImageField(null=True, upload_to=\"media/avatars\"),\n        ),",
         "detail": "applications.users.migrations.0002_user_avatar",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "applications.users.migrations.0003_alter_user_avatar",
+        "description": "applications.users.migrations.0003_alter_user_avatar",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        (\"users\", \"0002_user_avatar\"),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name=\"user\",\n            name=\"avatar\",\n            field=models.ImageField(blank=True, null=True, upload_to=\"media/avatars\"),\n        ),",
+        "detail": "applications.users.migrations.0003_alter_user_avatar",
         "documentation": {}
     },
     {

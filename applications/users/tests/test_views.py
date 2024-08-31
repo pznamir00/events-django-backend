@@ -1,11 +1,6 @@
-from unittest.mock import MagicMock, patch
 import pytest
 from rest_framework.test import APIRequestFactory, APIClient, force_authenticate
-from applications.core.models import Event
-from applications.tickets.models import Ticket, TicketTemplate
 from applications.users.models import User
-from mixer.backend.django import mixer
-
 from applications.users.views import UserAPIView
 
 

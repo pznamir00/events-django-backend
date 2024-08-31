@@ -3,20 +3,10 @@ from drf_extra_fields.geo_fields import PointField
 from applications.tickets.helpers import TicketGenerator
 from applications.tickets.serializers import TicketTemplateSerializer
 from . import validators
-from .models import Category, Event, FollowedHashTag, EventHistory
+from .models import Event, FollowedHashTag, EventHistory
 
 
-class CategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Category
-        fields = (
-            "name",
-            "slug",
-        )
-        read_only_fields = ("slug",)
-
-
-class EventHistorySerializer(serializers.ModelSerializer):
+class _EventHistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = EventHistory
         exclude = ("id",)
@@ -44,7 +34,7 @@ class EventSimpleSerializer(serializers.ModelSerializer):
 
 class EventDetailSerializer(serializers.ModelSerializer):
     ticket = TicketTemplateSerializer(write_only=True, required=False)
-    histories = EventHistorySerializer(many=True, read_only=True)
+    histories = _EventHistorySerializer(many=True, read_only=True)
     location = PointField()
 
     class Meta:
@@ -60,8 +50,10 @@ class EventDetailSerializer(serializers.ModelSerializer):
         extra_kwargs = {"category": {"required": True}, "location": {"required": True}}
 
     def validate_ticket(self, value):
-        if "quantity" not in value or "template" not in value:
-            raise serializers.ValidationError("Please valid 'ticket' field")
+        if "quantity" not in value or "file" not in value:
+            raise serializers.ValidationError(
+                "'ticket' field must contain both quantity and file"
+            )
 
     def create(self, validated_data):
         ticket = validated_data.pop("ticket", None)

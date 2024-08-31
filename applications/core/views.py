@@ -4,20 +4,13 @@ from rest_framework.permissions import IsAuthenticated
 from django.template.defaultfilters import slugify
 from django_filters import rest_framework as filters
 from .serializers import (
-    CategorySerializer,
     EventDetailSerializer,
     EventSimpleSerializer,
     FollowedHashTagSerializer,
 )
-from .models import Category, EventHistory, FollowedHashTag, Event
-from .permissions import IsAdminOrReadOnly, IsOwnerOrReadOnly, CreateAuthenticatedOnly
+from .models import EventHistory, FollowedHashTag, Event
+from .permissions import IsOwnerOrReadOnly, CreateAuthenticatedOnly
 from .filters import EventFilterSet, EventOrderingFilter
-
-
-class CategoryViewSet(viewsets.ModelViewSet):
-    queryset = Category.objects.all()
-    serializer_class = CategorySerializer
-    permission_classes = (IsAdminOrReadOnly,)
 
 
 class FollowedHashTagView(
@@ -27,6 +20,7 @@ class FollowedHashTagView(
     viewsets.GenericViewSet,
 ):
     serializer_class = FollowedHashTagSerializer
+    permission_classes = (IsAuthenticated,)
 
     def get_queryset(self):  # type: ignore
         return FollowedHashTag.objects.filter(user=self.request.user)
@@ -49,14 +43,14 @@ class EventViewSet(viewsets.ModelViewSet):
         filters.DjangoFilterBackend,
         EventOrderingFilter,
     )
-    filter_class = EventFilterSet
+    filterset_class = EventFilterSet
     ordering_fields = (
         "distance",
         "event_datetime_expired",
         "-create_at",
     )
 
-    def get_serializer_class(self):  # type: ignore
+    def get_serializer_class(self):
         """
         For list method user can get simplify version of objects.
         """

@@ -21,6 +21,6 @@ class TicketTemplateSerializer(serializers.ModelSerializer):
     class Meta:
         model = TicketTemplate
         fields = (
-            "template",
+            "file",
             "quantity",
         )

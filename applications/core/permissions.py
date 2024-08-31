@@ -1,19 +1,6 @@
 from rest_framework import permissions
 
 
-class IsAdminOrReadOnly(permissions.BasePermission):
-    def has_permission(self, request, view):
-        """
-        Allow an access for each user if method is safe (read)
-        Otherwise admin rights are required
-        """
-        return (
-            True
-            if request.method in permissions.SAFE_METHODS
-            else request.user.is_superuser
-        )
-
-
 class IsOwnerOrReadOnly(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
         # Read only for everybody

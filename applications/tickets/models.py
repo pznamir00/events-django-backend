@@ -12,7 +12,7 @@ class TicketTemplate(models.Model):
     """
 
     event = models.OneToOneField(Event, on_delete=models.CASCADE)
-    _file = models.FileField(
+    file = models.FileField(
         upload_to="media/tickets/", validators=[FileExtensionValidator(["pdf"])]
     )
 
