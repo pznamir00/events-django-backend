@@ -48,7 +48,11 @@ class EventFilterSet(filters.FilterSet):
         lat_lon = self.filter_service.get_lat_lon_from_query_params(req)
         if not lat_lon:
             raise ValidationError(
-                {"range": "range parameter requires both latitude and longitude params"}
+                {
+                    "range": [
+                        "range parameter requires both latitude and longitude params"
+                    ]
+                }
             )
 
         lat, lon = lat_lon
