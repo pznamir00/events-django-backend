@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from drf_extra_fields.geo_fields import PointField
-from applications.tickets.helpers import TicketGenerator
+from applications.core.services import TicketGeneratorService
 from applications.tickets.serializers import TicketTemplateSerializer
 from . import validators
 from .models import Event, FollowedHashTag, EventHistory
@@ -36,6 +36,7 @@ class EventDetailSerializer(serializers.ModelSerializer):
     ticket = TicketTemplateSerializer(write_only=True, required=False)
     histories = _EventHistorySerializer(many=True, read_only=True)
     location = PointField()
+    ticket_generator_service = TicketGeneratorService()
 
     class Meta:
         model = Event
@@ -47,26 +48,26 @@ class EventDetailSerializer(serializers.ModelSerializer):
             "took_place",
         )
         validators = [validators.CheckIfTicketProvidedIfPrivate()]
-        extra_kwargs = {"category": {"required": True}, "location": {"required": True}}
+        extra_kwargs = {
+            "category": {"required": True},
+            "location": {"required": True},
+        }
 
-    def validate_ticket(self, value):
+    def validate_ticket(self, value: dict):
         if "quantity" not in value or "file" not in value:
             raise serializers.ValidationError(
                 "'ticket' field must contain both quantity and file"
             )
 
-    def create(self, validated_data):
+    def create(self, validated_data: dict):
         ticket = validated_data.pop("ticket", None)
         event = Event.objects.create(**validated_data)
-        self.__generate_tickets_if_needed(validated_data, ticket, event)
+        self.ticket_generator_service.generate_if_needed(validated_data, ticket, event)
         return event
 
-    def update(self, instance, validated_data):
+    def update(self, instance: Event, validated_data: dict):
         ticket = validated_data.pop("ticket", None)
-        self.__generate_tickets_if_needed(validated_data, ticket, instance)
+        self.ticket_generator_service.generate_if_needed(
+            validated_data, ticket, instance
+        )
         return super().update(instance, validated_data)
-
-    def __generate_tickets_if_needed(self, data: dict, ticket: dict, event: Event):
-        ticket_generator = TicketGenerator(data)
-        if ticket_generator.should_generate_tickets():
-            ticket_generator.generate_tickets(ticket, event)

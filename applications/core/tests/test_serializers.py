@@ -96,53 +96,24 @@ class TestEventDetailSerializer:
 
     @pytest.mark.django_db
     @patch(
-        "applications.core.serializers.TicketGenerator",
-        return_value=MagicMock(should_generate_tickets=MagicMock(return_value=True)),
+        "applications.core.serializers.EventDetailSerializer.ticket_generator_service"
     )
     def test_create_calls_generate_tickets_if_should(self, mock: MagicMock):
         instance = EventDetailSerializer(data=get_event_detail_data())
         instance.is_valid()
         instance.save()
-        mock.return_value.should_generate_tickets.assert_called_once()
-        mock.return_value.generate_tickets.assert_called_once()
+        mock.generate_if_needed.assert_called_once()
 
     @pytest.mark.django_db
     @patch(
-        "applications.core.serializers.TicketGenerator",
-        return_value=MagicMock(should_generate_tickets=MagicMock(return_value=False)),
-    )
-    def test_create_does_not_call_generate_tickets_if_should_not(self, mock: MagicMock):
-        instance = EventDetailSerializer(data=get_event_detail_data())
-        instance.is_valid()
-        instance.save()
-        mock.return_value.should_generate_tickets.assert_called_once()
-        assert mock.return_value.generate_tickets.call_count == 0
-
-    @pytest.mark.django_db
-    @patch(
-        "applications.core.serializers.TicketGenerator",
-        return_value=MagicMock(should_generate_tickets=MagicMock(return_value=True)),
+        "applications.core.serializers.EventDetailSerializer.ticket_generator_service"
     )
     def test_update_calls_generate_tickets_if_should(self, mock: MagicMock):
         event: Event = mixer.blend("core.Event")
         instance = EventDetailSerializer(instance=event, data=get_event_detail_data())
         instance.is_valid()
         instance.save()
-        mock.return_value.should_generate_tickets.assert_called_once()
-        mock.return_value.generate_tickets.assert_called_once()
-
-    @pytest.mark.django_db
-    @patch(
-        "applications.core.serializers.TicketGenerator",
-        return_value=MagicMock(should_generate_tickets=MagicMock(return_value=False)),
-    )
-    def test_update_does_not_call_generate_tickets_if_should_not(self, mock: MagicMock):
-        event: Event = mixer.blend("core.Event")
-        instance = EventDetailSerializer(instance=event, data=get_event_detail_data())
-        instance.is_valid()
-        instance.save()
-        mock.return_value.should_generate_tickets.assert_called_once()
-        assert mock.return_value.generate_tickets.call_count == 0
+        mock.generate_if_needed.assert_called_once()
 
 
 def get_event_detail_data():

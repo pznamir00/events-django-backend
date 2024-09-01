@@ -1,13 +1,16 @@
 from datetime import datetime
+from typing import Any
 from django.db.models import Q
 from django.contrib.gis.measure import D
 from django.contrib.gis.geos import Point
 from django.db.models import Case, When, Value, QuerySet
 from django.contrib.gis.db.models.functions import Distance
-from rest_framework.serializers import ValidationError
 from rest_framework.filters import OrderingFilter
 from rest_framework.request import Request
+from rest_framework.views import View  # type:ignore
+from rest_framework.serializers import ValidationError
 import django_filters as filters
+from applications.core.services import FilterService
 from .models import Event
 
 
@@ -20,10 +23,11 @@ class EventFilterSet(filters.FilterSet):
     category = filters.NumberFilter("category")
     promoter = filters.NumberFilter("promoter")
     is_free = filters.BooleanFilter("is_free")
+    filter_service = FilterService()
 
     class Meta:
         model = Event
-        fields = [
+        fields = (
             "keywords",
             "created_at",
             "updated_at",
@@ -31,30 +35,26 @@ class EventFilterSet(filters.FilterSet):
             "category",
             "promoter",
             "is_free",
-        ]
+        )
 
-    def filter_by_range(self, queryset, _, value):
+    def filter_by_range(self, queryset: QuerySet, _: Any, value: float):
         """
         This filters queryset by range.
         Get only this events that location is inside a range in
         radius (field 'range') from user's location
         (fields 'latitude' and 'longitude' are required)
         """
-        try:
-            assert isinstance(self.request, Request)
-            lat = self.request.query_params["latitude"]
-            lon = self.request.query_params["longitude"]
-            point = Point(float(lat), float(lon))
-        except Exception as exc:
+        req: Request = self.request
+        lat_lon = self.filter_service.get_lat_lon_from_query_params(req)
+        if not lat_lon:
             raise ValidationError(
-                """
-                Excepted 'latitude' and 'longitude' parameters
-                (both decimal) when you pass 'range' field
-                """
-            ) from exc
-        return queryset.filter(location__dwithin=(point, D(km=value)))
+                {"range": "range parameter requires both latitude and longitude params"}
+            )
 
-    def filter_by_keywords(self, queryset: QuerySet, _, value):
+        lat, lon = lat_lon
+        return queryset.filter(location__dwithin=(Point(lat, lon), D(km=value)))
+
+    def filter_by_keywords(self, queryset: QuerySet, _: Any, value: str):
         """
         Filter by 3 fields (title, description and location_hints)
         """
@@ -72,10 +72,10 @@ class EventOrderingFilter(OrderingFilter):
     provided coordinates, by distance either.
     """
 
-    def filter_queryset(self, request: Request, queryset: QuerySet, view):
-        """
-        Order by expiration time. Expired events go to the end of a list.
-        """
+    filter_service = FilterService()
+
+    def filter_queryset(self, request: Request, queryset: QuerySet, view: View):
+        # set datetime_expired annotation
         queryset = queryset.annotate(
             event_datetime_expired=Case(
                 When(event_datetime__lte=datetime.now(), then=Value("0")),
@@ -83,15 +83,14 @@ class EventOrderingFilter(OrderingFilter):
             )
         )
 
-        try:
-            # Order by distance if lat and lon are provided.
-            lat = request.query_params.get("latitude", "")
-            lon = request.query_params.get("longitude", "")
-            assert lat.isnumeric() and lon.isnumeric()
-            queryset = queryset.annotate(
-                distance=Distance("location", Point(float(lat), float(lon), srid=4326))
+        # set distance annotation
+        lat_lon = self.filter_service.get_lat_lon_from_query_params(request)
+        queryset = queryset.annotate(
+            distance=(
+                Distance("location", Point(lat_lon[0], lat_lon[1], srid=4326))
+                if lat_lon
+                else Value(0)
             )
-        except AssertionError:
-            queryset = queryset.annotate(distance=Value(0))
+        )
 
         return super().filter_queryset(request, queryset, view)

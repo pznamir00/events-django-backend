@@ -1,16 +1,19 @@
 import os
 import io
 import time
-from typing import Any, Dict
+from typing import TYPE_CHECKING, Any, Dict
 import qrcode
 from django.contrib.sites.models import Site
 from django.core.mail import EmailMessage
 from django.core.files import File
+from django.db import transaction
 from PyPDF2 import PdfFileWriter, PdfFileReader
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
-from applications.core.models import Event
-from .models import Ticket, TicketTemplate
+
+if TYPE_CHECKING:
+    from applications.core.models import Event
+    from .models import Ticket
 
 
 class TicketGenerator:
@@ -27,7 +30,13 @@ class TicketGenerator:
     def should_generate_tickets(self):
         return "is_free" in self.__data and not self.__data["is_free"]
 
-    def generate_tickets(self, ticket: dict, event: Event):
+    @transaction.atomic
+    def generate_tickets(self, ticket: dict, event: "Event"):
+        from .models import (  # pylint:disable=import-outside-toplevel
+            Ticket,
+            TicketTemplate,
+        )
+
         # save a template
         file = ticket["file"]
         template = TicketTemplate.objects.create(event=event, file=file)
@@ -44,7 +53,7 @@ class TicketWithQRCodeSender:
     address.
     """
 
-    def send(self, email: str, obj: Ticket):
+    def send(self, email: str, obj: "Ticket"):
         # get pdf file from template
         pdf = obj.template.file  # pylint: disable=protected-access
         # generate qr code and get path to it
@@ -56,7 +65,7 @@ class TicketWithQRCodeSender:
         # delete files from tmp
         self.__delete_files(pdf_path, qr_path)
 
-    def __make_qr(self, obj: Ticket):
+    def __make_qr(self, obj: "Ticket"):
         """
         This method generates qr code and saves it in media/tmp directory.
         For this purpose it uses a qrcode lib.

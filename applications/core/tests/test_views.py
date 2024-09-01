@@ -1,4 +1,3 @@
-import PyPDF2
 from datetime import datetime, timedelta
 from typing import cast
 import pytest
@@ -11,12 +10,9 @@ from applications.core.views import (
     EventViewSet,
     FollowedHashTagView,
 )
-from PyPDF2 import PdfFileReader
-from applications.tickets.models import Ticket
 from applications.users.models import User
 from mixer.backend.django import mixer
 from django.contrib.gis.geos import Point
-from django.core.files.uploadedfile import SimpleUploadedFile
 
 
 @pytest.mark.django_db

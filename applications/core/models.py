@@ -1,9 +1,9 @@
 import uuid
 from django.contrib.gis.db.models import PointField
 from django.db import models
+from applications.core.services import EventFileNameGeneratorService
 from applications.users.models import User
 from .choices import Category, HistoryLabel
-from .helpers import EventFileNameGenerator
 
 
 class Event(models.Model):
@@ -30,7 +30,7 @@ class Event(models.Model):
     took_place = models.BooleanField(default=False)
     canceled = models.BooleanField(default=False)
     image = models.ImageField(
-        upload_to=EventFileNameGenerator.generate, null=True, blank=True
+        upload_to=EventFileNameGeneratorService.generate, null=True, blank=True
     )
 
     def __str__(self):

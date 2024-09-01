@@ -1,14 +1,15 @@
 from typing import Union
 from rest_framework import viewsets, mixins
+from rest_framework.serializers import Serializer
 from rest_framework.permissions import IsAuthenticated
-from django.template.defaultfilters import slugify
 from django_filters import rest_framework as filters
+from applications.core.services import EventService, SlugService
 from .serializers import (
     EventDetailSerializer,
     EventSimpleSerializer,
     FollowedHashTagSerializer,
 )
-from .models import EventHistory, FollowedHashTag, Event
+from .models import FollowedHashTag, Event
 from .permissions import IsOwnerOrReadOnly, CreateAuthenticatedOnly
 from .filters import EventFilterSet, EventOrderingFilter
 
@@ -21,16 +22,15 @@ class FollowedHashTagView(
 ):
     serializer_class = FollowedHashTagSerializer
     permission_classes = (IsAuthenticated,)
+    slug_service = SlugService()
 
-    def get_queryset(self):  # type: ignore
+    def get_queryset(self):
         return FollowedHashTag.objects.filter(user=self.request.user)
 
-    def perform_create(self, serializer):
-        # change string to hashtag
-        value = serializer.validated_data.pop("value")
-        value = slugify(value).replace("-", "")
-        # save data
-        return serializer.save(user=self.request.user, value=value)
+    def perform_create(self, serializer: Serializer):
+        data: dict = serializer.validated_data
+        slug = self.slug_service.create_slug(data.pop("value"))
+        return serializer.save(user=self.request.user, value=slug)
 
 
 class EventViewSet(viewsets.ModelViewSet):
@@ -49,6 +49,7 @@ class EventViewSet(viewsets.ModelViewSet):
         "event_datetime_expired",
         "-create_at",
     )
+    event_service = EventService()
 
     def get_serializer_class(self):
         """
@@ -56,7 +57,7 @@ class EventViewSet(viewsets.ModelViewSet):
         """
         return EventSimpleSerializer if self.action == "list" else EventDetailSerializer
 
-    def perform_create(self, serializer):
+    def perform_create(self, serializer: Serializer):
         return serializer.save(promoter=self.request.user)
 
     def perform_update(
@@ -67,26 +68,9 @@ class EventViewSet(viewsets.ModelViewSet):
         Each of them is generated automatically based on
         updated properties
         """
-        event = serializer.instance
-        assert isinstance(serializer.validated_data, dict)
-        if "event_datetime" in serializer.validated_data:
-            assert isinstance(serializer.instance, Event)
-            # Changed event datetime
-            text = (
-                str(serializer.instance.event_datetime)
-                + " ===> "
-                + str(serializer.validated_data["event_datetime"])
-            )
-            EventHistory.objects.create(event=event, label="1", text=text)
-        if serializer.validated_data.get("took_place"):
-            # The event took place
-            EventHistory.objects.create(event=event, label="4")
-        if serializer.validated_data.get("canceled"):
-            # Canceled an event
-            EventHistory.objects.create(event=event, label="2")
-        else:
-            # Note update
-            EventHistory.objects.create(event=event, label="3")
+        event: Event = serializer.instance
+        changes: dict = serializer.validated_data
+        self.event_service.register_event_history_base_on_changes(event, changes)
         return serializer.save()
 
 
@@ -94,5 +78,5 @@ class EventOwnListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     serializer_class = EventSimpleSerializer
     permission_classes = (IsAuthenticated,)
 
-    def get_queryset(self):  # type: ignore
+    def get_queryset(self):
         return Event.objects.filter(promoter=self.request.user)

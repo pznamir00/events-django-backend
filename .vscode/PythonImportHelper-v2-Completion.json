@@ -337,6 +337,14 @@
         "documentation": {}
     },
     {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -419,23 +427,6 @@
         "documentation": {}
     },
     {
-        "label": "applications.core.helpers",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "applications.core.helpers",
-        "description": "applications.core.helpers",
-        "detail": "applications.core.helpers",
-        "documentation": {}
-    },
-    {
-        "label": "EventFileNameGenerator",
-        "importPath": "applications.core.helpers",
-        "description": "applications.core.helpers",
-        "isExtraImport": true,
-        "detail": "applications.core.helpers",
-        "documentation": {}
-    },
-    {
         "label": "django.core.validators",
         "kind": 6,
         "isExtraImport": true,
@@ -461,6 +452,95 @@
         "documentation": {}
     },
     {
+        "label": "applications.core.services",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "detail": "applications.core.services",
+        "documentation": {}
+    },
+    {
+        "label": "EventFileNameGeneratorService",
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "isExtraImport": true,
+        "detail": "applications.core.services",
+        "documentation": {}
+    },
+    {
+        "label": "EventService",
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "isExtraImport": true,
+        "detail": "applications.core.services",
+        "documentation": {}
+    },
+    {
+        "label": "FilterService",
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "isExtraImport": true,
+        "detail": "applications.core.services",
+        "documentation": {}
+    },
+    {
+        "label": "SlugService",
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "isExtraImport": true,
+        "detail": "applications.core.services",
+        "documentation": {}
+    },
+    {
+        "label": "TicketGeneratorService",
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "isExtraImport": true,
+        "detail": "applications.core.services",
+        "documentation": {}
+    },
+    {
+        "label": "FilterService",
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "isExtraImport": true,
+        "detail": "applications.core.services",
+        "documentation": {}
+    },
+    {
+        "label": "EventFileNameGeneratorService",
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "isExtraImport": true,
+        "detail": "applications.core.services",
+        "documentation": {}
+    },
+    {
+        "label": "TicketGeneratorService",
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "isExtraImport": true,
+        "detail": "applications.core.services",
+        "documentation": {}
+    },
+    {
+        "label": "EventService",
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "isExtraImport": true,
+        "detail": "applications.core.services",
+        "documentation": {}
+    },
+    {
+        "label": "SlugService",
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "isExtraImport": true,
+        "detail": "applications.core.services",
+        "documentation": {}
+    },
+    {
         "label": "django.contrib.gis.db.models.fields",
         "kind": 6,
         "isExtraImport": true,
@@ -470,92 +550,20 @@
         "documentation": {}
     },
     {
-        "label": "patch",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "MagicMock",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "MagicMock",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "MagicMock",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "patch",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "MagicMock",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "patch",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "MagicMock",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "MagicMock",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "patch",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
-        "isExtraImport": true,
-        "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
         "label": "pytest",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "pytest",
         "description": "pytest",
         "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "mixer",
+        "importPath": "mixer.backend.django",
+        "description": "mixer.backend.django",
+        "isExtraImport": true,
+        "detail": "mixer.backend.django",
         "documentation": {}
     },
     {
@@ -679,6 +687,22 @@
         "documentation": {}
     },
     {
+        "label": "EventHistory",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
         "label": "FollowedHashTag",
         "importPath": "applications.core.models",
         "description": "applications.core.models",
@@ -791,6 +815,86 @@
         "documentation": {}
     },
     {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
         "label": "CreateAuthenticatedOnly",
         "importPath": "applications.core.permissions",
         "description": "applications.core.permissions",
@@ -804,6 +908,15 @@
         "description": "applications.core.permissions",
         "isExtraImport": true,
         "detail": "applications.core.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -863,7 +976,23 @@
         "documentation": {}
     },
     {
+        "label": "HistoryLabel",
+        "importPath": "applications.core.choices",
+        "description": "applications.core.choices",
+        "isExtraImport": true,
+        "detail": "applications.core.choices",
+        "documentation": {}
+    },
+    {
         "label": "Category",
+        "importPath": "applications.core.choices",
+        "description": "applications.core.choices",
+        "isExtraImport": true,
+        "detail": "applications.core.choices",
+        "documentation": {}
+    },
+    {
+        "label": "HistoryLabel",
         "importPath": "applications.core.choices",
         "description": "applications.core.choices",
         "isExtraImport": true,
@@ -892,14 +1021,6 @@
         "description": "applications.core.serializers",
         "isExtraImport": true,
         "detail": "applications.core.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "SimpleUploadedFile",
-        "importPath": "django.core.files.uploadedfile",
-        "description": "django.core.files.uploadedfile",
-        "isExtraImport": true,
-        "detail": "django.core.files.uploadedfile",
         "documentation": {}
     },
     {
@@ -1063,60 +1184,11 @@
         "documentation": {}
     },
     {
-        "label": "PyPDF2",
-        "kind": 6,
+        "label": "Serializer",
+        "importPath": "rest_framework.serializers",
+        "description": "rest_framework.serializers",
         "isExtraImport": true,
-        "importPath": "PyPDF2",
-        "description": "PyPDF2",
-        "detail": "PyPDF2",
-        "documentation": {}
-    },
-    {
-        "label": "PdfFileReader",
-        "importPath": "PyPDF2",
-        "description": "PyPDF2",
-        "isExtraImport": true,
-        "detail": "PyPDF2",
-        "documentation": {}
-    },
-    {
-        "label": "PdfFileWriter",
-        "importPath": "PyPDF2",
-        "description": "PyPDF2",
-        "isExtraImport": true,
-        "detail": "PyPDF2",
-        "documentation": {}
-    },
-    {
-        "label": "PdfFileReader",
-        "importPath": "PyPDF2",
-        "description": "PyPDF2",
-        "isExtraImport": true,
-        "detail": "PyPDF2",
-        "documentation": {}
-    },
-    {
-        "label": "PdfFileReader",
-        "importPath": "PyPDF2",
-        "description": "PyPDF2",
-        "isExtraImport": true,
-        "detail": "PyPDF2",
-        "documentation": {}
-    },
-    {
-        "label": "PdfFileWriter",
-        "importPath": "PyPDF2",
-        "description": "PyPDF2",
-        "isExtraImport": true,
-        "detail": "PyPDF2",
-        "documentation": {}
-    },
-    {
-        "label": "PdfFileReader",
-        "importPath": "PyPDF2",
-        "description": "PyPDF2",
-        "isExtraImport": true,
-        "detail": "PyPDF2",
+        "detail": "rest_framework.serializers",
         "documentation": {}
     },
     {
@@ -1129,6 +1201,54 @@
     },
     {
         "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TYPE_CHECKING",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -1153,6 +1273,14 @@
     },
     {
         "label": "cast",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TYPE_CHECKING",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -1277,54 +1405,6 @@
         "description": "applications.core.views",
         "isExtraImport": true,
         "detail": "applications.core.views",
-        "documentation": {}
-    },
-    {
-        "label": "Ticket",
-        "importPath": "applications.tickets.models",
-        "description": "applications.tickets.models",
-        "isExtraImport": true,
-        "detail": "applications.tickets.models",
-        "documentation": {}
-    },
-    {
-        "label": "Ticket",
-        "importPath": "applications.tickets.models",
-        "description": "applications.tickets.models",
-        "isExtraImport": true,
-        "detail": "applications.tickets.models",
-        "documentation": {}
-    },
-    {
-        "label": "Ticket",
-        "importPath": "applications.tickets.models",
-        "description": "applications.tickets.models",
-        "isExtraImport": true,
-        "detail": "applications.tickets.models",
-        "documentation": {}
-    },
-    {
-        "label": "Ticket",
-        "importPath": "applications.tickets.models",
-        "description": "applications.tickets.models",
-        "isExtraImport": true,
-        "detail": "applications.tickets.models",
-        "documentation": {}
-    },
-    {
-        "label": "Ticket",
-        "importPath": "applications.tickets.models",
-        "description": "applications.tickets.models",
-        "isExtraImport": true,
-        "detail": "applications.tickets.models",
-        "documentation": {}
-    },
-    {
-        "label": "TicketTemplate",
-        "importPath": "applications.tickets.models",
-        "description": "applications.tickets.models",
-        "isExtraImport": true,
-        "detail": "applications.tickets.models",
         "documentation": {}
     },
     {
@@ -1497,6 +1577,46 @@
         "documentation": {}
     },
     {
+        "label": "Request",
+        "importPath": "rest_framework.request",
+        "description": "rest_framework.request",
+        "isExtraImport": true,
+        "detail": "rest_framework.request",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "rest_framework.request",
+        "description": "rest_framework.request",
+        "isExtraImport": true,
+        "detail": "rest_framework.request",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
         "label": "django_filters",
         "kind": 6,
         "isExtraImport": true,
@@ -1618,23 +1738,6 @@
         "documentation": {}
     },
     {
-        "label": "applications.tickets.helpers",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "applications.tickets.helpers",
-        "description": "applications.tickets.helpers",
-        "detail": "applications.tickets.helpers",
-        "documentation": {}
-    },
-    {
-        "label": "TicketGenerator",
-        "importPath": "applications.tickets.helpers",
-        "description": "applications.tickets.helpers",
-        "isExtraImport": true,
-        "detail": "applications.tickets.helpers",
-        "documentation": {}
-    },
-    {
         "label": "TicketTemplateSerializer",
         "importPath": "applications.tickets.serializers",
         "description": "applications.tickets.serializers",
@@ -1656,6 +1759,31 @@
         "description": "applications.tickets.serializers",
         "isExtraImport": true,
         "detail": "applications.tickets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "slugify",
+        "importPath": "django.template.defaultfilters",
+        "description": "django.template.defaultfilters",
+        "isExtraImport": true,
+        "detail": "django.template.defaultfilters",
+        "documentation": {}
+    },
+    {
+        "label": "applications.tickets.helpers",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "applications.tickets.helpers",
+        "description": "applications.tickets.helpers",
+        "detail": "applications.tickets.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "TicketGenerator",
+        "importPath": "applications.tickets.helpers",
+        "description": "applications.tickets.helpers",
+        "isExtraImport": true,
+        "detail": "applications.tickets.helpers",
         "documentation": {}
     },
     {
@@ -1763,14 +1891,6 @@
         "documentation": {}
     },
     {
-        "label": "slugify",
-        "importPath": "django.template.defaultfilters",
-        "description": "django.template.defaultfilters",
-        "isExtraImport": true,
-        "detail": "django.template.defaultfilters",
-        "documentation": {}
-    },
-    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -1855,6 +1975,46 @@
         "documentation": {}
     },
     {
+        "label": "PdfFileWriter",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "PdfFileReader",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "PdfFileReader",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "PdfFileWriter",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
+        "label": "PdfFileReader",
+        "importPath": "PyPDF2",
+        "description": "PyPDF2",
+        "isExtraImport": true,
+        "detail": "PyPDF2",
+        "documentation": {}
+    },
+    {
         "label": "canvas",
         "importPath": "reportlab.pdfgen",
         "description": "reportlab.pdfgen",
@@ -1884,6 +2044,46 @@
         "description": "reportlab.lib.pagesizes",
         "isExtraImport": true,
         "detail": "reportlab.lib.pagesizes",
+        "documentation": {}
+    },
+    {
+        "label": "Ticket",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "isExtraImport": true,
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Ticket",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "isExtraImport": true,
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Ticket",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "isExtraImport": true,
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Ticket",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "isExtraImport": true,
+        "detail": "applications.tickets.models",
+        "documentation": {}
+    },
+    {
+        "label": "TicketTemplate",
+        "importPath": "applications.tickets.models",
+        "description": "applications.tickets.models",
+        "isExtraImport": true,
+        "detail": "applications.tickets.models",
         "documentation": {}
     },
     {
@@ -1948,14 +2148,6 @@
         "description": "PIL",
         "isExtraImport": true,
         "detail": "PIL",
-        "documentation": {}
-    },
-    {
-        "label": "APIView",
-        "importPath": "rest_framework.views",
-        "description": "rest_framework.views",
-        "isExtraImport": true,
-        "detail": "rest_framework.views",
         "documentation": {}
     },
     {
@@ -2270,15 +2462,6 @@
         "documentation": {}
     },
     {
-        "label": "TestEventFileNameGenerator",
-        "kind": 6,
-        "importPath": "applications.core.tests.test_helpers",
-        "description": "applications.core.tests.test_helpers",
-        "peekOfCode": "class TestEventFileNameGenerator:\n    @patch(\"applications.core.helpers.uuid.uuid4\", return_value=\"2137\")\n    def test_generate_makes_new_filename_from_provided(self, _: MagicMock):\n        result = EventFileNameGenerator.generate(None, \"example.png\")\n        assert result == \"media/events/2137.png\"",
-        "detail": "applications.core.tests.test_helpers",
-        "documentation": {}
-    },
-    {
         "label": "TestEvent",
         "kind": 6,
         "importPath": "applications.core.tests.test_models",
@@ -2310,7 +2493,7 @@
         "kind": 6,
         "importPath": "applications.core.tests.test_permissions",
         "description": "applications.core.tests.test_permissions",
-        "peekOfCode": "class TestIsOwnerOrReadOnly:\n    def test_has_object_permission_returns_true_if_method_is_safe(self):\n        permission = IsOwnerOrReadOnly()\n        user = MagicMock(email=\"admin@gmail.com\", is_superuser=True)\n        other_user = MagicMock(email=\"test@gmail.com\")\n        req = MagicMock(method=\"GET\", user=user)\n        obj = MagicMock(promoter=other_user)\n        assert permission.has_object_permission(req, None, obj)\n    def test_has_object_permission_returns_true_if_user_is_superuser(self):\n        permission = IsOwnerOrReadOnly()",
+        "peekOfCode": "class TestIsOwnerOrReadOnly:\n    def test_has_object_permission_returns_true_if_method_is_safe(self):\n        permission = IsOwnerOrReadOnly()\n        user = MagicMock(email=\"admin@gmail.com\", is_superuser=True)\n        other_user = MagicMock(email=\"test@gmail.com\")\n        req = MagicMock(method=\"GET\", user=user)\n        obj = MagicMock(promoter=other_user)\n        assert permission.has_object_permission(req, None, obj)  # type: ignore\n    def test_has_object_permission_returns_true_if_user_is_superuser(self):\n        permission = IsOwnerOrReadOnly()",
         "detail": "applications.core.tests.test_permissions",
         "documentation": {}
     },
@@ -2319,7 +2502,7 @@
         "kind": 6,
         "importPath": "applications.core.tests.test_permissions",
         "description": "applications.core.tests.test_permissions",
-        "peekOfCode": "class TestCreateAuthenticatedOnly:\n    def test_has_permission_returns_true_if_method_is_not_post(self):\n        permission = CreateAuthenticatedOnly()\n        user = MagicMock(email=\"test@gmail.com\", is_authenticated=False)\n        req = MagicMock(method=\"GET\", user=user)\n        assert permission.has_permission(req, None)\n    def test_has_permission_returns_true_if_method_is_post_and_user_is_authenticated(\n        self,\n    ):\n        permission = CreateAuthenticatedOnly()",
+        "peekOfCode": "class TestCreateAuthenticatedOnly:\n    def test_has_permission_returns_true_if_method_is_not_post(self):\n        permission = CreateAuthenticatedOnly()\n        user = MagicMock(email=\"test@gmail.com\", is_authenticated=False)\n        req = MagicMock(method=\"GET\", user=user)\n        assert permission.has_permission(req, None)  # type: ignore\n    def test_has_permission_returns_true_if_method_is_post_and_user_is_authenticated(\n        self,\n    ):\n        permission = CreateAuthenticatedOnly()",
         "detail": "applications.core.tests.test_permissions",
         "documentation": {}
     },
@@ -2357,6 +2540,51 @@
         "description": "applications.core.tests.test_serializers",
         "peekOfCode": "def get_event_detail_data():\n    return {\n        \"title\": \"new event\",\n        \"description\": \"this is new event\",\n        \"location\": {\"latitude\": 3.14, \"longitude\": 21.37},\n        \"event_datetime\": datetime(2020, 10, 10, 10, 10, 10),\n        \"category\": Category.CONCERT,\n        \"is_free\": True,\n    }",
         "detail": "applications.core.tests.test_serializers",
+        "documentation": {}
+    },
+    {
+        "label": "TestEventFileNameGeneratorService",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_services",
+        "description": "applications.core.tests.test_services",
+        "peekOfCode": "class TestEventFileNameGeneratorService:\n    @patch(\"applications.core.services.uuid.uuid4\", return_value=\"2137\")\n    def test_generate_makes_new_filename_from_provided(self, _: MagicMock):\n        result = EventFileNameGeneratorService.generate(None, \"example.png\")\n        assert result == \"media/events/2137.png\"\nclass TestSlugService:\n    def test_create_slug_makes_slug_from_value(self):\n        service = SlugService()\n        slug = service.create_slug(\"Some Slug\")\n        assert slug == \"someslug\"",
+        "detail": "applications.core.tests.test_services",
+        "documentation": {}
+    },
+    {
+        "label": "TestSlugService",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_services",
+        "description": "applications.core.tests.test_services",
+        "peekOfCode": "class TestSlugService:\n    def test_create_slug_makes_slug_from_value(self):\n        service = SlugService()\n        slug = service.create_slug(\"Some Slug\")\n        assert slug == \"someslug\"\nclass TestTicketGeneratorService:\n    def test_generate_if_needed_calls_generate_tickets_if_should(self):\n        service = TicketGeneratorService()\nclass TestEventService:\n    @pytest.mark.django_db",
+        "detail": "applications.core.tests.test_services",
+        "documentation": {}
+    },
+    {
+        "label": "TestTicketGeneratorService",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_services",
+        "description": "applications.core.tests.test_services",
+        "peekOfCode": "class TestTicketGeneratorService:\n    def test_generate_if_needed_calls_generate_tickets_if_should(self):\n        service = TicketGeneratorService()\nclass TestEventService:\n    @pytest.mark.django_db\n    def test_register_event_history_base_on_changes_creates_correct_histories(self):\n        service = EventService()\n        event: Event = mixer.blend(\"core.Event\")\n        changes = {\"event_datetime\": datetime.datetime(2020, 10, 10), \"canceled\": True}\n        service.register_event_history_base_on_changes(event, changes)",
+        "detail": "applications.core.tests.test_services",
+        "documentation": {}
+    },
+    {
+        "label": "TestEventService",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_services",
+        "description": "applications.core.tests.test_services",
+        "peekOfCode": "class TestEventService:\n    @pytest.mark.django_db\n    def test_register_event_history_base_on_changes_creates_correct_histories(self):\n        service = EventService()\n        event: Event = mixer.blend(\"core.Event\")\n        changes = {\"event_datetime\": datetime.datetime(2020, 10, 10), \"canceled\": True}\n        service.register_event_history_base_on_changes(event, changes)\n        histories = EventHistory.objects.all()\n        assert len(histories) == 2\n        assert histories[0].label == HistoryLabel.MOVED",
+        "detail": "applications.core.tests.test_services",
+        "documentation": {}
+    },
+    {
+        "label": "TestFilterService",
+        "kind": 6,
+        "importPath": "applications.core.tests.test_services",
+        "description": "applications.core.tests.test_services",
+        "peekOfCode": "class TestFilterService:\n    def test_get_lat_lon_from_query_params_returns_lat_lon_if_defined(self):\n        service = FilterService()\n        req = MagicMock(query_params={\"latitude\": \"3.14\", \"longitude\": \"12.99\"})\n        result = service.get_lat_lon_from_query_params(req)\n        assert result == (3.14, 12.99)\n    def test_get_lat_lon_from_query_params_returns_none_if_any_field_is_missing(self):\n        service = FilterService()\n        req = MagicMock(query_params={\"latitude\": \"3.14\"})\n        result = service.get_lat_lon_from_query_params(req)",
+        "detail": "applications.core.tests.test_services",
         "documentation": {}
     },
     {
@@ -2472,7 +2700,7 @@
         "kind": 6,
         "importPath": "applications.core.filters",
         "description": "applications.core.filters",
-        "peekOfCode": "class EventFilterSet(filters.FilterSet):\n    range = filters.NumberFilter(method=\"filter_by_range\")\n    keywords = filters.CharFilter(\"keywords\", method=\"filter_by_keywords\")\n    created_at = filters.DateRangeFilter()\n    updated_at = filters.DateRangeFilter()\n    event_datetime = filters.DateRangeFilter()\n    category = filters.NumberFilter(\"category\")\n    promoter = filters.NumberFilter(\"promoter\")\n    is_free = filters.BooleanFilter(\"is_free\")\n    class Meta:",
+        "peekOfCode": "class EventFilterSet(filters.FilterSet):\n    range = filters.NumberFilter(method=\"filter_by_range\")\n    keywords = filters.CharFilter(\"keywords\", method=\"filter_by_keywords\")\n    created_at = filters.DateRangeFilter()\n    updated_at = filters.DateRangeFilter()\n    event_datetime = filters.DateRangeFilter()\n    category = filters.NumberFilter(\"category\")\n    promoter = filters.NumberFilter(\"promoter\")\n    is_free = filters.BooleanFilter(\"is_free\")\n    filter_service = FilterService()",
         "detail": "applications.core.filters",
         "documentation": {}
     },
@@ -2481,17 +2709,8 @@
         "kind": 6,
         "importPath": "applications.core.filters",
         "description": "applications.core.filters",
-        "peekOfCode": "class EventOrderingFilter(OrderingFilter):\n    \"\"\"\n    Default ordering way for events list.\n    That orders by time expiration and if user\n    provided coordinates, by distance either.\n    \"\"\"\n    def filter_queryset(self, request: Request, queryset: QuerySet, view):\n        \"\"\"\n        Order by expiration time. Expired events go to the end of a list.\n        \"\"\"",
+        "peekOfCode": "class EventOrderingFilter(OrderingFilter):\n    \"\"\"\n    Default ordering way for events list.\n    That orders by time expiration and if user\n    provided coordinates, by distance either.\n    \"\"\"\n    filter_service = FilterService()\n    def filter_queryset(self, request: Request, queryset: QuerySet, view: View):\n        # set datetime_expired annotation\n        queryset = queryset.annotate(",
         "detail": "applications.core.filters",
-        "documentation": {}
-    },
-    {
-        "label": "EventFileNameGenerator",
-        "kind": 6,
-        "importPath": "applications.core.helpers",
-        "description": "applications.core.helpers",
-        "peekOfCode": "class EventFileNameGenerator:\n    @staticmethod\n    def generate(_, filename: str):\n        extension = filename.split(\".\")[-1]\n        return \"media/events/\" + str(uuid.uuid4()) + \".\" + extension",
-        "detail": "applications.core.helpers",
         "documentation": {}
     },
     {
@@ -2526,7 +2745,7 @@
         "kind": 6,
         "importPath": "applications.core.permissions",
         "description": "applications.core.permissions",
-        "peekOfCode": "class IsOwnerOrReadOnly(permissions.BasePermission):\n    def has_object_permission(self, request, view, obj):\n        # Read only for everybody\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        # Edit mode only for author (promoter) of event or admin user\n        return request.user.is_superuser or obj.promoter == request.user\nclass CreateAuthenticatedOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        return request.user.is_authenticated if request.method == \"POST\" else True",
+        "peekOfCode": "class IsOwnerOrReadOnly(permissions.BasePermission):\n    def has_object_permission(self, request: Request, view: View, obj: Event):\n        # Read only for everybody\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        # Edit mode only for author (promoter) of event or admin user\n        return request.user.is_superuser or obj.promoter == request.user  # type:ignore\nclass CreateAuthenticatedOnly(permissions.BasePermission):\n    def has_permission(self, request: Request, view: View):\n        return (not request.method == \"POST\") or request.user.is_authenticated",
         "detail": "applications.core.permissions",
         "documentation": {}
     },
@@ -2535,7 +2754,7 @@
         "kind": 6,
         "importPath": "applications.core.permissions",
         "description": "applications.core.permissions",
-        "peekOfCode": "class CreateAuthenticatedOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        return request.user.is_authenticated if request.method == \"POST\" else True",
+        "peekOfCode": "class CreateAuthenticatedOnly(permissions.BasePermission):\n    def has_permission(self, request: Request, view: View):\n        return (not request.method == \"POST\") or request.user.is_authenticated",
         "detail": "applications.core.permissions",
         "documentation": {}
     },
@@ -2571,8 +2790,53 @@
         "kind": 6,
         "importPath": "applications.core.serializers",
         "description": "applications.core.serializers",
-        "peekOfCode": "class EventDetailSerializer(serializers.ModelSerializer):\n    ticket = TicketTemplateSerializer(write_only=True, required=False)\n    histories = _EventHistorySerializer(many=True, read_only=True)\n    location = PointField()\n    class Meta:\n        model = Event\n        fields = \"__all__\"\n        read_only_fields = (\n            \"created_at\",\n            \"updated_at\",",
+        "peekOfCode": "class EventDetailSerializer(serializers.ModelSerializer):\n    ticket = TicketTemplateSerializer(write_only=True, required=False)\n    histories = _EventHistorySerializer(many=True, read_only=True)\n    location = PointField()\n    ticket_generator_service = TicketGeneratorService()\n    class Meta:\n        model = Event\n        fields = \"__all__\"\n        read_only_fields = (\n            \"created_at\",",
         "detail": "applications.core.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "EventService",
+        "kind": 6,
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "peekOfCode": "class EventService:\n    def register_event_history_base_on_changes(self, event: \"Event\", changes: dict):\n        from applications.core.models import (  # pylint:disable=import-outside-toplevel\n            EventHistory,\n        )\n        known_action = False\n        histories: List[EventHistory] = []\n        if changes.get(\"event_datetime\"):\n            # Changed event datetime\n            histories.append(",
+        "detail": "applications.core.services",
+        "documentation": {}
+    },
+    {
+        "label": "TicketGeneratorService",
+        "kind": 6,
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "peekOfCode": "class TicketGeneratorService:\n    def generate_if_needed(self, data: dict, ticket_data: dict, event: \"Event\"):\n        ticket_generator = TicketGenerator(data)\n        if ticket_generator.should_generate_tickets():\n            ticket_generator.generate_tickets(ticket_data, event)\nclass SlugService:\n    def create_slug(self, value: str):\n        return slugify(value).replace(\"-\", \"\")\nclass EventFileNameGeneratorService:\n    @staticmethod",
+        "detail": "applications.core.services",
+        "documentation": {}
+    },
+    {
+        "label": "SlugService",
+        "kind": 6,
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "peekOfCode": "class SlugService:\n    def create_slug(self, value: str):\n        return slugify(value).replace(\"-\", \"\")\nclass EventFileNameGeneratorService:\n    @staticmethod\n    def generate(_: Any, filename: str):\n        extension = filename.split(\".\")[-1]\n        return f\"media/events/{uuid.uuid4()}.{extension}\"\nclass FilterService:\n    def get_lat_lon_from_query_params(",
+        "detail": "applications.core.services",
+        "documentation": {}
+    },
+    {
+        "label": "EventFileNameGeneratorService",
+        "kind": 6,
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "peekOfCode": "class EventFileNameGeneratorService:\n    @staticmethod\n    def generate(_: Any, filename: str):\n        extension = filename.split(\".\")[-1]\n        return f\"media/events/{uuid.uuid4()}.{extension}\"\nclass FilterService:\n    def get_lat_lon_from_query_params(\n        self, request: Request\n    ) -> Optional[Tuple[float, float]]:\n        try:",
+        "detail": "applications.core.services",
+        "documentation": {}
+    },
+    {
+        "label": "FilterService",
+        "kind": 6,
+        "importPath": "applications.core.services",
+        "description": "applications.core.services",
+        "peekOfCode": "class FilterService:\n    def get_lat_lon_from_query_params(\n        self, request: Request\n    ) -> Optional[Tuple[float, float]]:\n        try:\n            lat = request.query_params.get(\"latitude\", \"\")\n            lon = request.query_params.get(\"longitude\", \"\")\n            lat = float(lat)\n            lon = float(lon)\n            return (lat, lon)",
+        "detail": "applications.core.services",
         "documentation": {}
     },
     {
@@ -2616,7 +2880,7 @@
         "kind": 6,
         "importPath": "applications.core.views",
         "description": "applications.core.views",
-        "peekOfCode": "class FollowedHashTagView(\n    mixins.ListModelMixin,\n    mixins.CreateModelMixin,\n    mixins.DestroyModelMixin,\n    viewsets.GenericViewSet,\n):\n    serializer_class = FollowedHashTagSerializer\n    permission_classes = (IsAuthenticated,)\n    def get_queryset(self):  # type: ignore\n        return FollowedHashTag.objects.filter(user=self.request.user)",
+        "peekOfCode": "class FollowedHashTagView(\n    mixins.ListModelMixin,\n    mixins.CreateModelMixin,\n    mixins.DestroyModelMixin,\n    viewsets.GenericViewSet,\n):\n    serializer_class = FollowedHashTagSerializer\n    permission_classes = (IsAuthenticated,)\n    slug_service = SlugService()\n    def get_queryset(self):",
         "detail": "applications.core.views",
         "documentation": {}
     },
@@ -2634,7 +2898,7 @@
         "kind": 6,
         "importPath": "applications.core.views",
         "description": "applications.core.views",
-        "peekOfCode": "class EventOwnListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):\n    serializer_class = EventSimpleSerializer\n    permission_classes = (IsAuthenticated,)\n    def get_queryset(self):  # type: ignore\n        return Event.objects.filter(promoter=self.request.user)",
+        "peekOfCode": "class EventOwnListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):\n    serializer_class = EventSimpleSerializer\n    permission_classes = (IsAuthenticated,)\n    def get_queryset(self):\n        return Event.objects.filter(promoter=self.request.user)",
         "detail": "applications.core.views",
         "documentation": {}
     },
@@ -2859,7 +3123,7 @@
         "kind": 6,
         "importPath": "applications.tickets.helpers",
         "description": "applications.tickets.helpers",
-        "peekOfCode": "class TicketWithQRCodeSender:\n    \"\"\"\n    This class is up to sending ticket file to client's email address.\n    It generates unique QR code (based on id of ticket), and pdf file\n    (based on selected template file). Then it merges this 2 files saved\n    in media/tmp with unique names, and sends the result to provided email\n    address.\n    \"\"\"\n    def send(self, email: str, obj: Ticket):\n        # get pdf file from template",
+        "peekOfCode": "class TicketWithQRCodeSender:\n    \"\"\"\n    This class is up to sending ticket file to client's email address.\n    It generates unique QR code (based on id of ticket), and pdf file\n    (based on selected template file). Then it merges this 2 files saved\n    in media/tmp with unique names, and sends the result to provided email\n    address.\n    \"\"\"\n    def send(self, email: str, obj: \"Ticket\"):\n        # get pdf file from template",
         "detail": "applications.tickets.helpers",
         "documentation": {}
     },
