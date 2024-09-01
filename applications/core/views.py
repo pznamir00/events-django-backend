@@ -3,13 +3,18 @@ from rest_framework import viewsets, mixins
 from rest_framework.serializers import Serializer
 from rest_framework.permissions import IsAuthenticated
 from django_filters import rest_framework as filters
+from applications.core.selectors import (
+    get_publicly_available_events,
+    get_user_events,
+    get_user_hashtags,
+)
 from applications.core.services import EventService, SlugService
 from .serializers import (
     EventDetailSerializer,
     EventSimpleSerializer,
     FollowedHashTagSerializer,
 )
-from .models import FollowedHashTag, Event
+from .models import Event
 from .permissions import IsOwnerOrReadOnly, CreateAuthenticatedOnly
 from .filters import EventFilterSet, EventOrderingFilter
 
@@ -25,7 +30,7 @@ class FollowedHashTagView(
     slug_service = SlugService()
 
     def get_queryset(self):
-        return FollowedHashTag.objects.filter(user=self.request.user)
+        return get_user_hashtags(self.request.user)  # type:ignore
 
     def perform_create(self, serializer: Serializer):
         data: dict = serializer.validated_data
@@ -34,7 +39,7 @@ class FollowedHashTagView(
 
 
 class EventViewSet(viewsets.ModelViewSet):
-    queryset = Event.objects.filter(is_private=False, canceled=False, took_place=False)
+    queryset = get_publicly_available_events()
     permission_classes = (
         IsOwnerOrReadOnly,
         CreateAuthenticatedOnly,
@@ -79,4 +84,4 @@ class EventOwnListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     permission_classes = (IsAuthenticated,)
 
     def get_queryset(self):
-        return Event.objects.filter(promoter=self.request.user)
+        return get_user_events(self.request.user)  # type:ignore

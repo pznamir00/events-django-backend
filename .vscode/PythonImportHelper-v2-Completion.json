@@ -727,6 +727,22 @@
         "documentation": {}
     },
     {
+        "label": "FollowedHashTag",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "applications.core.models",
+        "description": "applications.core.models",
+        "isExtraImport": true,
+        "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
         "label": "Event",
         "importPath": "applications.core.models",
         "description": "applications.core.models",
@@ -748,6 +764,14 @@
         "description": "applications.core.models",
         "isExtraImport": true,
         "detail": "applications.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "applications.users.models",
+        "description": "applications.users.models",
+        "isExtraImport": true,
+        "detail": "applications.users.models",
         "documentation": {}
     },
     {
@@ -1891,6 +1915,30 @@
         "documentation": {}
     },
     {
+        "label": "get_publicly_available_events",
+        "importPath": "applications.core.selectors",
+        "description": "applications.core.selectors",
+        "isExtraImport": true,
+        "detail": "applications.core.selectors",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_events",
+        "importPath": "applications.core.selectors",
+        "description": "applications.core.selectors",
+        "isExtraImport": true,
+        "detail": "applications.core.selectors",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_hashtags",
+        "importPath": "applications.core.selectors",
+        "description": "applications.core.selectors",
+        "isExtraImport": true,
+        "detail": "applications.core.selectors",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -2759,6 +2807,33 @@
         "documentation": {}
     },
     {
+        "label": "get_user_hashtags",
+        "kind": 2,
+        "importPath": "applications.core.selectors",
+        "description": "applications.core.selectors",
+        "peekOfCode": "def get_user_hashtags(user: User):\n    return FollowedHashTag.objects.filter(user=user)\ndef get_user_events(user: User):\n    return Event.objects.filter(promoter=user)\ndef get_publicly_available_events():\n    return Event.objects.filter(is_private=False, canceled=False, took_place=False)",
+        "detail": "applications.core.selectors",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_events",
+        "kind": 2,
+        "importPath": "applications.core.selectors",
+        "description": "applications.core.selectors",
+        "peekOfCode": "def get_user_events(user: User):\n    return Event.objects.filter(promoter=user)\ndef get_publicly_available_events():\n    return Event.objects.filter(is_private=False, canceled=False, took_place=False)",
+        "detail": "applications.core.selectors",
+        "documentation": {}
+    },
+    {
+        "label": "get_publicly_available_events",
+        "kind": 2,
+        "importPath": "applications.core.selectors",
+        "description": "applications.core.selectors",
+        "peekOfCode": "def get_publicly_available_events():\n    return Event.objects.filter(is_private=False, canceled=False, took_place=False)",
+        "detail": "applications.core.selectors",
+        "documentation": {}
+    },
+    {
         "label": "_EventHistorySerializer",
         "kind": 6,
         "importPath": "applications.core.serializers",
@@ -2889,7 +2964,7 @@
         "kind": 6,
         "importPath": "applications.core.views",
         "description": "applications.core.views",
-        "peekOfCode": "class EventViewSet(viewsets.ModelViewSet):\n    queryset = Event.objects.filter(is_private=False, canceled=False, took_place=False)\n    permission_classes = (\n        IsOwnerOrReadOnly,\n        CreateAuthenticatedOnly,\n    )\n    filter_backends = (\n        filters.DjangoFilterBackend,\n        EventOrderingFilter,\n    )",
+        "peekOfCode": "class EventViewSet(viewsets.ModelViewSet):\n    queryset = get_publicly_available_events()\n    permission_classes = (\n        IsOwnerOrReadOnly,\n        CreateAuthenticatedOnly,\n    )\n    filter_backends = (\n        filters.DjangoFilterBackend,\n        EventOrderingFilter,\n    )",
         "detail": "applications.core.views",
         "documentation": {}
     },
@@ -2898,7 +2973,7 @@
         "kind": 6,
         "importPath": "applications.core.views",
         "description": "applications.core.views",
-        "peekOfCode": "class EventOwnListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):\n    serializer_class = EventSimpleSerializer\n    permission_classes = (IsAuthenticated,)\n    def get_queryset(self):\n        return Event.objects.filter(promoter=self.request.user)",
+        "peekOfCode": "class EventOwnListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):\n    serializer_class = EventSimpleSerializer\n    permission_classes = (IsAuthenticated,)\n    def get_queryset(self):\n        return get_user_events(self.request.user)  # type:ignore",
         "detail": "applications.core.views",
         "documentation": {}
     },
